@@ -1,0 +1,40 @@
+[
+	{
+		"id": 1,
+		"icon": "/images/plans/plan_basic.png",
+		"title": "home:plan_basic_title",
+		"price": 500,
+		"features": [
+			{ "id": 1, "title": "home:plan_basic_feature_1_title", "extras": null },
+			{ "id": 2, "title": "home:plan_basic_feature_2_title", "extras": null },
+			{ "id": 3, "title": "home:plan_basic_feature_3_title", "extras": null }
+		]
+	},
+	{
+		"id": 2,
+		"icon": "/images/plans/plan_advanced.png",
+		"title": "home:plan_advanced_title",
+		"price": 850,
+		"features": [
+			{ "id": 1, "title": "home:plan_advanced_feature_1_title", "extras": null },
+			{ "id": 2, "title": "home:plan_advanced_feature_2_title", "extras": null },
+			{ "id": 3, "title": "home:plan_advanced_feature_3_title", "extras": "common:iron_only" },
+			{ "id": 4, "title": "home:plan_advanced_feature_4_title", "extras": null },
+			{ "id": 5, "title": "home:plan_advanced_feature_5_title", "extras": null },
+			{ "id": 6, "title": "home:plan_advanced_feature_6_title", "extras": null }
+		]
+	},
+	{
+		"id": 3,
+		"icon": "/images/plans/plan_super.png",
+		"title": "home:plan_super_title",
+		"price": 1200,
+		"features": [
+			{ "id": 1, "title": "home:plan_super_feature_1_title", "extras": null },
+			{ "id": 2, "title": "home:plan_super_feature_2_title", "extras": null },
+			{ "id": 3, "title": "home:plan_super_feature_3_title", "extras": "common:iron_only" },
+			{ "id": 4, "title": "home:plan_super_feature_4_title", "extras": null },
+			{ "id": 5, "title": "home:plan_super_feature_5_title", "extras": null }
+		]
+	}
+]

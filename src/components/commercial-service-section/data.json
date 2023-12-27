@@ -1,0 +1,22 @@
+[
+	{
+		"id": 1,
+		"icon": "/images/commercial-service/commercial_service_hotels.png",
+		"title": "home:commercial_service_hotels_title"
+	},
+	{
+		"id": 2,
+		"icon": "/images/commercial-service/commercial_service_contract_salons_cleaner.png",
+		"title": "home:commercial_service_contract_salons_cleaner_title"
+	},
+	{
+		"id": 3,
+		"icon": "/images/commercial-service/commercial_service_companies.png",
+		"title": "home:commercial_service_companies_title"
+	},
+	{
+		"id": 4,
+		"icon": "/images/commercial-service/commercial_service_spas.png",
+		"title": "home:commercial_service_spas_title"
+	}
+]

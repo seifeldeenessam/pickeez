@@ -1,0 +1,32 @@
+[
+	{
+		"id": 1,
+		"icon": "/images/services/service_whole_cleaner.png",
+		"title": "home:service_whole_cleaner_title"
+	},
+	{
+		"id": 2,
+		"icon": "/images/services/service_ghost_cleaner.png",
+		"title": "home:service_ghost_cleaner_title"
+	},
+	{
+		"id": 3,
+		"icon": "/images/services/service_vehicle_cleaner.png",
+		"title": "home:service_vehicle_cleaner_title"
+	},
+	{
+		"id": 4,
+		"icon": "/images/services/service_dress_cleaner.png",
+		"title": "home:service_dress_cleaner_title"
+	},
+	{
+		"id": 5,
+		"icon": "/images/services/service_hotel_cleaner.png",
+		"title": "home:service_hotel_cleaner_title"
+	},
+	{
+		"id": 6,
+		"icon": "/images/services/service_contract_salons_cleaner.png",
+		"title": "home:service_contract_salons_cleaner_title"
+	}
+]

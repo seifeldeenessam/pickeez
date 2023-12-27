@@ -1,0 +1,56 @@
+[
+	{
+		"id": 1,
+		"icon": "/images/features/feature_washing.png",
+		"title": "home:feature_washing_title",
+		"description": "home:feature_washing_description"
+	},
+	{
+		"id": 2,
+		"icon": "/images/features/feature_ironing.png",
+		"title": "home:feature_ironing_title",
+		"description": "home:feature_ironing_description"
+	},
+	{
+		"id": 3,
+		"icon": "/images/features/feature_dry_cleaning.png",
+		"title": "home:feature_dry_cleaning_title",
+		"description": "home:feature_dry_cleaning_description"
+	},
+	{
+		"id": 4,
+		"icon": "/images/features/feature_shoes_cleaning.png",
+		"title": "home:feature_shoes_cleaning_title",
+		"description": "home:feature_shoes_cleaning_description"
+	},
+	{
+		"id": 5,
+		"icon": "/images/features/feature_carpet_cleaning.png",
+		"title": "home:feature_carpet_cleaning_title",
+		"description": "home:feature_carpet_cleaning_description"
+	},
+	{
+		"id": 6,
+		"icon": "/images/features/feature_furniture_cleaning.png",
+		"title": "home:feature_furniture_cleaning_title",
+		"description": "home:feature_furniture_cleaning_description"
+	},
+	{
+		"id": 7,
+		"icon": "/images/features/feature_mattress_cleaning.png",
+		"title": "home:feature_mattress_cleaning_title",
+		"description": "home:feature_mattress_cleaning_description"
+	},
+	{
+		"id": 8,
+		"icon": "/images/features/feature_curtains_cleaning.png",
+		"title": "home:feature_curtains_cleaning_title",
+		"description": "home:feature_curtains_cleaning_description"
+	},
+	{
+		"id": 9,
+		"icon": "/images/features/feature_laundry_bags.png",
+		"title": "home:feature_laundry_bags_title",
+		"description": "home:feature_laundry_bags_description"
+	}
+]

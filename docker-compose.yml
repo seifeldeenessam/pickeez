@@ -1,0 +1,10 @@
+version: "3.9"
+
+services:
+  web:
+    restart: always
+    volumes:
+      - .:/code
+    ports:
+      - 3005:3005
+    build: .
