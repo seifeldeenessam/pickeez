@@ -1,3 +1,7 @@
+* {
+	box-sizing: border-box !important;
+}
+
 #__next {
 	min-height: 100dvh;
 	display: flex;
@@ -9,7 +13,7 @@
 .swiper-pagination {
 	top: unset !important;
 	bottom: 0 !important;
-	transform: translateY(40px) !important;
+	transform: translateY(32px) !important;
 }
 
 .swiper-pagination-bullet {

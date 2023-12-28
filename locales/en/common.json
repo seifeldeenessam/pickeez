@@ -1,6 +1,12 @@
 {
+	"home": "Home",
+	"about": "About",
+	"services": "Services",
+	"pages": "Pages",
+	"blog": "Blog",
+	"contact": "Contact",
 	"discover_more": "Discover More",
-	"view_all_services": "View All Service",
+	"view_all_services": "View All Services",
 	"per_month": "Per Month",
 	"buy_now": "Buy now",
 	"iron_only": "Iron only",

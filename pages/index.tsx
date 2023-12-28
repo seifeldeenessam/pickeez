@@ -1,18 +1,18 @@
-import AdvantagesSection from '@/components/advantages-section';
 import Announcements from '@/components/announcements';
-import CallToActionSection from '@/components/call-to-action-section';
-import CommercialServiceSection from '@/components/commercial-service-section';
-import FeaturesSection from '@/components/features-section';
 import Footer from '@/components/footer/footer';
 import Header from '@/components/header';
-import Hero from '@/components/hero';
-import OffersSection from '@/components/offers-section';
-import PlansSection from '@/components/plans-section';
-import ServicesSection from '@/components/services-section';
-import TestimonialsSection from '@/components/testimonials-section';
-import WorkflowSection from '@/components/workflow-section';
 import { Box } from '@mui/material';
 import { NextPage } from 'next';
+import AdvantagesSection from './components/sections/advantages';
+import CallToActionSection from './components/sections/call-to-action';
+import CommercialServiceSection from './components/sections/commercial-service';
+import FeaturesSection from './components/sections/features';
+import HeroSection from './components/sections/hero';
+import OffersSection from './components/sections/offers';
+import PlansSection from './components/sections/plans';
+import ServicesSection from './components/sections/services';
+import TestimonialsSection from './components/sections/testimonials';
+import WorkflowSection from './components/sections/workflow';
 
 const Home: NextPage = () => {
 	return (
@@ -20,7 +20,7 @@ const Home: NextPage = () => {
 			<Announcements />
 			<Header />
 			<Box component={'main'} display={'flex'} flexDirection={'column'} flex={1}>
-				<Hero />
+				<HeroSection />
 				<FeaturesSection />
 				<PlansSection />
 				<ServicesSection />

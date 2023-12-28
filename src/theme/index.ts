@@ -5,7 +5,7 @@ import { createTheme } from '@mui/material/styles';
 import { Cairo, Jaldi, Open_Sans } from 'next/font/google';
 
 export const enFont = Open_Sans({
-	weight: ['300', '400', '500', '700'],
+	weight: ['300', '400', '500', '600', '700'],
 	subsets: ['latin'],
 	display: 'swap',
 	fallback: ['Helvetica', 'Arial', 'sans-serif'],
@@ -21,7 +21,7 @@ export const enSecondaryFont = Jaldi({
 });
 
 export const arFont = Cairo({
-	weight: ['300', '400', '500', '700'],
+	weight: ['300', '400', '500', '600', '700'],
 	subsets: ['latin'],
 	display: 'swap',
 	fallback: ['Helvetica', 'Arial', 'sans-serif'],
@@ -57,7 +57,7 @@ export const theme = (locale: string | undefined) => {
 			MuiButton: {
 				defaultProps: { disableElevation: true },
 				styleOverrides: {
-					root: { borderRadius: 100 },
+					root: { borderRadius: 100, fontWeight: 600 },
 					containedSecondary: {
 						color: '#FFFFFF'
 					}

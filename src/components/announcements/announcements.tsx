@@ -1,18 +1,25 @@
 import { Call, Login } from '@mui/icons-material';
-import { Button, IconButton, Stack } from '@mui/material';
+import { Box, Button, Container, IconButton, Stack } from '@mui/material';
+import useTranslation from 'next-translate/useTranslation';
 
 type Props = {};
 
 const Announcements = (props: Props) => {
+	const { lang } = useTranslation();
+
 	return (
-		<Stack width={1} direction={'row'} justifyContent={'space-between'} alignItems={'center'} bgcolor={'primary.main'} px={2} py={1} sx={{ color: 'background.paper' }}>
-			<Button size="small" color="inherit" startIcon={<Call />}>
-				050 1044 566 - 02 6760 068
-			</Button>
-			<IconButton size="small" color="inherit">
-				<Login fontSize="small" />
-			</IconButton>
-		</Stack>
+		<Box bgcolor={'primary.main'} color={'background.paper'}>
+			<Container>
+				<Stack direction={'row'} justifyContent={'space-between'} alignItems={'center'}>
+					<Button color="inherit" startIcon={<Call sx={{ transform: lang === 'ar' ? 'scaleX(-1)' : 'none' }} />}>
+						050 1044 566 - 02 6760 068
+					</Button>
+					<IconButton color="inherit">
+						<Login sx={{ transform: lang === 'ar' ? 'scaleX(-1)' : 'none' }} />
+					</IconButton>
+				</Stack>
+			</Container>
+		</Box>
 	);
 };
 
