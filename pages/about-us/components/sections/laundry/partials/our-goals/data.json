@@ -1,0 +1,9 @@
+[
+	{ "id": 1, "label": "efficiency" },
+	{ "id": 2, "label": "satisfaction" },
+	{ "id": 3, "label": "innovation" },
+	{ "id": 4, "label": "sustainability" },
+	{ "id": 5, "label": "quality_control" },
+	{ "id": 6, "label": "diversification" },
+	{ "id": 7, "label": "community" }
+]

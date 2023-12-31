@@ -1,8 +1,8 @@
+import Title from '@/components/title';
 import { AspectRatio } from '@/enums/aspectRatio';
 import useResponsive from '@/hooks/useResponsive';
 import { Box, Container, Stack, useTheme } from '@mui/material';
 import Image from 'next/image';
-import Title from 'pages/components/title';
 import { CSSProperties } from 'react';
 import { A11y, Autoplay, Pagination } from 'swiper/modules';
 import { Swiper, SwiperSlide } from 'swiper/react';
@@ -16,7 +16,7 @@ const TestimonialsSection = (props: Props) => {
 	const swiperStyles: CSSProperties = { '--swiper-theme-color': theme.palette.primary.main, overflowY: 'visible' } as any;
 
 	return (
-		<Box component={'section'} width={1} py={5} overflow={'hidden'}>
+		<Box component={'section'} width={1} py={6} overflow={'hidden'}>
 			<Container>
 				<Stack spacing={4} useFlexGap>
 					<Title title="home:testimonials_section_title" subtitle="home:testimonials_section_subtitle" />

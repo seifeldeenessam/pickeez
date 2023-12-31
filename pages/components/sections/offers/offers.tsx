@@ -1,9 +1,9 @@
+import Title from '@/components/title';
 import useResponsive from '@/hooks/useResponsive';
 import { enSecondaryFont } from '@/theme';
 import { Box, Chip, Container, Stack, Typography, useTheme } from '@mui/material';
 import useTranslation from 'next-translate/useTranslation';
 import Image from 'next/image';
-import Title from 'pages/components/title';
 import { CSSProperties } from 'react';
 import { A11y, Autoplay, Pagination } from 'swiper/modules';
 import { Swiper, SwiperSlide } from 'swiper/react';
@@ -19,7 +19,7 @@ const OffersSection = (props: Props) => {
 	const swiperStyles: CSSProperties = { '--swiper-theme-color': theme.palette.primary.main, overflowY: 'visible' } as any;
 
 	return (
-		<Box component={'section'} width={1} py={5} overflow={'hidden'} bgcolor={'background.paper'}>
+		<Box component={'section'} width={1} py={6} overflow={'hidden'} bgcolor={'background.paper'}>
 			<Container>
 				<Stack spacing={4} useFlexGap>
 					<Title title="home:offers_section_title" subtitle="home:offers_section_subtitle" />

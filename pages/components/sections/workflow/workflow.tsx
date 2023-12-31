@@ -1,7 +1,7 @@
+import Title from '@/components/title';
 import useResponsive from '@/hooks/useResponsive';
 import { Box, Container, Stack } from '@mui/material';
 import Image from 'next/image';
-import Title from 'pages/components/title';
 
 type Props = {};
 
@@ -9,7 +9,7 @@ const WorkflowSection = (props: Props) => {
 	const smUp = useResponsive({ key: 'sm', query: 'up' });
 
 	return (
-		<Box component={'section'} width={1} py={5} overflow={'hidden'} bgcolor={'background.paper'}>
+		<Box component={'section'} width={1} py={6} overflow={'hidden'} bgcolor={'background.paper'}>
 			<Container>
 				<Stack spacing={4} useFlexGap>
 					<Title title="home:workflow_section_title" subtitle="home:workflow_section_subtitle" />

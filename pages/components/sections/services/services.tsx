@@ -11,7 +11,7 @@ const ServicesSection = (props: Props) => {
 	const { t, lang } = useTranslation();
 
 	return (
-		<Box component={'section'} width={1} py={5} overflow={'hidden'} bgcolor={'background.paper'}>
+		<Box component={'section'} width={1} py={6} overflow={'hidden'} bgcolor={'background.paper'}>
 			<Box position={'relative'} width={1} height={128}>
 				<Image src={'/images/laundry_dryer.png'} alt={'Laundry Dryer'} style={{ objectFit: 'cover', opacity: '0.3' }} fill />
 			</Box>

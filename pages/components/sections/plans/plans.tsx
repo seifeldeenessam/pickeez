@@ -1,10 +1,10 @@
+import Title from '@/components/title';
 import { AspectRatio } from '@/enums/aspectRatio';
 import useResponsive from '@/hooks/useResponsive';
 import { ArrowForward, Check } from '@mui/icons-material';
 import { Box, Button, Chip, Container, Divider, Grid, Stack, Typography } from '@mui/material';
 import useTranslation from 'next-translate/useTranslation';
 import Image from 'next/image';
-import Title from 'pages/components/title';
 import plans from './data.json';
 
 type Props = {};
@@ -14,7 +14,7 @@ const PlansSection = (props: Props) => {
 	const smUp = useResponsive({ key: 'sm', query: 'up' });
 
 	return (
-		<Box component={'section'} position={'relative'} width={1} minHeight={'100dvh'} py={5} overflow={'hidden'}>
+		<Box component={'section'} position={'relative'} width={1} minHeight={'100dvh'} py={6} overflow={'hidden'}>
 			<Box position={'absolute'} top={0} left={'50%'} width={{ xs: 1280, sm: 1 }} height={{ xs: 850, sm: 600, md: 750, lg: 900 }} zIndex={-1} sx={{ transform: 'translate(-50%, 0)' }}>
 				<Image src={'/svgs/curve-texture.svg'} alt="Curve Texture" fill />
 			</Box>

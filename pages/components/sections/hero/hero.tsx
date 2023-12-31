@@ -14,15 +14,8 @@ const HeroSection = (props: Props) => {
 	return (
 		<Box component={'section'} width={1} position={'relative'}>
 			<Image src={'/images/hero-background.jpg'} alt="Hero Background" sizes="100vw" quality={100} style={{ objectFit: 'cover', zIndex: -1 }} fill priority />
-			<Stack
-				height={1}
-				justifyContent={'center'}
-				color={'background.paper'}
-				px={{ xs: 4, lg: 8 }}
-				pt={{ xs: 4, lg: 12 }}
-				pb={{ xs: '500px', lg: 12 }}
-				sx={{ background: 'linear-gradient(90deg, rgba(113, 53, 108, 0.80) 47.04%, rgba(241, 132, 232, 0.00) 129.92%)' }}
-				useFlexGap>
+			<Box sx={{ position: 'absolute', inset: 0, width: 1, height: 1, background: 'linear-gradient(90deg, rgba(113, 53, 108, 0.80) 47.04%, rgba(241, 132, 232, 0.00) 129.92%)', zIndex: -1 }} />
+			<Stack height={1} justifyContent={'center'} color={'background.paper'} px={{ xs: 4, lg: 8 }} pt={{ xs: 4, lg: 12 }} pb={{ xs: '500px', lg: 12 }} useFlexGap>
 				<Stack spacing={4} sx={{ fontFamily: enSecondaryFont.style.fontFamily }} useFlexGap>
 					<Stack direction={'row'} alignItems={'center'} spacing={4} useFlexGap>
 						<Box position={'relative'} width={300} height={{ xs: 300, lg: 500 }}>

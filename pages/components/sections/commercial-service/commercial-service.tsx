@@ -1,10 +1,10 @@
+import Title from '@/components/title';
 import { AspectRatio } from '@/enums/aspectRatio';
 import { ArrowForward } from '@mui/icons-material';
 import { Box, Button, Container, Grid, Stack } from '@mui/material';
 import useTranslation from 'next-translate/useTranslation';
 import Image from 'next/image';
 import ShowcaseCard from 'pages/components/showcase-card';
-import Title from 'pages/components/title';
 import services from './data.json';
 
 type Props = {};
@@ -13,7 +13,7 @@ const CommercialServiceSection = (props: Props) => {
 	const { t, lang } = useTranslation();
 
 	return (
-		<Box component={'section'} width={1} py={5} overflow={'hidden'}>
+		<Box component={'section'} width={1} py={6} overflow={'hidden'}>
 			<Container>
 				<Stack spacing={4} useFlexGap>
 					<Title title="home:commercial_service_section_title" subtitle="home:commercial_service_section_subtitle" />

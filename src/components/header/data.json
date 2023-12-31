@@ -1,8 +1,6 @@
 [
 	{ "id": 1, "path": "/", "label": "common:home" },
-	{ "id": 2, "path": "/about", "label": "common:about" },
+	{ "id": 2, "path": "/about-us", "label": "common:about" },
 	{ "id": 3, "path": "/services", "label": "common:services" },
-	{ "id": 4, "path": "/pages", "label": "common:pages" },
-	{ "id": 5, "path": "/blog", "label": "common:blog" },
-	{ "id": 6, "path": "/contact", "label": "common:contact" }
+	{ "id": 6, "path": "/contact-us", "label": "common:contact" }
 ]
