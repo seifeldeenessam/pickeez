@@ -16,5 +16,12 @@
 	"footer_official_info": "معلومات رسمية",
 	"footer_mon_sat": "الاثنين - السبت: 09:00 صباحًا - 07:00 مساءً",
 	"footer_sun": "الأحد: مغلق",
-	"footer_copyrights": "@ {{year}} بيكيز - جميع الحقوق محفوظة"
+	"footer_copyrights": "@ {{year}} بيكيز - جميع الحقوق محفوظة",
+	"address": "العنوان",
+	"phone": "الهاتف",
+	"email": "البريد الإلكتروني",
+	"full_name": "الاسم الكامل",
+	"subject": "الموضوع",
+	"message": "الرسالة",
+	"send": "ارسال"
 }

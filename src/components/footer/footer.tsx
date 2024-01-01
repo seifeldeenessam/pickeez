@@ -41,7 +41,7 @@ const Footer = (props: Props) => {
 								</Stack>
 								<Stack direction={'row'} alignItems={'flex-start'} spacing={2} useFlexGap>
 									<Place color="secondary" sx={{ transform: lang === 'ar' ? 'scaleX(-1)' : 'none' }} />
-									<Typography>store 8 - Musaffah - MW-4 - Abu Dhabi - United Arab Emirates</Typography>
+									<Typography>Store 8 - Musaffah - MW-4 - Abu Dhabi - United Arab Emirates</Typography>
 								</Stack>
 							</Stack>
 						</Stack>

@@ -62,6 +62,11 @@ export const theme = (locale: string | undefined) => {
 						color: '#FFFFFF'
 					}
 				}
+			},
+			MuiOutlinedInput: {
+				styleOverrides: {
+					root: { borderRadius: 8 }
+				}
 			}
 		}
 	});
