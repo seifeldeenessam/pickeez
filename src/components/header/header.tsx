@@ -7,6 +7,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { useState } from 'react';
 import links from './data.json';
+import LanguageSwitcher from './partials/language-switcher';
 
 const MenuDrawer = dynamic(() => import('./partials/drawer'));
 
@@ -47,6 +48,7 @@ const Header = (props: Props) => {
 						<Stack width={1} direction={'row'} justifyContent={'space-between'} alignItems={'center'}>
 							<Image src={'/svgs/logo.svg'} alt="Pickeez" width={150} height={50} />
 							{renderNavigation()}
+							<LanguageSwitcher />
 						</Stack>
 					</Container>
 				</Toolbar>
