@@ -1,5 +1,5 @@
 import useResponsive from '@/hooks/useResponsive';
-import { enSecondaryFont } from '@/theme';
+import { arFont, enSecondaryFont } from '@/theme';
 import { ArrowForward } from '@mui/icons-material';
 import { Box, Button, Container, Stack, Typography } from '@mui/material';
 import useTranslation from 'next-translate/useTranslation';
@@ -14,7 +14,7 @@ const CallToActionSection = (props: Props) => {
 	const smUp = useResponsive({ key: 'sm', query: 'up' });
 
 	return (
-		<Box component={'section'} position={'relative'} width={1} fontFamily={enSecondaryFont.style.fontFamily} overflow={'hidden'}>
+		<Box component={'section'} position={'relative'} width={1} fontFamily={lang === 'en' ? enSecondaryFont.style.fontFamily : arFont.style.fontFamily} overflow={'hidden'}>
 			<Box position={'relative'} width={1} minHeight={550}>
 				<Image src={'/images/call_to_action_background.png'} alt="Call to Action Background" sizes="100vw" style={{ objectFit: 'cover' }} fill priority />
 				<Stack
