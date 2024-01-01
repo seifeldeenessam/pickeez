@@ -3,8 +3,23 @@ import Footer from '@/components/footer/footer';
 import Header from '@/components/header';
 import { Box, Container, Typography } from '@mui/material';
 import { NextPage } from 'next';
+import { useRouter } from 'next/router';
+import { useEffect, useState } from 'react';
+import Markdown from 'react-markdown';
+import remarkGfm from 'remark-gfm';
 
 const PrivacyPolicy: NextPage = () => {
+	const [content, setContent] = useState<string | null>(null);
+	const { locale } = useRouter();
+
+	useEffect(() => {
+		const path = `/markdown/privacy-policy/${locale}.md`;
+
+		fetch(path)
+			.then((response) => response.text())
+			.then((text) => setContent(text));
+	}, [locale]);
+
 	return (
 		<>
 			<Announcements />
@@ -13,9 +28,7 @@ const PrivacyPolicy: NextPage = () => {
 				<Box component={'section'} py={4}>
 					<Container>
 						<Typography component={'div'} p={2} borderRadius={2} bgcolor={'background.paper'}>
-							Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem similique deleniti laboriosam itaque veritatis? Sit totam delectus labore fuga corrupti architecto
-							necessitatibus accusamus natus quidem optio obcaecati dolore, atque perferendis repellendus suscipit expedita, itaque numquam, sunt culpa. Ipsa ullam, unde distinctio
-							repellat, reiciendis sint animi, minus fugiat eligendi aspernatur consequatur!
+							<Markdown remarkPlugins={[remarkGfm]}>{content}</Markdown>
 						</Typography>
 					</Container>
 				</Box>
