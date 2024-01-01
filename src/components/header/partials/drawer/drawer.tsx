@@ -4,6 +4,7 @@ import { Button, Drawer, IconButton, Stack, Typography } from '@mui/material';
 import useTranslation from 'next-translate/useTranslation';
 import { useRouter } from 'next/router';
 import links from '../../data.json';
+import LanguageSwitcher from '../language-switcher';
 
 type Props = {
 	handleDrawerClose: () => void;
@@ -38,6 +39,12 @@ const MenuDrawer = ({ handleDrawerClose }: Props) => {
 						{t(link.label)}
 					</Button>
 				))}
+				<Stack direction={'row'} justifyContent={'space-between'} alignItems={'center'} px={'11px'}>
+					<Typography variant="button" fontSize={'15px'} color={'#444444'}>
+						{t('common:language')}
+					</Typography>
+					<LanguageSwitcher />
+				</Stack>
 			</Stack>
 		</Drawer>
 	);
