@@ -1,6 +1,26 @@
+import LocalPhoneOutlinedIcon from '@mui/icons-material/LocalPhoneOutlined';
+import LocationOnOutlinedIcon from '@mui/icons-material/LocationOnOutlined';
+import MailOutlineOutlinedIcon from '@mui/icons-material/MailOutlineOutlined';
 import { Box, Button, Container, Grid, Stack, TextField, Typography } from '@mui/material';
 import useTranslation from 'next-translate/useTranslation';
-import { attributes } from '../../../static';
+
+const attributes = [
+	{
+		icon: <LocationOnOutlinedIcon fontSize="small" sx={{ fill: '#ffffff' }} />,
+		title: 'common:address',
+		value: 'Store 8 - Musaffah - MW-4 - Abu Dhabi - UAE'
+	},
+	{
+		icon: <LocalPhoneOutlinedIcon fontSize="small" sx={{ fill: '#ffffff' }} />,
+		title: 'common:phone',
+		value: '050 1044 566 / 02 6760 068'
+	},
+	{
+		icon: <MailOutlineOutlinedIcon fontSize="small" sx={{ fill: '#ffffff' }} />,
+		title: 'common:email',
+		value: 'info@pickeez.com'
+	}
+];
 
 type Props = {};
 
