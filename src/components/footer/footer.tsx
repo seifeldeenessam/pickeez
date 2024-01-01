@@ -1,11 +1,13 @@
 import { Call, Facebook, Instagram, Mail, Place } from '@mui/icons-material';
-import { Box, Container, Divider, IconButton, Stack, Typography } from '@mui/material';
+import { Box, Button, Container, Divider, IconButton, Stack, Typography } from '@mui/material';
 import useTranslation from 'next-translate/useTranslation';
 import Image from 'next/image';
+import { useRouter } from 'next/router';
 
 type Props = {};
 
 const Footer = (props: Props) => {
+	const { push } = useRouter();
 	const { t, lang } = useTranslation();
 
 	return (
@@ -56,11 +58,21 @@ const Footer = (props: Props) => {
 					</Stack>
 				</Container>
 			</Stack>
-			<Stack p={2} bgcolor={'secondary.main'}>
+			<Box p={2} bgcolor={'secondary.main'}>
 				<Container>
-					<Typography>{t('common:footer_copyrights', { year: new Date().getFullYear() })}</Typography>
+					<Stack direction={'row'} justifyContent={'space-between'} alignItems={'center'}>
+						<Typography>{t('common:footer_copyrights', { year: new Date().getFullYear() })}</Typography>
+						<Stack direction={'row'} spacing={2} useFlexGap>
+							<Button color="inherit" onClick={() => push('/privacy-policy')}>
+								{t('common:privacy_policy')}
+							</Button>
+							<Button color="inherit" onClick={() => push('/return-policy')}>
+								{t('common:return_policy')}
+							</Button>
+						</Stack>
+					</Stack>
 				</Container>
-			</Stack>
+			</Box>
 		</Box>
 	);
 };
