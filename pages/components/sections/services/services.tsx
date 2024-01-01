@@ -3,11 +3,13 @@ import { ArrowForward } from '@mui/icons-material';
 import { Box, Button, Container, Divider, Stack, Typography } from '@mui/material';
 import useTranslation from 'next-translate/useTranslation';
 import Image from 'next/image';
+import { useRouter } from 'next/router';
 import services from './data.json';
 
 type Props = {};
 
 const ServicesSection = (props: Props) => {
+	const { push } = useRouter();
 	const { t, lang } = useTranslation();
 
 	return (
@@ -50,6 +52,7 @@ const ServicesSection = (props: Props) => {
 							variant="contained"
 							color="secondary"
 							size="large"
+							onClick={() => push('/services')}
 							endIcon={<ArrowForward sx={{ transform: lang === 'ar' ? 'scaleX(-1)' : 'none' }} />}
 							sx={{ alignSelf: 'flex-start' }}>
 							{t('common:view_all_services')}

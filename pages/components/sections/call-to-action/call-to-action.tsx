@@ -4,11 +4,13 @@ import { ArrowForward } from '@mui/icons-material';
 import { Box, Button, Container, Stack, Typography } from '@mui/material';
 import useTranslation from 'next-translate/useTranslation';
 import Image from 'next/image';
+import { useRouter } from 'next/router';
 
 type Props = {};
 
 const CallToActionSection = (props: Props) => {
 	const { t, lang } = useTranslation();
+	const { push } = useRouter();
 	const smUp = useResponsive({ key: 'sm', query: 'up' });
 
 	return (
@@ -47,7 +49,12 @@ const CallToActionSection = (props: Props) => {
 								{t('home:call_to_action_quote_description')}
 							</Typography>
 						</Stack>
-						<Button variant="contained" color="secondary" size="large" endIcon={<ArrowForward sx={{ transform: lang === 'ar' ? 'scaleX(-1)' : 'none' }} />}>
+						<Button
+							variant="contained"
+							color="secondary"
+							size="large"
+							onClick={() => push('/services')}
+							endIcon={<ArrowForward sx={{ transform: lang === 'ar' ? 'scaleX(-1)' : 'none' }} />}>
 							{t('common:view_all_services')}
 						</Button>
 					</Stack>

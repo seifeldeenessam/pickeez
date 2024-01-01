@@ -6,6 +6,7 @@ module.exports = {
 		'*': ['common'],
 		'/': ['home'],
 		'/about-us': ['about-us'],
-		'/contact-us': ['contact-us']
+		'/contact-us': ['contact-us'],
+		'/services': ['services']
 	}
 };

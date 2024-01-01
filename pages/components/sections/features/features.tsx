@@ -2,12 +2,14 @@ import Title from '@/components/title';
 import { ArrowForward } from '@mui/icons-material';
 import { Box, Button, Container, Grid, Stack } from '@mui/material';
 import useTranslation from 'next-translate/useTranslation';
+import { useRouter } from 'next/router';
 import ShowcaseCard from 'pages/components/showcase-card';
 import features from './data.json';
 
 type Props = {};
 
 const FeaturesSection = (props: Props) => {
+	const { push } = useRouter();
 	const { t, lang } = useTranslation();
 
 	return (
@@ -22,7 +24,13 @@ const FeaturesSection = (props: Props) => {
 							</Grid>
 						))}
 					</Grid>
-					<Button variant="contained" color="secondary" size="large" endIcon={<ArrowForward sx={{ transform: lang === 'ar' ? 'scaleX(-1)' : 'none' }} />} sx={{ alignSelf: 'center' }}>
+					<Button
+						variant="contained"
+						color="secondary"
+						size="large"
+						onClick={() => push('/services')}
+						endIcon={<ArrowForward sx={{ transform: lang === 'ar' ? 'scaleX(-1)' : 'none' }} />}
+						sx={{ alignSelf: 'center' }}>
 						{t('common:view_all_services')}
 					</Button>
 				</Stack>
