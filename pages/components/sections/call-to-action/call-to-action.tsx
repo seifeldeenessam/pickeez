@@ -1,7 +1,6 @@
 import useResponsive from '@/hooks/useResponsive';
 import { arFont, enSecondaryFont } from '@/theme';
-import { ArrowForward } from '@mui/icons-material';
-import { Box, Button, Container, Stack, Typography } from '@mui/material';
+import { Box, Stack, Typography } from '@mui/material';
 import useTranslation from 'next-translate/useTranslation';
 import Image from 'next/image';
 import { useRouter } from 'next/router';
@@ -34,11 +33,8 @@ const CallToActionSection = (props: Props) => {
 						{t('home:call_to_action_description')}
 					</Typography>
 				</Stack>
-				<Box position={'absolute'} bottom={0} right={{ xs: 0, lg: '10%' }} width={{ xs: 350, sm: 400, md: 500, lg: 600 }} height={{ xs: 300, sm: 350, md: 400, lg: 500 }}>
-					<Image src={'/images/call_to_action_figure.png'} alt="Call to Action Figure" fill style={{ objectFit: 'contain' }} />
-				</Box>
 			</Box>
-			<Box position={'relative'} bgcolor={'primary.main'} color={'background.paper'}>
+			{/* <Box position={'relative'} bgcolor={'primary.main'} color={'background.paper'}>
 				<Container>
 					<Stack direction={'row'} bgcolor={'primary.main'} justifyContent={'space-between'} alignItems={'center'} color={'background.paper'} py={4} spacing={2} useFlexGap>
 						<Stack>
@@ -59,7 +55,7 @@ const CallToActionSection = (props: Props) => {
 						</Button>
 					</Stack>
 				</Container>
-			</Box>
+			</Box> */}
 		</Box>
 	);
 };

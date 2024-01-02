@@ -57,7 +57,7 @@ export const theme = (locale: string | undefined) => {
 			MuiButton: {
 				defaultProps: { disableElevation: true },
 				styleOverrides: {
-					root: { borderRadius: 100, fontWeight: 600 },
+					root: { borderRadius: 100, fontWeight: 600, whiteSpace: 'nowrap' },
 					containedSecondary: {
 						color: '#FFFFFF'
 					}

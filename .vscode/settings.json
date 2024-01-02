@@ -35,25 +35,6 @@
 	"prettier.vueIndentScriptAndStyle": false,
 	"prettier.embeddedLanguageFormatting": "auto",
 
-	"cSpell.words": [
-		"apexcode",
-		"Fatoorah",
-		"FLYUP",
-		"foodly",
-		"hookform",
-		"hotjar",
-		"jsons",
-		"Noot",
-		"partialize",
-		"Paymob",
-		"prefixer",
-		"stylis",
-		"svgs",
-		"Swiper",
-		"tanstack",
-		"travia",
-		"webp",
-		"zustand"
-	],
+	"cSpell.words": ["Dhabi", "Noot", "Pickeez", "prefixer", "stylis", "svgs", "Swiper", "webp"],
 	"cSpell.language": "en,lorem"
 }
