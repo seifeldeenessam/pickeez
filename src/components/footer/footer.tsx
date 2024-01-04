@@ -1,7 +1,9 @@
+import useResponsive from '@/hooks/useResponsive';
 import { ArrowForward, Call, Facebook, Instagram, Mail, Place } from '@mui/icons-material';
-import { Box, Button, Container, Divider, IconButton, Stack, Typography } from '@mui/material';
+import { Box, Button, Container, Divider, Grid, IconButton, Stack, Typography } from '@mui/material';
 import useTranslation from 'next-translate/useTranslation';
 import Image from 'next/image';
+import Link from 'next/link';
 import { useRouter } from 'next/router';
 
 type Props = {};
@@ -9,20 +11,27 @@ type Props = {};
 const Footer = (props: Props) => {
 	const { push, asPath } = useRouter();
 	const { t, lang } = useTranslation();
+	const mdUp = useResponsive({ key: 'md', query: 'up' });
+	const showExtraELement: boolean = asPath === '/' || asPath === '/about-us';
 
 	return (
 		<Box component={'footer'} width={1} zIndex={1}>
-			{asPath === '/' && (
+			{showExtraELement && (
 				<Box position={'relative'} bgcolor={'primary.main'} color={'background.paper'}>
 					<Box
 						position={'absolute'}
 						bottom={0}
-						right={0}
+						right={asPath === '/about-us' ? { xs: 0, md: 200 } : 0}
 						width={{ xs: 350, sm: 400, md: 500, lg: 600 }}
 						height={{ xs: 300, sm: 350, md: 400, lg: 600 }}
 						zIndex={-1}
 						sx={{ transform: { xs: 'translateY(-70%)', sm: 'translateY(-50%)', md: 'translateY(-45%)', lg: 'translateY(-25%)' } }}>
-						<Image src={'/images/call_to_action_figure.png'} alt="Call to Action Figure" fill style={{ objectFit: 'contain' }} />
+						<Image
+							src={`/images/${asPath === '/about-us' ? 'about-us-footer-figure.png' : 'call_to_action_figure.png'}`}
+							alt="Call to Action Figure"
+							fill
+							style={{ objectFit: 'contain' }}
+						/>
 					</Box>
 					<Container>
 						<Stack
@@ -35,10 +44,13 @@ const Footer = (props: Props) => {
 							spacing={4}
 							useFlexGap>
 							<Stack spacing={1} useFlexGap>
-								<Typography variant="subtitle1" color={'inherit'} fontFamily={'inherit'} fontWeight={'bold'} textTransform={'uppercase'}>
+								<Typography variant={mdUp ? 'h3' : 'subtitle1'} color={'#FFD66B'} fontFamily={'inherit'} fontWeight={'bold'} textTransform={'uppercase'}>
 									{t('common:footer_quote_title')}
 								</Typography>
-								<Typography variant="caption" color={'inherit'} fontFamily={'inherit'} maxWidth={{ md: '25ch' }}>
+								<Typography variant={mdUp ? 'h4' : 'subtitle1'} color={'#FBB040'} fontFamily={'inherit'} fontWeight={'bold'}>
+									{t('common:footer_quote_subtitle')}
+								</Typography>
+								<Typography variant={mdUp ? 'h6' : 'body2'} color={'inherit'} fontFamily={'inherit'} fontWeight={'bold'}>
 									{t('common:footer_quote_description')}
 								</Typography>
 							</Stack>
@@ -90,12 +102,40 @@ const Footer = (props: Props) => {
 							</Stack>
 						</Stack>
 						<Stack width={1}>
-							<Typography variant="subtitle1">{`${t('common:footer_open_hours')}:`}</Typography>
+							<Typography variant="subtitle1">{`${t('common:footer_information')}:`}</Typography>
 							<Divider sx={{ width: '25%', borderBottomWidth: '2px', borderColor: 'secondary.main' }} />
-							<Stack mt={4}>
-								<Typography>{t('common:footer_mon_sat')}</Typography>
-								<Typography>{t('common:footer_sun')}</Typography>
-							</Stack>
+							<Grid container mt={4} spacing={1}>
+								<Grid item xs={6}>
+									<Link href={'/about-us'} style={{ fontFamily: 'inherit', color: 'inherit', textDecoration: 'inherit' }}>
+										<Typography color={'background.paper'}>{t('common:about')}</Typography>
+									</Link>
+								</Grid>
+								<Grid item xs={6}>
+									<Link href={'/offers'} style={{ fontFamily: 'inherit', color: 'inherit', textDecoration: 'inherit' }}>
+										<Typography color={'background.paper'}>{t('common:offers')}</Typography>
+									</Link>
+								</Grid>
+								<Grid item xs={6}>
+									<Link href={'/services'} style={{ fontFamily: 'inherit', color: 'inherit', textDecoration: 'inherit' }}>
+										<Typography color={'background.paper'}>{t('common:services')}</Typography>
+									</Link>
+								</Grid>
+								<Grid item xs={6}>
+									<Link href={'/contact-us'} style={{ fontFamily: 'inherit', color: 'inherit', textDecoration: 'inherit' }}>
+										<Typography color={'background.paper'}>{t('common:contact')}</Typography>
+									</Link>
+								</Grid>
+								<Grid item xs={6}>
+									<Link href={'/privacy-policy'} style={{ fontFamily: 'inherit', color: 'inherit', textDecoration: 'inherit' }}>
+										<Typography color={'background.paper'}>{t('common:privacy-policy')}</Typography>
+									</Link>
+								</Grid>
+								<Grid item xs={6}>
+									<Link href={'/return-policy'} style={{ fontFamily: 'inherit', color: 'inherit', textDecoration: 'inherit' }}>
+										<Typography color={'background.paper'}>{t('common:return-policy')}</Typography>
+									</Link>
+								</Grid>
+							</Grid>
 						</Stack>
 					</Stack>
 				</Container>

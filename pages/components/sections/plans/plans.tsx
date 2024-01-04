@@ -2,7 +2,7 @@ import Title from '@/components/title';
 import { AspectRatio } from '@/enums/aspectRatio';
 import useResponsive from '@/hooks/useResponsive';
 import { ArrowForward, Check } from '@mui/icons-material';
-import { Box, Button, Chip, Container, Divider, Grid, Stack, Typography } from '@mui/material';
+import { Box, Button, Container, Divider, Grid, Stack, Typography } from '@mui/material';
 import useTranslation from 'next-translate/useTranslation';
 import Image from 'next/image';
 import plans from './data.json';
@@ -60,7 +60,6 @@ const PlansSection = (props: Props) => {
 											<Stack direction={'row'} justifyContent={'flex-start'} alignItems={'center'} spacing={2} key={feature.id} useFlexGap>
 												<Check sx={{ color: '#39E14A' }} />
 												<Typography>{t(feature.title)}</Typography>
-												{feature.extras ? <Chip label={t(feature.extras)} color="error" size="small" sx={{ ml: 'auto' }} /> : null}
 											</Stack>
 										))}
 									</Stack>

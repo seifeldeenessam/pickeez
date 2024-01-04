@@ -46,7 +46,9 @@ const Header = (props: Props) => {
 				<Toolbar>
 					<Container>
 						<Stack width={1} direction={'row'} justifyContent={'space-between'} alignItems={'center'}>
-							<Image src={'/svgs/logo.svg'} alt="Pickeez" width={150} height={50} />
+							<Link href={'/'} style={{ color: 'inherit', textDecoration: 'inherit', position: 'relative', width: 150, height: 50 }}>
+								<Image src={'/svgs/logo.svg'} alt="Pickeez" fill priority />
+							</Link>
 							{renderNavigation()}
 							{mdUp && <LanguageSwitcher />}
 						</Stack>

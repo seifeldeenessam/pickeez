@@ -1,5 +1,5 @@
 import { AspectRatio } from '@/enums/aspectRatio';
-import { Divider, Stack, Typography } from '@mui/material';
+import { Box, Divider, Stack, Typography } from '@mui/material';
 import useTranslation from 'next-translate/useTranslation';
 import Image from 'next/image';
 
@@ -24,7 +24,9 @@ const ShowcaseCard = ({ icon, title, description }: Props) => {
 			spacing={2}
 			p={2}
 			useFlexGap>
-			<Image src={icon} alt={title} width={64} height={64} style={{ objectFit: 'contain' }} />
+			<Box position={'relative'} width={0.5} maxWidth={96} sx={{ aspectRatio: AspectRatio.SQUARE }}>
+				<Image src={icon} alt={title} style={{ objectFit: 'contain' }} fill />
+			</Box>
 			<Typography fontWeight={'bold'} textAlign={'center'}>
 				{t(title)}
 			</Typography>

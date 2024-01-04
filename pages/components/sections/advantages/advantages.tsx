@@ -11,7 +11,7 @@ const AdvantagesSection = (props: Props) => {
 			<Container>
 				<Stack spacing={4} useFlexGap>
 					<Title title="home:advantages_section_title" subtitle="home:advantages_section_subtitle" />
-					<Grid container spacing={2}>
+					<Grid container spacing={2} justifyContent={'center'}>
 						{advantages.map((advantage) => (
 							<Grid item xs={6} sm={3} key={advantage.id}>
 								<ShowcaseCard {...advantage} />
