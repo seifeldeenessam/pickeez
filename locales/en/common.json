@@ -17,10 +17,11 @@
 	"contact_us_for_more_info": "Contact Us for More Information",
 	"instead_of": "Instead of {{price}}",
 	"footer_quote_title": "Get a Price Quote Today!",
-	"footer_quote_description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.",
+	"footer_quote_subtitle": "20% discount",
+	"footer_quote_description": "Will be applied to your first order",
 	"footer_description": "Pickeez is one of the most high quality cleaning services laundries in Abu Dhabi , as it is keen to fully meet the needs of customers. The company also provides a delivery and collection service, and adheres to the deadlines for its services",
 	"footer_official_info": "Official Info",
-	"footer_open_hours": "Open Hours",
+	"footer_information": "Information",
 	"footer_mon_sat": "Monday - Saturday: 09:00 AM - 07:00 PM",
 	"footer_sun": "Sunday: CLOSED",
 	"footer_copyrights": "@ {{year}} Pickeez - All rights reserved",
@@ -32,5 +33,8 @@
 	"full_name": "Full Name",
 	"subject": "Subject",
 	"message": "Message",
-	"send": "Send"
+	"send": "Send",
+	"offers": "Offers",
+	"privacy-policy": "Privacy policy",
+	"return-policy": "Return policy"
 }

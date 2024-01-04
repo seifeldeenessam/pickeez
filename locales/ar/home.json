@@ -36,8 +36,10 @@
 
 	"plan_basic_title": "الباقة الأساسية",
 	"plan_basic_feature_1_title": "غسيل / طي",
-	"plan_basic_feature_2_title": "خدمة غسيل الملابس",
-	"plan_basic_feature_3_title": "حقيبة واحدة في الأسبوع",
+	"plan_basic_feature_2_title": "غسيل / كي",
+	"plan_basic_feature_3_title": "كي فقط",
+	"plan_basic_feature_4_title": "خدمة غسيل الملابس",
+	"plan_basic_feature_5_title": "حقيبة واحدة في الأسبوع",
 	"plan_advanced_title": "الباقة المتقدمة",
 	"plan_advanced_feature_1_title": "تنظيف جاف",
 	"plan_advanced_feature_2_title": "غسيل / طي",

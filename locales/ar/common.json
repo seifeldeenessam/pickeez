@@ -16,10 +16,12 @@
 	"iron_only": "مكواة فقط",
 	"contact_us_for_more_info": "اتصل بنا لمزيد من المعلومات",
 	"instead_of": "بدلاً من {{price}}",
-	"call_to_action_quote_title": "احصل على عرض سعر اليوم!",
-	"call_to_action_quote_description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.",
+	"footer_quote_title": "احصل على عرض سعر اليوم!",
+	"footer_quote_subtitle": "خصم 20%",
+	"footer_quote_description": "سيتم تطبيقه على طلبك الأول",
 	"footer_description": "بيكيز هي واحدة من خدمات التنظيف والمغاسل عالية الجودة في أبوظبي، حيث تسعى جاهدة لتلبية جميع احتياجات العملاء. تقدم الشركة أيضًا خدمة التوصيل والاستلام، وتلتزم بالمواعيد المحددة لخدماتها.",
 	"footer_official_info": "معلومات رسمية",
+	"footer_information": "معلومات",
 	"footer_mon_sat": "الاثنين - السبت: 09:00 صباحًا - 07:00 مساءً",
 	"footer_sun": "الأحد: مغلق",
 	"footer_copyrights": "@ {{year}} بيكيز - جميع الحقوق محفوظة",
@@ -31,5 +33,8 @@
 	"full_name": "الاسم الكامل",
 	"subject": "الموضوع",
 	"message": "الرسالة",
-	"send": "ارسال"
+	"send": "ارسال",
+	"offers": "العروض",
+	"privacy-policy": "سياسة الخصوصية",
+	"return-policy": "سياسة الاسترجاع"
 }
