@@ -22,10 +22,10 @@ const Footer = (props: Props) => {
 						position={'absolute'}
 						bottom={0}
 						right={asPath === '/about-us' ? { xs: 0, md: 200 } : 0}
-						width={{ xs: 350, sm: 400, md: 500, lg: 600 }}
-						height={{ xs: 300, sm: 350, md: 400, lg: 600 }}
+						width={{ xs: 450, sm: 500, md: 600, lg: 700 }}
+						height={{ xs: 400, sm: 450, md: 500, lg: 650 }}
 						zIndex={-1}
-						sx={{ transform: { xs: 'translateY(-70%)', sm: 'translateY(-50%)', md: 'translateY(-45%)', lg: 'translateY(-25%)' } }}>
+						sx={{ transform: { xs: 'translate(20%, -60%)', sm: 'translate(20%, -50%)', md: 'translate(20%, -35%)', lg: 'translateY(-25%)' } }}>
 						<Image
 							src={`/images/${asPath === '/about-us' ? 'about-us-footer-figure.png' : 'call_to_action_figure.png'}`}
 							alt="Call to Action Figure"
@@ -84,8 +84,8 @@ const Footer = (props: Props) => {
 							</Stack>
 						</Stack>
 						<Stack width={1}>
-							<Typography variant="subtitle1">{`${t('common:footer_official_info')}:`}</Typography>
-							<Divider sx={{ width: '25%', borderBottomWidth: '2px', borderColor: 'secondary.main' }} />
+							<Typography variant="subtitle1" color={'secondary.main'}>{`${t('common:footer_official_info')}:`}</Typography>
+							<Divider sx={{ width: '15%', borderBottomWidth: '2px', borderColor: 'secondary.main' }} />
 							<Stack spacing={2} mt={4} useFlexGap>
 								<Stack direction={'row'} alignItems={'flex-start'} spacing={2} useFlexGap>
 									<Call color="secondary" sx={{ transform: lang === 'ar' ? 'scaleX(-1)' : 'none' }} />
@@ -102,37 +102,49 @@ const Footer = (props: Props) => {
 							</Stack>
 						</Stack>
 						<Stack width={1}>
-							<Typography variant="subtitle1">{`${t('common:footer_information')}:`}</Typography>
-							<Divider sx={{ width: '25%', borderBottomWidth: '2px', borderColor: 'secondary.main' }} />
+							<Typography variant="subtitle1" color={'secondary.main'}>{`${t('common:footer_information')}:`}</Typography>
+							<Divider sx={{ width: '15%', borderBottomWidth: '2px', borderColor: 'secondary.main' }} />
 							<Grid container mt={4} spacing={1}>
 								<Grid item xs={6}>
 									<Link href={'/about-us'} style={{ fontFamily: 'inherit', color: 'inherit', textDecoration: 'inherit' }}>
-										<Typography color={'background.paper'}>{t('common:about')}</Typography>
+										<Typography color={'background.paper'} fontWeight={300} sx={{ ':hover': { textDecoration: 'underline' } }}>
+											{t('common:about')}
+										</Typography>
 									</Link>
 								</Grid>
 								<Grid item xs={6}>
 									<Link href={'/offers'} style={{ fontFamily: 'inherit', color: 'inherit', textDecoration: 'inherit' }}>
-										<Typography color={'background.paper'}>{t('common:offers')}</Typography>
+										<Typography color={'background.paper'} fontWeight={300} sx={{ ':hover': { textDecoration: 'underline' } }}>
+											{t('common:offers')}
+										</Typography>
 									</Link>
 								</Grid>
 								<Grid item xs={6}>
 									<Link href={'/services'} style={{ fontFamily: 'inherit', color: 'inherit', textDecoration: 'inherit' }}>
-										<Typography color={'background.paper'}>{t('common:services')}</Typography>
+										<Typography color={'background.paper'} fontWeight={300} sx={{ ':hover': { textDecoration: 'underline' } }}>
+											{t('common:services')}
+										</Typography>
 									</Link>
 								</Grid>
 								<Grid item xs={6}>
 									<Link href={'/contact-us'} style={{ fontFamily: 'inherit', color: 'inherit', textDecoration: 'inherit' }}>
-										<Typography color={'background.paper'}>{t('common:contact')}</Typography>
+										<Typography color={'background.paper'} fontWeight={300} sx={{ ':hover': { textDecoration: 'underline' } }}>
+											{t('common:contact')}
+										</Typography>
 									</Link>
 								</Grid>
 								<Grid item xs={6}>
 									<Link href={'/privacy-policy'} style={{ fontFamily: 'inherit', color: 'inherit', textDecoration: 'inherit' }}>
-										<Typography color={'background.paper'}>{t('common:privacy-policy')}</Typography>
+										<Typography color={'background.paper'} fontWeight={300} sx={{ ':hover': { textDecoration: 'underline' } }}>
+											{t('common:privacy-policy')}
+										</Typography>
 									</Link>
 								</Grid>
 								<Grid item xs={6}>
 									<Link href={'/return-policy'} style={{ fontFamily: 'inherit', color: 'inherit', textDecoration: 'inherit' }}>
-										<Typography color={'background.paper'}>{t('common:return-policy')}</Typography>
+										<Typography color={'background.paper'} fontWeight={300} sx={{ ':hover': { textDecoration: 'underline' } }}>
+											{t('common:return-policy')}
+										</Typography>
 									</Link>
 								</Grid>
 							</Grid>
@@ -142,16 +154,8 @@ const Footer = (props: Props) => {
 			</Stack>
 			<Box py={2} bgcolor={'secondary.main'}>
 				<Container>
-					<Stack direction={{ xs: 'column-reverse', md: 'row' }} justifyContent={'space-between'} alignItems={'center'} color={'background.paper'} spacing={2} useFlexGap>
+					<Stack direction={{ xs: 'column-reverse', md: 'row' }} justifyContent={'center'} alignItems={'center'} color={'background.paper'} spacing={2} useFlexGap>
 						<Typography>{t('common:footer_copyrights', { year: new Date().getFullYear() })}</Typography>
-						<Stack direction={'row'} spacing={2} useFlexGap>
-							<Button color="inherit" onClick={() => push('/privacy-policy')}>
-								{t('common:privacy_policy')}
-							</Button>
-							<Button color="inherit" onClick={() => push('/return-policy')}>
-								{t('common:return_policy')}
-							</Button>
-						</Stack>
 					</Stack>
 				</Container>
 			</Box>

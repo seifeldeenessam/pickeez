@@ -14,7 +14,7 @@ const LaundrySection = (props: Props) => {
 				<Image src={'/svgs/laundry_title.svg'} alt="Laundry Title" fill priority />
 			</Box>
 			<Container>
-				<Grid container mt={6} mb={'250px'} spacing={6} justifyContent={'center'}>
+				<Grid container mt={6} mb={'350px'} spacing={6} justifyContent={'center'}>
 					<Grid item xs={12} md={6}>
 						<OurVision />
 					</Grid>

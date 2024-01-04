@@ -20,16 +20,8 @@ const TestimonialsSection = (props: Props) => {
 			<Container>
 				<Stack spacing={4} useFlexGap>
 					<Title title="home:testimonials_section_title" subtitle="home:testimonials_section_subtitle" />
-					<Box width={1}>
-						<Swiper
-							modules={[Pagination, Autoplay, A11y]}
-							spaceBetween={16}
-							slidesPerView={1.1}
-							centeredSlides={!smUp}
-							breakpoints={{ 426: { slidesPerView: 2 }, 769: { slidesPerView: 4 } }}
-							pagination={{ clickable: true }}
-							style={swiperStyles}
-							loop>
+					<Box width={0.5} mx={'auto'}>
+						<Swiper modules={[Pagination, Autoplay, A11y]} spaceBetween={16} slidesPerView={1.1} centeredSlides pagination={{ clickable: true }} style={swiperStyles} loop>
 							{Array(6)
 								.fill('')
 								.map((testimonial, index) => (

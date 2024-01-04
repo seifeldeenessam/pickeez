@@ -19,7 +19,7 @@ const Home: NextPage = () => {
 		<>
 			<Announcements />
 			<Header />
-			<Box component={'main'} display={'flex'} flexDirection={'column'} flex={1}>
+			<Box component={'main'} display={'flex'} flexDirection={'column'} flex={1} sx={{ overflowX: 'hidden' }}>
 				<HeroSection />
 				<FeaturesSection />
 				<PlansSection />
