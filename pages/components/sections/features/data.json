@@ -1,5 +1,11 @@
 [
 	{
+		"id": 3,
+		"icon": "/images/features/feature_dry_cleaning.png",
+		"title": "home:feature_dry_cleaning_title",
+		"description": "home:feature_dry_cleaning_description"
+	},
+	{
 		"id": 1,
 		"icon": "/images/features/feature_washing.png",
 		"title": "home:feature_washing_title",
@@ -10,12 +16,6 @@
 		"icon": "/images/features/feature_ironing.png",
 		"title": "home:feature_ironing_title",
 		"description": "home:feature_ironing_description"
-	},
-	{
-		"id": 3,
-		"icon": "/images/features/feature_dry_cleaning.png",
-		"title": "home:feature_dry_cleaning_title",
-		"description": "home:feature_dry_cleaning_description"
 	},
 	{
 		"id": 4,
