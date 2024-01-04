@@ -24,7 +24,7 @@ const OurVision = (props: Props) => {
 				<Image src={'/svgs/vision.svg'} alt="Vision Icon" width={32} height={32} />
 				<Typography color={'background.paper'}>{t('about-us:our_vision_title')}</Typography>
 			</Stack>
-			<Stack direction={{ xs: 'column', md: 'row' }} alignItems={'center'} height={1}>
+			<Stack alignItems={'center'} height={1}>
 				<Stack>
 					<Typography textAlign={'center'} textTransform={'uppercase'} maxWidth={'57ch'}>
 						{t('about-us:our_vision_description_1')}

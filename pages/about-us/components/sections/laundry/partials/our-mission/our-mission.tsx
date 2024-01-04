@@ -24,13 +24,13 @@ const OurMission = (props: Props) => {
 				<Image src={'/svgs/mission.svg'} alt="Vision Icon" width={32} height={32} />
 				<Typography color={'background.paper'}>{t('about-us:our_mission_title')}</Typography>
 			</Stack>
-			<Stack direction={{ xs: 'column', md: 'row' }} alignItems={'center'} height={1}>
+			<Stack alignItems={'center'} height={1}>
 				<Stack>
 					<Typography textAlign={'center'} textTransform={'uppercase'} maxWidth={'57ch'}>
 						{t('about-us:our_mission_description')}
 					</Typography>
 				</Stack>
-				<Box position={'relative'} width={187} height={191} mb={{ xs: -2, md: 0 }} mt={'auto'} mx={'auto'}>
+				<Box position={'relative'} width={187 * 1.75} height={191 * 1.75} mb={-2} mt={'auto'} mx={'auto'}>
 					<Image src={'/images/our_mission_figure.png'} alt="Vision Figure" fill />
 				</Box>
 			</Stack>

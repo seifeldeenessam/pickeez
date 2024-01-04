@@ -1,4 +1,5 @@
-import { Box, Container, Stack } from '@mui/material';
+import { AspectRatio } from '@/enums/aspectRatio';
+import { Box, Container, Grid } from '@mui/material';
 import Image from 'next/image';
 import OurGoals from './partials/our-goals';
 import OurMission from './partials/our-mission';
@@ -9,17 +10,21 @@ type Props = {};
 const LaundrySection = (props: Props) => {
 	return (
 		<Box component={'section'} width={1} py={6} bgcolor={'background.paper'}>
+			<Box position={'relative'} width={0.9} mx={'auto'} sx={{ aspectRatio: AspectRatio.WIDE }}>
+				<Image src={'/svgs/laundry_title.svg'} alt="Laundry Title" fill priority />
+			</Box>
 			<Container>
-				<Stack spacing={4} useFlexGap>
-					<Box position={'relative'} width={1} height={200}>
-						<Image src={'/svgs/laundry_title.svg'} alt="Laundry Title" fill priority />
-					</Box>
-					<Stack mt={6} spacing={6} useFlexGap>
+				<Grid container mt={6} mb={'250px'} spacing={6} justifyContent={'center'}>
+					<Grid item xs={12} md={6}>
 						<OurVision />
+					</Grid>
+					<Grid item xs={12} md={6}>
 						<OurMission />
+					</Grid>
+					<Grid item xs={12} md={8}>
 						<OurGoals />
-					</Stack>
-				</Stack>
+					</Grid>
+				</Grid>
 			</Container>
 		</Box>
 	);

@@ -15,13 +15,22 @@ const HeroSection = (props: Props) => {
 			<Image src={'/images/hero-background.jpg'} alt="Hero Background" sizes="100vw" quality={100} style={{ objectFit: 'cover', zIndex: -1 }} fill priority />
 			<Box sx={{ position: 'absolute', inset: 0, width: 1, height: 1, background: 'linear-gradient(90deg, rgba(113, 53, 108, 0.80) 47.04%, rgba(241, 132, 232, 0.00) 129.92%)', zIndex: -1 }} />
 			<Container>
-				<Stack height={1} direction={{ xs: 'column', md: 'row' }} justifyContent={'space-between'} alignItems={'center'} color={'background.paper'} spacing={4} py={8} useFlexGap>
+				<Stack
+					height={1}
+					direction={{ xs: 'column', md: 'row' }}
+					justifyContent={'space-between'}
+					alignItems={'center'}
+					color={'background.paper'}
+					spacing={4}
+					pl={{ xs: 4, lg: 8 }}
+					py={{ xs: 4, lg: 8 }}
+					useFlexGap>
 					<Stack spacing={4} sx={{ fontFamily: lang === 'en' ? enSecondaryFont.style.fontFamily : arFont.style.fontFamily }} useFlexGap>
 						<Stack direction={'row'} alignItems={'center'} spacing={4} useFlexGap>
-							<Box position={'relative'} width={150} height={{ xs: 150, lg: 500 }}>
-								<Image src={'/svgs/arc-texture.svg'} alt="Logo Signature" fill priority />
+							<Box position={'relative'} width={{ xs: 300, lg: 400 }} height={{ xs: 300, lg: 400 }}>
+								<Image src={'/svgs/logo-variant.svg'} alt="Logo Signature" fill priority />
 							</Box>
-							<Stack spacing={2} useFlexGap>
+							<Stack ml={{ xs: '-100px', md: '-120px' }} mt={{ xs: '100px', sm: '50px', md: '150px' }} spacing={2} useFlexGap>
 								<Typography variant={mdUp ? 'h1' : 'h3'} fontWeight={'bold'} fontFamily={'inherit'} lineHeight={1} maxWidth={'15ch'}>
 									{t('about-us:hero_header_subtitle')}
 								</Typography>
@@ -42,7 +51,7 @@ const HeroSection = (props: Props) => {
 						width={375}
 						height={505}
 						quality={100}
-						style={{ objectFit: 'contain', transform: lang === 'ar' ? 'scaleX(-1)' : 'none', marginBottom: mdUp ? '0' : '-100px' }}
+						style={{ objectFit: 'contain', transform: lang === 'ar' ? 'scaleX(-1)' : 'none', marginBottom: mdUp ? '-150px' : '-100px' }}
 					/>
 				</Stack>
 			</Container>

@@ -1,4 +1,4 @@
-import { Box, Divider, Stack, Typography } from '@mui/material';
+import { Box, Divider, Grid, Stack, Typography } from '@mui/material';
 import useTranslation from 'next-translate/useTranslation';
 import Image from 'next/image';
 import goals from './data.json';
@@ -25,22 +25,22 @@ const OurGoals = (props: Props) => {
 				<Image src={'/svgs/goals.svg'} alt="Vision Icon" width={32} height={32} />
 				<Typography color={'background.paper'}>{t('about-us:our_goals_title')}</Typography>
 			</Stack>
-			<Stack direction={{ xs: 'column', md: 'row' }} flexWrap={'wrap'} spacing={4} useFlexGap>
+			<Grid container spacing={4}>
 				{goals.map((goal) => (
-					<Stack key={goal.id} spacing={2} useFlexGap>
-						<Stack direction={'row'} alignItems={'center'} spacing={1} useFlexGap>
-							<Image src={`/svgs/goals/${goal.label}.svg`} alt={goal.label} width={24} height={24} />
-							<Divider orientation="vertical" flexItem />
-							<Typography color={'secondary.main'} textTransform={'uppercase'}>
-								{t(`about-us:goals_${goal.label}_title`)}
-							</Typography>
+					<Grid item key={goal.id} xs={12} sm={6}>
+						<Stack spacing={2} useFlexGap>
+							<Stack direction={'row'} alignItems={'center'} spacing={1} useFlexGap>
+								<Image src={`/svgs/goals/${goal.label}.svg`} alt={goal.label} width={32} height={32} />
+								<Divider orientation="vertical" flexItem />
+								<Typography color={'secondary.main'} textTransform={'uppercase'} fontWeight={'bold'}>
+									{t(`about-us:goals_${goal.label}_title`)}
+								</Typography>
+							</Stack>
+							<Typography textTransform={'uppercase'}>{t(`about-us:goals_${goal.label}_description`)}</Typography>
 						</Stack>
-						<Typography textTransform={'uppercase'} maxWidth={'57ch'}>
-							{t(`about-us:goals_${goal.label}_description`)}
-						</Typography>
-					</Stack>
+					</Grid>
 				))}
-			</Stack>
+			</Grid>
 		</Box>
 	);
 };
