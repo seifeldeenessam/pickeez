@@ -1,3 +1,4 @@
+import { AspectRatio } from '@/enums/aspectRatio';
 import useResponsive from '@/hooks/useResponsive';
 import { ArrowForward, Call, Facebook, Instagram, Mail, Place } from '@mui/icons-material';
 import { Box, Button, Container, Divider, Grid, IconButton, Stack, Typography } from '@mui/material';
@@ -17,53 +18,50 @@ const Footer = (props: Props) => {
 	return (
 		<Box component={'footer'} width={1} zIndex={1}>
 			{showExtraELement && (
-				<Box position={'relative'} bgcolor={'primary.main'} color={'background.paper'}>
-					<Box
-						position={'absolute'}
-						bottom={0}
-						right={asPath === '/about-us' ? { xs: 0, md: 200 } : 0}
-						width={{ xs: 450, sm: 500, md: 600, lg: 700 }}
-						height={{ xs: 400, sm: 450, md: 500, lg: 650 }}
-						zIndex={-1}
-						sx={{ transform: { xs: 'translate(20%, -60%)', sm: 'translate(20%, -50%)', md: 'translate(20%, -35%)', lg: 'translateY(-25%)' } }}>
-						<Image
-							src={`/images/${asPath === '/about-us' ? 'about-us-footer-figure.png' : 'call_to_action_figure.png'}`}
-							alt="Call to Action Figure"
-							fill
-							style={{ objectFit: 'contain' }}
-						/>
-					</Box>
-					<Container>
+				<Box position={'relative'} width={1} height={{ xs: 125, md: 250 }} mt={'125px'}>
+					<Image src={'/svgs/footer-announcement.svg'} alt="Footer announcement" style={{ objectFit: 'cover', objectPosition: mdUp ? '50%' : '60%' }} fill priority />
+
+					<Container sx={{ position: 'absolute', top: '50%', left: '0', right: '0', transform: 'translate(0, -50%)' }}>
 						<Stack
 							direction={{ xs: 'column', md: 'row' }}
-							bgcolor={'primary.main'}
 							justifyContent={'space-between'}
 							alignItems={{ xs: 'flex-start', md: 'center' }}
 							color={'background.paper'}
 							py={4}
 							spacing={4}
 							useFlexGap>
-							<Stack spacing={1} useFlexGap>
-								<Typography variant={mdUp ? 'h3' : 'subtitle1'} color={'#FFD66B'} fontFamily={'inherit'} fontWeight={'bold'} textTransform={'uppercase'}>
+							<Stack spacing={{ md: 1 }} useFlexGap>
+								<Typography variant={mdUp ? 'h3' : 'body1'} color={'#FFD66B'} fontFamily={'inherit'} fontWeight={'bold'} textTransform={'uppercase'}>
 									{t('common:footer_quote_title')}
 								</Typography>
 								<Typography variant={mdUp ? 'h4' : 'subtitle1'} color={'#FBB040'} fontFamily={'inherit'} fontWeight={'bold'}>
 									{t('common:footer_quote_subtitle')}
 								</Typography>
-								<Typography variant={mdUp ? 'h6' : 'body2'} color={'inherit'} fontFamily={'inherit'} fontWeight={'bold'}>
+								<Typography variant={mdUp ? 'h6' : 'body2'} color={'inherit'} fontFamily={'inherit'} fontWeight={'bold'} maxWidth={{ xs: '20ch', md: 'none' }}>
 									{t('common:footer_quote_description')}
 								</Typography>
 							</Stack>
-							<Button
-								variant="contained"
-								color="secondary"
-								size={'large'}
-								onClick={() => push('/services')}
-								endIcon={<ArrowForward sx={{ transform: lang === 'ar' ? 'scaleX(-1)' : 'none' }} />}>
-								{t('common:view_all_services')}
-							</Button>
+							{mdUp && (
+								<Button
+									variant="contained"
+									color="secondary"
+									size={'large'}
+									onClick={() => push('/services')}
+									endIcon={<ArrowForward sx={{ transform: lang === 'ar' ? 'scaleX(-1)' : 'none' }} />}>
+									{t('common:view_all_services')}
+								</Button>
+							)}
 						</Stack>
 					</Container>
+
+					<Box position={'absolute'} bottom={0} right={0} width={{ xs: 500, sm: 600, md: 700, lg: 800 }} zIndex={-1} overflow={'hidden'} sx={{ aspectRatio: AspectRatio.SQUARE }}>
+						<Image
+							src={`/images/${asPath === '/about-us' ? 'footer_announcement_figure_2.png' : 'footer_announcement_figure_1.png'}`}
+							alt="Call to Action Figure"
+							fill
+							style={{ objectFit: 'contain', transform: 'translate(15%, 0)' }}
+						/>
+					</Box>
 				</Box>
 			)}
 			<Stack py={4} bgcolor={'primary.main'} color={'background.paper'}>

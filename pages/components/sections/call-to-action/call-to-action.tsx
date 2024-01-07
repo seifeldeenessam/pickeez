@@ -14,7 +14,7 @@ const CallToActionSection = (props: Props) => {
 
 	return (
 		<Box component={'section'} position={'relative'} width={1} fontFamily={lang === 'en' ? enSecondaryFont.style.fontFamily : arFont.style.fontFamily} overflow={'hidden'}>
-			<Box position={'relative'} width={1} minHeight={550}>
+			<Box position={'relative'} width={1} minHeight={500}>
 				<Image src={'/images/call_to_action_background.png'} alt="Call to Action Background" sizes="100vw" style={{ objectFit: 'cover' }} fill priority />
 				<Stack
 					position={'absolute'}
@@ -34,28 +34,6 @@ const CallToActionSection = (props: Props) => {
 					</Typography>
 				</Stack>
 			</Box>
-			{/* <Box position={'relative'} bgcolor={'primary.main'} color={'background.paper'}>
-				<Container>
-					<Stack direction={'row'} bgcolor={'primary.main'} justifyContent={'space-between'} alignItems={'center'} color={'background.paper'} py={4} spacing={2} useFlexGap>
-						<Stack>
-							<Typography variant="subtitle1" color={'inherit'} fontFamily={'inherit'} fontWeight={'bold'} textTransform={'uppercase'}>
-								{t('home:call_to_action_quote_title')}
-							</Typography>
-							<Typography variant="caption" color={'inherit'} fontFamily={'inherit'} maxWidth={'25ch'}>
-								{t('home:call_to_action_quote_description')}
-							</Typography>
-						</Stack>
-						<Button
-							variant="contained"
-							color="secondary"
-							size="large"
-							onClick={() => push('/services')}
-							endIcon={<ArrowForward sx={{ transform: lang === 'ar' ? 'scaleX(-1)' : 'none' }} />}>
-							{t('common:view_all_services')}
-						</Button>
-					</Stack>
-				</Container>
-			</Box> */}
 		</Box>
 	);
 };

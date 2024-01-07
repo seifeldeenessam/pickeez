@@ -9,12 +9,12 @@ type Props = {};
 
 const LaundrySection = (props: Props) => {
 	return (
-		<Box component={'section'} width={1} py={6} bgcolor={'background.paper'}>
+		<Box component={'section'} width={1} py={6}>
 			<Box position={'relative'} width={0.9} mx={'auto'} sx={{ aspectRatio: AspectRatio.WIDE }}>
 				<Image src={'/svgs/laundry_title.svg'} alt="Laundry Title" fill priority />
 			</Box>
 			<Container>
-				<Grid container mt={6} mb={'350px'} spacing={6} justifyContent={'center'}>
+				<Grid container mt={6} mb={{ xs: '150px', sm: '50px' }} spacing={6} justifyContent={'center'}>
 					<Grid item xs={12} md={6}>
 						<OurVision />
 					</Grid>

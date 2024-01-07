@@ -9,7 +9,7 @@ const OurGoals = (props: Props) => {
 	const { t } = useTranslation();
 
 	return (
-		<Box position={'relative'} bgcolor={'background.default'} height={1} p={2} pt={8} borderRadius={2}>
+		<Box position={'relative'} bgcolor={'background.paper'} height={1} p={2} pt={8} borderRadius={2}>
 			<Stack
 				position={'absolute'}
 				top={0}

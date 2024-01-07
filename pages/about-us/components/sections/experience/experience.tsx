@@ -13,7 +13,7 @@ const ExperienceSection = (props: Props) => {
 	const mdUp = useResponsive({ key: 'md', query: 'up' });
 
 	return (
-		<Box component={'section'} width={1} py={6}>
+		<Box component={'section'} width={1} py={6} bgcolor={'background.paper'}>
 			<Container>
 				<Stack spacing={4} useFlexGap>
 					<Title title="about-us:experience_section_title" subtitle="about-us:experience_section_subtitle" />
