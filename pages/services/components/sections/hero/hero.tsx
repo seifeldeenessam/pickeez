@@ -30,7 +30,7 @@ const HeroSection = (props: Props) => {
 					<Stack spacing={4} sx={{ fontFamily: lang === 'en' ? enSecondaryFont.style.fontFamily : arFont.style.fontFamily }} useFlexGap>
 						<Stack direction={'row'} alignItems={'center'} spacing={4} useFlexGap>
 							<Box position={'relative'} width={{ xs: 300, lg: 400 }} sx={{ aspectRatio: AspectRatio.SQUARE }}>
-								<Image src={'/svgs/logo-variant.svg'} alt="Logo Signature" fill priority />
+								<Image src={'/svgs/logo-variant.svg'} alt="Logo Signature" style={{ transform: lang === 'ar' ? 'scaleX(-1)' : 'none' }} fill priority />
 							</Box>
 							<Stack ml={{ xs: '-100px', md: '-120px' }} mt={{ xs: '100px', sm: '50px', md: '150px' }} spacing={2} useFlexGap>
 								<Typography variant={mdUp ? 'h1' : 'h3'} fontWeight={'bold'} fontFamily={'inherit'} lineHeight={1} maxWidth={'15ch'}>
@@ -41,7 +41,7 @@ const HeroSection = (props: Props) => {
 										{t('common:home')}
 									</Typography>
 									<Typography variant={mdUp ? 'subtitle1' : 'body1'} fontWeight={'normal'} color={'background.paper'}>
-										{t('common:about')}
+										{t('common:services')}
 									</Typography>
 								</Breadcrumbs>
 							</Stack>
