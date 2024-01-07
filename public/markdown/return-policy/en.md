@@ -1,0 +1,7 @@
+-   The customer gets 4 days to apply for the compensation
+-   Once the order completed
+-   If something is damage he will send us the clear picture and will have option to return back to laundry to fix the issue or ask for the compensation
+-   If he do not have receipt we will compensate 15 times the service charge of the item
+-   If he have receipt.. 1-3 month old.. then we will compensate 70% amount
+-   If its 3-6 month . Its 50%
+-   6-12month - 30%
