@@ -9,7 +9,7 @@ const OurGoals = (props: Props) => {
 	const { t } = useTranslation();
 
 	return (
-		<Box position={'relative'} bgcolor={'background.paper'} height={1} p={2} pt={8} borderRadius={2}>
+		<Box position={'relative'} bgcolor={'background.default'} height={1} p={2} pt={8} borderRadius={2} border={'3px solid white'} boxShadow={'0px 0px 7px 0px rgba(0, 0, 0, 0.15)'}>
 			<Stack
 				position={'absolute'}
 				top={0}
@@ -18,7 +18,7 @@ const OurGoals = (props: Props) => {
 				alignItems={'center'}
 				p={1}
 				borderRadius={2}
-				spacing={2}
+				spacing={1}
 				bgcolor={'primary.main'}
 				sx={{ transform: 'translate(-50%, -50%)' }}
 				useFlexGap>

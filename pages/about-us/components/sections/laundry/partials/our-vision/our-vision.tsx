@@ -8,7 +8,7 @@ const OurVision = (props: Props) => {
 	const { t } = useTranslation();
 
 	return (
-		<Box position={'relative'} bgcolor={'background.paper'} height={1} p={2} pt={8} borderRadius={2}>
+		<Box position={'relative'} bgcolor={'background.default'} height={1} p={2} pt={8} borderRadius={2} border={'3px solid white'} boxShadow={'0px 0px 7px 0px rgba(0, 0, 0, 0.15)'}>
 			<Stack
 				position={'absolute'}
 				top={0}
@@ -17,7 +17,7 @@ const OurVision = (props: Props) => {
 				alignItems={'center'}
 				p={1}
 				borderRadius={2}
-				spacing={2}
+				spacing={1}
 				bgcolor={'primary.main'}
 				sx={{ transform: 'translate(-50%, -50%)' }}
 				useFlexGap>
@@ -34,7 +34,7 @@ const OurVision = (props: Props) => {
 						{t('about-us:our_vision_description_2')}
 					</Typography>
 				</Stack>
-				<Box position={'relative'} width={379} height={253} mb={{ xs: -2, md: 0 }} mt={'auto'} mx={'auto'}>
+				<Box position={'relative'} width={1} mt={'auto'} mb={{ xs: '-50px', md: '-80px' }} mx={'auto'} sx={{ aspectRatio: '4/3' }}>
 					<Image src={'/images/our_vision_figure.png'} alt="Vision Figure" fill />
 				</Box>
 			</Stack>
