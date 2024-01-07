@@ -1,7 +1,7 @@
 import { AspectRatio } from '@/enums/aspectRatio';
 import useResponsive from '@/hooks/useResponsive';
-import { ArrowForward, Call, Facebook, Instagram, Mail, Place } from '@mui/icons-material';
-import { Box, Button, Container, Divider, Grid, IconButton, Stack, Typography } from '@mui/material';
+import { Call, Facebook, Instagram, Mail, Place } from '@mui/icons-material';
+import { Box, Container, Divider, Grid, IconButton, Stack, Typography } from '@mui/material';
 import useTranslation from 'next-translate/useTranslation';
 import Image from 'next/image';
 import Link from 'next/link';
@@ -10,15 +10,15 @@ import { useRouter } from 'next/router';
 type Props = {};
 
 const Footer = (props: Props) => {
-	const { push, asPath } = useRouter();
+	const { asPath } = useRouter();
 	const { t, lang } = useTranslation();
 	const mdUp = useResponsive({ key: 'md', query: 'up' });
-	const showExtraELement: boolean = asPath === '/' || asPath === '/about-us';
+	const showExtraELement: boolean = asPath === '/' || asPath === '/#offers' || asPath === '/about-us';
 
 	return (
 		<Box component={'footer'} width={1} zIndex={1}>
 			{showExtraELement && (
-				<Box position={'relative'} width={1} height={{ xs: 125, md: 250 }} mt={'125px'}>
+				<Box position={'relative'} width={1} height={{ xs: 125, md: 250 }}>
 					<Image
 						src={'/svgs/footer-announcement.svg'}
 						alt="Footer announcement"
@@ -47,25 +47,22 @@ const Footer = (props: Props) => {
 									{t('common:footer_quote_description')}
 								</Typography>
 							</Stack>
-							{mdUp && (
-								<Button
-									variant="contained"
-									color="secondary"
-									size={'large'}
-									onClick={() => push('/services')}
-									endIcon={<ArrowForward sx={{ transform: lang === 'ar' ? 'scaleX(-1)' : 'none' }} />}>
-									{t('common:view_all_services')}
-								</Button>
-							)}
 						</Stack>
 					</Container>
 
-					<Box position={'absolute'} bottom={0} right={0} width={{ xs: 500, sm: 600, md: 700, lg: 800 }} zIndex={-1} overflow={'hidden'} sx={{ aspectRatio: AspectRatio.SQUARE }}>
+					<Box
+						position={'absolute'}
+						bottom={0}
+						right={0}
+						width={asPath === '/about-us' ? { xs: 600, sm: 700, md: 800, lg: 900 } : { xs: 500, sm: 600, md: 700, lg: 800 }}
+						zIndex={-1}
+						overflow={'hidden'}
+						sx={{ aspectRatio: AspectRatio.SQUARE }}>
 						<Image
 							src={`/images/${asPath === '/about-us' ? 'footer_announcement_figure_2.png' : 'footer_announcement_figure_1.png'}`}
 							alt="Call to Action Figure"
 							fill
-							style={{ objectFit: 'contain', transform: lang === 'ar' ? 'translate(-15%, 0)' : 'translate(15%, 0)' }}
+							style={{ objectFit: 'contain', transform: lang === 'ar' ? 'translate(-10%, 0)' : 'translate(10%, 0)' }}
 						/>
 					</Box>
 				</Box>
@@ -117,7 +114,7 @@ const Footer = (props: Props) => {
 									</Link>
 								</Grid>
 								<Grid item xs={6}>
-									<Link href={'/offers'} style={{ fontFamily: 'inherit', color: 'inherit', textDecoration: 'inherit' }}>
+									<Link href={'/#offers'} style={{ fontFamily: 'inherit', color: 'inherit', textDecoration: 'inherit' }}>
 										<Typography color={'background.paper'} fontWeight={300} sx={{ ':hover': { textDecoration: 'underline' } }}>
 											{t('common:offers')}
 										</Typography>

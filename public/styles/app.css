@@ -2,6 +2,11 @@
 	box-sizing: border-box !important;
 }
 
+html,
+body {
+	scroll-behavior: smooth;
+}
+
 #__next {
 	min-height: 100dvh;
 	display: flex;
