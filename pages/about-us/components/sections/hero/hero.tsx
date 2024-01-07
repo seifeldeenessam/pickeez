@@ -1,3 +1,4 @@
+import { AspectRatio } from '@/enums/aspectRatio';
 import useResponsive from '@/hooks/useResponsive';
 import { arFont, enSecondaryFont } from '@/theme';
 import { Box, Breadcrumbs, Container, Stack, Typography } from '@mui/material';
@@ -14,7 +15,8 @@ const HeroSection = (props: Props) => {
 		<Box component={'section'} width={1} position={'relative'}>
 			<Image src={'/images/hero-background.jpg'} alt="Hero Background" sizes="100vw" quality={100} style={{ objectFit: 'cover', zIndex: -1 }} fill priority />
 			<Box sx={{ position: 'absolute', inset: 0, width: 1, height: 1, background: 'linear-gradient(90deg, rgba(113, 53, 108, 0.80) 47.04%, rgba(241, 132, 232, 0.00) 129.92%)', zIndex: -1 }} />
-			<Container>
+
+			<Container maxWidth={'xl'}>
 				<Stack
 					height={1}
 					direction={{ xs: 'column', md: 'row' }}
@@ -27,7 +29,7 @@ const HeroSection = (props: Props) => {
 					useFlexGap>
 					<Stack spacing={4} sx={{ fontFamily: lang === 'en' ? enSecondaryFont.style.fontFamily : arFont.style.fontFamily }} useFlexGap>
 						<Stack direction={'row'} alignItems={'center'} spacing={4} useFlexGap>
-							<Box position={'relative'} width={{ xs: 300, lg: 400 }} height={{ xs: 300, lg: 400 }}>
+							<Box position={'relative'} width={{ xs: 300, lg: 400 }} sx={{ aspectRatio: AspectRatio.SQUARE }}>
 								<Image src={'/svgs/logo-variant.svg'} alt="Logo Signature" fill priority />
 							</Box>
 							<Stack ml={{ xs: '-100px', md: '-120px' }} mt={{ xs: '100px', sm: '50px', md: '150px' }} spacing={2} useFlexGap>
@@ -45,14 +47,10 @@ const HeroSection = (props: Props) => {
 							</Stack>
 						</Stack>
 					</Stack>
-					<Image
-						src={'/images/about_us_hero_figure.png'}
-						alt="Hero Basket"
-						width={375}
-						height={505}
-						quality={100}
-						style={{ objectFit: 'contain', transform: lang === 'ar' ? 'scaleX(-1)' : 'none', marginBottom: mdUp ? '-150px' : '-100px' }}
-					/>
+
+					<Box position={'relative'} width={375} height={505} mb={{ xs: '-100px', md: '-150px' }} sx={{ transform: lang === 'ar' ? 'scaleX(-1)' : 'none' }}>
+						<Image src={'/images/about_us_hero_figure.png'} alt="Hero Basket" quality={100} style={{ objectFit: 'contain' }} fill priority />
+					</Box>
 				</Stack>
 			</Container>
 		</Box>
