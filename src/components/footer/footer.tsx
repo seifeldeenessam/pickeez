@@ -1,7 +1,8 @@
 import { AspectRatio } from '@/enums/aspectRatio';
 import useResponsive from '@/hooks/useResponsive';
 import { Call, Facebook, Instagram, Mail, Place } from '@mui/icons-material';
-import { Box, Container, Divider, Grid, IconButton, Stack, Typography } from '@mui/material';
+import { Box, Container, Divider, Grid, IconButton, Stack, SvgIcon, Typography } from '@mui/material';
+import TikTokSVG from '@svgs/tiktok';
 import useTranslation from 'next-translate/useTranslation';
 import Image from 'next/image';
 import Link from 'next/link';
@@ -76,11 +77,16 @@ const Footer = (props: Props) => {
 								{t('common:footer_description')}
 							</Typography>
 							<Stack direction={'row'} alignItems={'center'} color={'background.paper'} mt={4}>
-								<IconButton size="small" color="inherit">
+								<IconButton href="https://www.facebook.com/PickeezLaundry/" referrerPolicy="no-referrer" size="small" color="inherit">
 									<Facebook />
 								</IconButton>
-								<IconButton size="small" color="inherit">
+								<IconButton href="https://www.instagram.com/pickeezlaundry.ae/" referrerPolicy="no-referrer" size="small" color="inherit">
 									<Instagram />
+								</IconButton>
+								<IconButton href="https://www.tiktok.com/@pickeez" referrerPolicy="no-referrer" size="small" color="inherit">
+									<SvgIcon>
+										<TikTokSVG />
+									</SvgIcon>
 								</IconButton>
 							</Stack>
 						</Stack>
