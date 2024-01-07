@@ -19,7 +19,13 @@ const Footer = (props: Props) => {
 		<Box component={'footer'} width={1} zIndex={1}>
 			{showExtraELement && (
 				<Box position={'relative'} width={1} height={{ xs: 125, md: 250 }} mt={'125px'}>
-					<Image src={'/svgs/footer-announcement.svg'} alt="Footer announcement" style={{ objectFit: 'cover', objectPosition: mdUp ? '50%' : '60%' }} fill priority />
+					<Image
+						src={'/svgs/footer-announcement.svg'}
+						alt="Footer announcement"
+						style={{ objectFit: 'cover', objectPosition: mdUp ? '50%' : '60%', transform: lang === 'ar' ? 'scaleX(-1)' : 'none' }}
+						fill
+						priority
+					/>
 
 					<Container sx={{ position: 'absolute', top: '50%', left: '0', right: '0', transform: 'translate(0, -50%)' }}>
 						<Stack
@@ -59,7 +65,7 @@ const Footer = (props: Props) => {
 							src={`/images/${asPath === '/about-us' ? 'footer_announcement_figure_2.png' : 'footer_announcement_figure_1.png'}`}
 							alt="Call to Action Figure"
 							fill
-							style={{ objectFit: 'contain', transform: 'translate(15%, 0)' }}
+							style={{ objectFit: 'contain', transform: lang === 'ar' ? 'translate(-15%, 0)' : 'translate(15%, 0)' }}
 						/>
 					</Box>
 				</Box>
