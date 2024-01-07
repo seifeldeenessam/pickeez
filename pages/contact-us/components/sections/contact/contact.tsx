@@ -2,6 +2,7 @@ import LocalPhoneOutlinedIcon from '@mui/icons-material/LocalPhoneOutlined';
 import LocationOnOutlinedIcon from '@mui/icons-material/LocationOnOutlined';
 import MailOutlineOutlinedIcon from '@mui/icons-material/MailOutlineOutlined';
 import { Box, Button, Container, Grid, Stack, TextField, Typography } from '@mui/material';
+import { motion } from 'framer-motion';
 import useTranslation from 'next-translate/useTranslation';
 
 const attributes = [
@@ -61,7 +62,7 @@ const ContactSection = (props: Props) => {
 							<TextField placeholder={t('common:email')} name="email" />
 							<TextField placeholder={t('common:subject')} name="subject" />
 							<TextField placeholder={t('common:message')} name="message" />
-							<Button variant="contained" size="large" sx={{ alignSelf: 'center' }} type="submit">
+							<Button component={motion.button} whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }} variant="contained" size="large" sx={{ alignSelf: 'center' }} type="submit">
 								{t('common:send')}
 							</Button>
 						</Box>

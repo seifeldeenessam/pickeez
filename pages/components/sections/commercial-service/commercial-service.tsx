@@ -1,5 +1,6 @@
 import Title from '@/components/title';
 import { Box, Container, Grid, Stack } from '@mui/material';
+import { motion } from 'framer-motion';
 import useTranslation from 'next-translate/useTranslation';
 import Image from 'next/image';
 import ShowcaseCard from 'pages/components/showcase-card';
@@ -8,10 +9,18 @@ import services from './data.json';
 type Props = {};
 
 const CommercialServiceSection = (props: Props) => {
-	const { t, lang } = useTranslation();
+	const { lang } = useTranslation();
 
 	return (
-		<Box component={'section'} width={1} py={6} overflow={'hidden'}>
+		<Box
+			component={motion.section}
+			initial={{ opacity: 0, scaleX: 0 }}
+			whileInView={{ opacity: 1, scaleX: 1 }}
+			transition={{ duration: 0.5 }}
+			viewport={{ once: true }}
+			width={1}
+			py={6}
+			overflow={'hidden'}>
 			<Container>
 				<Stack spacing={6} useFlexGap>
 					<Title title="home:commercial_service_section_title" subtitle="home:commercial_service_section_subtitle" />

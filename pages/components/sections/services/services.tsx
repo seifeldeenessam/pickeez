@@ -1,6 +1,7 @@
 import Title from '@/components/title';
 import useResponsive from '@/hooks/useResponsive';
 import { Box, Container, Stack } from '@mui/material';
+import { motion } from 'framer-motion';
 import Image from 'next/image';
 
 type Props = {};
@@ -9,7 +10,16 @@ const ServicesSection = (props: Props) => {
 	const smUp = useResponsive({ key: 'sm', query: 'up' });
 
 	return (
-		<Box component={'section'} width={1} py={6} overflow={'hidden'} bgcolor={'background.paper'}>
+		<Box
+			component={motion.section}
+			initial={{ opacity: 0, scaleX: 0 }}
+			whileInView={{ opacity: 1, scaleX: 1 }}
+			transition={{ duration: 0.5 }}
+			viewport={{ once: true }}
+			width={1}
+			py={6}
+			overflow={'hidden'}
+			bgcolor={'background.paper'}>
 			<Box position={'relative'} width={1} height={128}>
 				<Image src={'/images/laundry_dryer.png'} alt={'Laundry Dryer'} style={{ objectFit: 'cover', opacity: '0.3' }} fill />
 			</Box>

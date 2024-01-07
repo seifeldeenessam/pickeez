@@ -1,6 +1,7 @@
 import { ArrowDropDown } from '@mui/icons-material';
 import CloseOutlinedIcon from '@mui/icons-material/CloseOutlined';
 import { Button, Drawer, IconButton, Stack, Typography } from '@mui/material';
+import { motion } from 'framer-motion';
 import useTranslation from 'next-translate/useTranslation';
 import { useRouter } from 'next/router';
 import links from '../../data.json';
@@ -35,7 +36,15 @@ const MenuDrawer = ({ handleDrawerClose }: Props) => {
 			</Stack>
 			<Stack px={2} spacing={2} useFlexGap>
 				{links.map((link) => (
-					<Button size="large" endIcon={<ArrowDropDown />} onClick={() => handleNavigate(link.path)} key={link.id} sx={{ justifyContent: 'space-between', color: '#444444' }}>
+					<Button
+						component={motion.button}
+						whileHover={{ scale: 1.1 }}
+						whileTap={{ scale: 0.9 }}
+						size="large"
+						endIcon={<ArrowDropDown />}
+						onClick={() => handleNavigate(link.path)}
+						key={link.id}
+						sx={{ justifyContent: 'space-between', color: '#444444' }}>
 						{t(link.label)}
 					</Button>
 				))}

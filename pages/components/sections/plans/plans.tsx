@@ -3,6 +3,7 @@ import { AspectRatio } from '@/enums/aspectRatio';
 import useResponsive from '@/hooks/useResponsive';
 import { ArrowForward, Check } from '@mui/icons-material';
 import { Box, Button, Container, Divider, Grid, Stack, Typography } from '@mui/material';
+import { motion } from 'framer-motion';
 import useTranslation from 'next-translate/useTranslation';
 import Image from 'next/image';
 import plans from './data.json';
@@ -14,7 +15,17 @@ const PlansSection = (props: Props) => {
 	const smUp = useResponsive({ key: 'sm', query: 'up' });
 
 	return (
-		<Box component={'section'} position={'relative'} width={1} minHeight={'100dvh'} py={6} overflow={'hidden'}>
+		<Box
+			component={motion.section}
+			initial={{ opacity: 0, scaleX: 0 }}
+			whileInView={{ opacity: 1, scaleX: 1 }}
+			transition={{ duration: 0.5 }}
+			viewport={{ once: true }}
+			position={'relative'}
+			width={1}
+			minHeight={'100dvh'}
+			py={6}
+			overflow={'hidden'}>
 			<Box position={'absolute'} top={0} left={'50%'} width={{ xs: 1280, sm: 1 }} height={{ xs: 850, sm: 600, md: 750, lg: 900 }} zIndex={-1} sx={{ transform: 'translate(-50%, 0)' }}>
 				<Image src={'/svgs/curve-texture.svg'} alt="Curve Texture" fill />
 			</Box>
@@ -64,6 +75,9 @@ const PlansSection = (props: Props) => {
 										))}
 									</Stack>
 									<Button
+										component={motion.button}
+										whileHover={{ scale: 1.1 }}
+										whileTap={{ scale: 0.9 }}
 										variant="contained"
 										color="secondary"
 										size="large"

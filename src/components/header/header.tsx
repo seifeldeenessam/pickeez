@@ -1,6 +1,7 @@
 import useResponsive from '@/hooks/useResponsive';
 import { ArrowDropDown, Menu } from '@mui/icons-material';
 import { AppBar, Button, Container, IconButton, Stack, Toolbar } from '@mui/material';
+import { motion } from 'framer-motion';
 import useTranslation from 'next-translate/useTranslation';
 import dynamic from 'next/dynamic';
 import Image from 'next/image';
@@ -24,7 +25,7 @@ const Header = (props: Props) => {
 				<Stack position={'absolute'} left={'50%'} direction={'row'} alignItems={'center'} spacing={2} sx={{ transform: 'translateX(-50%)' }} useFlexGap>
 					{links.map((link) => (
 						<Link href={link.path} style={{ fontFamily: 'inherit', color: 'inherit', textDecoration: 'inherit' }} key={link.id}>
-							<Button endIcon={<ArrowDropDown />} sx={{ color: '#444444' }}>
+							<Button component={motion.button} whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }} endIcon={<ArrowDropDown />} sx={{ color: '#444444' }}>
 								{t(link.label)}
 							</Button>
 						</Link>

@@ -3,6 +3,7 @@ import useResponsive from '@/hooks/useResponsive';
 import { arFont, enSecondaryFont } from '@/theme';
 import { ArrowForward, Call, WatchLater, WhatsApp } from '@mui/icons-material';
 import { Box, Button, Container, Stack, Typography } from '@mui/material';
+import { motion } from 'framer-motion';
 import useTranslation from 'next-translate/useTranslation';
 import Image from 'next/image';
 
@@ -38,6 +39,9 @@ const HeroSection = (props: Props) => {
 											{t('home:hero_header_description')}
 										</Typography>
 										<Button
+											component={motion.button}
+											whileHover={{ scale: 1.1 }}
+											whileTap={{ scale: 0.9 }}
 											variant="contained"
 											color="secondary"
 											size="large"
@@ -55,6 +59,9 @@ const HeroSection = (props: Props) => {
 									{t('home:hero_header_description')}
 								</Typography>
 								<Button
+									component={motion.button}
+									whileHover={{ scale: 1.1 }}
+									whileTap={{ scale: 0.9 }}
 									variant="contained"
 									color="secondary"
 									size="large"
