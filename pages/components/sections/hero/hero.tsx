@@ -11,7 +11,6 @@ type Props = {};
 const HeroSection = (props: Props) => {
 	const { t, lang } = useTranslation();
 	const mdUp = useResponsive({ key: 'md', query: 'up' });
-	const lgUp = useResponsive({ key: 'lg', query: 'up' });
 
 	return (
 		<Box component={'section'} width={1} position={'relative'}>
@@ -23,15 +22,19 @@ const HeroSection = (props: Props) => {
 					<Stack spacing={4} sx={{ fontFamily: lang === 'en' ? enSecondaryFont.style.fontFamily : arFont.style.fontFamily }} useFlexGap>
 						<Stack direction={'row'} alignItems={'center'} spacing={4} mt={4} useFlexGap>
 							<Box position={'relative'} width={{ xs: 300, md: 400 }} sx={{ aspectRatio: AspectRatio.SQUARE }}>
-								<Image src={'/svgs/logo-variant.svg'} alt="Logo Signature" fill priority />
+								<Image src={'/svgs/logo-variant.svg'} alt="Logo Signature" style={{ transform: lang === 'ar' ? 'scaleX(-1)' : 'none' }} fill priority />
 							</Box>
 							<Stack ml={{ xs: '-100px', md: '-120px' }} mt={{ xs: '150px', sm: '50px', md: '270px' }} spacing={2} useFlexGap>
-								<Typography variant={mdUp ? 'h1' : 'h3'} fontWeight={'bold'} fontFamily={'inherit'} lineHeight={1} maxWidth={{ xs: '10ch', sm: '15ch' }}>
+								<Typography variant={mdUp ? 'h1' : 'h3'} fontWeight={'bold'} fontFamily={'inherit'} lineHeight={1} maxWidth={{ xs: '10ch', sm: lang === 'ar' ? '12ch' : '15ch' }}>
 									{t('home:hero_header_title')}
 								</Typography>
 								{mdUp && (
-									<Stack spacing={2} useFlexGap>
-										<Typography color={'secondary.main'} maxWidth={'38ch'} textAlign={{ xs: 'center', md: 'start' }} alignSelf={{ xs: 'center', md: 'flex-start' }}>
+									<Stack spacing={2} mt={2} useFlexGap>
+										<Typography
+											color={'secondary.main'}
+											maxWidth={{ xs: '38ch', md: '67ch' }}
+											textAlign={{ xs: 'center', md: 'justify' }}
+											alignSelf={{ xs: 'center', md: 'flex-start' }}>
 											{t('home:hero_header_description')}
 										</Typography>
 										<Button
@@ -48,7 +51,7 @@ const HeroSection = (props: Props) => {
 						</Stack>
 						{!mdUp && (
 							<Stack spacing={2} useFlexGap>
-								<Typography color={'secondary.main'} maxWidth={'38ch'} textAlign={{ xs: 'center', md: 'start' }} alignSelf={{ xs: 'center', md: 'flex-start' }}>
+								<Typography color={'secondary.main'} maxWidth={{ xs: '38ch', md: '67ch' }} textAlign={{ xs: 'center', md: 'justify' }} alignSelf={{ xs: 'center', md: 'flex-start' }}>
 									{t('home:hero_header_description')}
 								</Typography>
 								<Button
@@ -66,28 +69,40 @@ const HeroSection = (props: Props) => {
 					<Stack position={'absolute'} bottom={'0'} left={'50%'} sx={{ transform: 'translate(-50%, 50%)' }}>
 						<Stack direction={{ xs: 'column', md: 'row' }}>
 							<Stack direction={'row'} alignItems={'center'} px={4} py={2} spacing={2} bgcolor={'#B64FAE'} width={{ xs: 1, lg: 350 }} useFlexGap>
-								<WhatsApp sx={{ fontSize: { xs: '24px', md: '32px' }, transform: lang === 'ar' ? 'scaleX(-1)' : 'none' }} />
+								<WhatsApp sx={{ fontSize: { xs: '24px', md: '32px' } }} />
 								<Stack>
-									<Typography whiteSpace={'nowrap'}>{t('home:hero_sections_1_title')}</Typography>
+									<Typography whiteSpace={'nowrap'} fontWeight={'bold'}>
+										{t('home:hero_sections_1_title')}
+									</Typography>
 									<Typography>{t('home:hero_sections_1_subtitle')}</Typography>
 								</Stack>
 							</Stack>
 							<Stack direction={'row'} alignItems={'center'} px={4} py={2} spacing={2} bgcolor={'#FBB040'} width={{ xs: 1, lg: 350 }} useFlexGap>
 								<WatchLater sx={{ fontSize: { xs: '24px', md: '32px' }, transform: lang === 'ar' ? 'scaleX(-1)' : 'none' }} />
 								<Stack>
-									<Typography whiteSpace={'nowrap'}>{t('home:hero_sections_2_title')}</Typography>
+									<Typography whiteSpace={'nowrap'} fontWeight={'bold'}>
+										{t('home:hero_sections_2_title')}
+									</Typography>
 									<Typography>{t('home:hero_sections_2_subtitle')}</Typography>
 								</Stack>
 							</Stack>
 							<Stack direction={'row'} alignItems={'center'} px={4} py={2} spacing={2} bgcolor={'#71356C'} width={{ xs: 1, lg: 350 }} useFlexGap>
 								<Call sx={{ fontSize: { xs: '24px', md: '32px' }, transform: lang === 'ar' ? 'scaleX(-1)' : 'none' }} />
 								<Stack>
-									<Typography whiteSpace={'nowrap'}>{t('home:hero_sections_3_title')}</Typography>
+									<Typography maxWidth={lang === 'ar' ? '15ch' : '18ch'} fontWeight={'bold'}>
+										{t('home:hero_sections_3_title')}
+									</Typography>
 									<Typography>{t('home:hero_sections_3_subtitle')}</Typography>
 								</Stack>
 							</Stack>
 						</Stack>
-						<Box position={'absolute'} top={0} right={0} width={300} height={400} sx={{ transform: { xs: 'translate(0%, -90%)', md: 'translate(80%, -60%)' } }}>
+						<Box
+							position={'absolute'}
+							top={0}
+							right={0}
+							width={{ xs: 300, md: 400 }}
+							height={{ xs: 400, md: 500 }}
+							sx={{ transform: { xs: 'translate(0%, -90%)', md: 'translate(70%, -65%)' } }}>
 							<Image src={'/images/hero-basket.png'} alt="Hero Basket" style={{ objectFit: 'contain' }} fill priority />
 						</Box>
 					</Stack>

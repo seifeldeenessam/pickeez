@@ -34,7 +34,7 @@ export const theme = (locale: string | undefined) => {
 
 	return createTheme({
 		palette: {
-			primary: { main: '#71356C', light: lightenColor('#71356C', 0.25), dark: darkenColor('#71356C', 0.25) },
+			primary: { main: '#63345B', light: lightenColor('#63345B', 0.25), dark: darkenColor('#63345B', 0.25) },
 			secondary: { main: '#FBB040', light: lightenColor('#FBB040', 0.25), dark: darkenColor('#FBB040', 0.25) },
 			background: { default: '#F9FAFE', paper: '#FFFFFF' },
 			text: { primary: '#71356C', secondary: '#787878' }

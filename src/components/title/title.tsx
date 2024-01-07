@@ -12,7 +12,13 @@ const Title = ({ title, subtitle, white }: Props) => {
 
 	return (
 		<Stack width={1} justifyContent={'center'} alignItems={'center'} spacing={1} useFlexGap>
-			<Divider sx={{ ':before': { borderTopColor: white ? 'transparent' : 'initial' }, ':after': { borderTopColor: white ? 'transparent' : 'initial' } }} flexItem>
+			<Divider
+				sx={{
+					justifyContent: 'center',
+					':before': { borderTopColor: white ? 'background.paper' : 'initial', borderTopStyle: 'dashed', maxWidth: '5ch' },
+					':after': { borderTopColor: white ? 'background.paper' : 'initial', borderTopStyle: 'dashed', maxWidth: '5ch' }
+				}}
+				flexItem>
 				<Typography fontWeight={'bold'} color={white ? 'background.paper' : 'text.secondary'} textAlign={'center'} textTransform={'uppercase'}>
 					{t(title)}
 				</Typography>

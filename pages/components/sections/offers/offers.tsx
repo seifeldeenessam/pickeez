@@ -19,7 +19,7 @@ const OffersSection = (props: Props) => {
 	const swiperStyles: CSSProperties = { '--swiper-theme-color': theme.palette.primary.main, overflowY: 'visible' } as any;
 
 	return (
-		<Box component={'section'} width={1} py={6} overflow={'hidden'} bgcolor={'background.paper'}>
+		<Box component={'section'} width={1} py={6} overflow={'hidden'} bgcolor={'background.paper'} id="offers">
 			<Container>
 				<Stack spacing={4} useFlexGap>
 					<Title title="home:offers_section_title" subtitle="home:offers_section_subtitle" />

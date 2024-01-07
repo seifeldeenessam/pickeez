@@ -13,7 +13,7 @@ const CallToActionSection = (props: Props) => {
 	const smUp = useResponsive({ key: 'sm', query: 'up' });
 
 	return (
-		<Box component={'section'} position={'relative'} width={1} fontFamily={lang === 'en' ? enSecondaryFont.style.fontFamily : arFont.style.fontFamily} overflow={'hidden'}>
+		<Box component={'section'} position={'relative'} width={1} mb={'125px'} fontFamily={lang === 'en' ? enSecondaryFont.style.fontFamily : arFont.style.fontFamily} overflow={'hidden'}>
 			<Box position={'relative'} width={1} minHeight={500}>
 				<Image src={'/images/call_to_action_background.png'} alt="Call to Action Background" sizes="100vw" style={{ objectFit: 'cover' }} fill priority />
 				<Stack

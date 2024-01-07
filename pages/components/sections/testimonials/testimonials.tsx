@@ -1,10 +1,10 @@
 import Title from '@/components/title';
 import { AspectRatio } from '@/enums/aspectRatio';
 import useResponsive from '@/hooks/useResponsive';
-import { Box, Container, Stack, useTheme } from '@mui/material';
+import { Box, Container, Divider, Rating, Stack, Typography, useTheme } from '@mui/material';
 import Image from 'next/image';
 import { CSSProperties } from 'react';
-import { A11y, Autoplay, Pagination } from 'swiper/modules';
+import { A11y, Autoplay } from 'swiper/modules';
 import { Swiper, SwiperSlide } from 'swiper/react';
 
 type Props = {};
@@ -17,28 +17,31 @@ const TestimonialsSection = (props: Props) => {
 
 	return (
 		<Box component={'section'} width={1} py={6} overflow={'hidden'}>
-			<Container>
-				<Stack spacing={4} useFlexGap>
+			<Stack spacing={4} useFlexGap>
+				<Container>
 					<Title title="home:testimonials_section_title" subtitle="home:testimonials_section_subtitle" />
-					<Box width={0.5} mx={'auto'}>
-						<Swiper modules={[Pagination, Autoplay, A11y]} spaceBetween={16} slidesPerView={1.1} centeredSlides pagination={{ clickable: true }} style={swiperStyles} loop>
-							{Array(6)
-								.fill('')
-								.map((testimonial, index) => (
-									<SwiperSlide style={{ aspectRatio: AspectRatio.SQUARE }} key={index}>
-										<Image
-											src={`/images/testimonials/${index + 1}.jpg`}
-											alt={'Client Review'}
-											style={{ objectFit: 'contain', boxShadow: '0px 0px 7px 0px rgba(0, 0, 0, 0.15)', borderRadius: '16px' }}
-											fill
-											quality={100}
-										/>
-									</SwiperSlide>
-								))}
-						</Swiper>
-					</Box>
-				</Stack>
-			</Container>
+				</Container>
+				<Box width={1} p={2}>
+					<Swiper modules={[Autoplay, A11y]} spaceBetween={16} slidesPerView={1.1} breakpoints={{ 426: { slidesPerView: 2.1 }, 769: { slidesPerView: 'auto' } }} style={swiperStyles}>
+						{Array(6)
+							.fill('')
+							.map((testimonial, index) => (
+								<SwiperSlide key={index} style={{ maxWidth: 300 }}>
+									<Stack justifyContent={'center'} alignItems={'center'} bgcolor={'background.paper'} boxShadow={'0px 0px 7px 0px rgba(0, 0, 0, 0.15)'} p={2} spacing={2} useFlexGap>
+										<Box position={'relative'} width={1} sx={{ aspectRatio: AspectRatio.SQUARE }}>
+											<Image src={`/images/testimonials/${index + 1}.png`} alt={'Client Review'} style={{ objectPosition: 'top', objectFit: 'contain' }} fill quality={100} />
+										</Box>
+										<Divider sx={{ width: '15%', borderBottomWidth: '2px', borderColor: 'secondary.main' }} />
+										<Stack pt={0}>
+											<Typography textAlign={'center'}>Customer</Typography>
+											<Rating size="small" value={5} readOnly />
+										</Stack>
+									</Stack>
+								</SwiperSlide>
+							))}
+					</Swiper>
+				</Box>
+			</Stack>
 		</Box>
 	);
 };

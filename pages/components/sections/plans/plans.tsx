@@ -41,7 +41,7 @@ const PlansSection = (props: Props) => {
 									}}
 									useFlexGap>
 									<Stack justifyContent={'center'} alignItems={'center'} spacing={2} useFlexGap>
-										<Image src={plan.icon} alt={plan.title} width={64} height={64} style={{ objectFit: 'contain' }} />
+										<Image src={plan.icon} alt={plan.title} width={64} height={64} quality={100} style={{ objectFit: 'contain' }} />
 										<Stack alignItems={'center'} color={'#444444'}>
 											<Typography variant="h6" fontWeight={'bold'} color={'inherit'}>
 												{t(plan.title)}
