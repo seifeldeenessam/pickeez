@@ -1,11 +1,11 @@
 [
-	{ "id": 1, "icon": "/images/advantages/advantage_delivery.png", "title": "home:advantage_delivery_title" },
-	{ "id": 2, "icon": "/images/advantages/advantage_hours.png", "title": "home:advantage_hours_title" },
-	{ "id": 3, "icon": "/images/advantages/advantage_perfuming.png", "title": "home:advantage_perfuming_title" },
-	{ "id": 4, "icon": "/images/advantages/advantage_subscriptions.png", "title": "home:advantage_subscriptions_title" },
-	{ "id": 5, "icon": "/images/advantages/advantage_discounts.png", "title": "home:advantage_discounts_title" },
-	{ "id": 6, "icon": "/images/advantages/advantage_packaging.png", "title": "home:advantage_packaging_title" },
-	{ "id": 7, "icon": "/images/advantages/advantage_materials.png", "title": "home:advantage_materials_title" },
-	{ "id": 9, "icon": "/images/advantages/advantage_team.png", "title": "home:advantage_team_title" },
-	{ "id": 0, "icon": "/images/advantages/advantage_service.png", "title": "home:advantage_service_title" }
+	{ "id": 1, "icon": "/svgs/advantages/advantage_delivery.svg", "title": "home:advantage_delivery_title" },
+	{ "id": 2, "icon": "/svgs/advantages/advantage_hours.svg", "title": "home:advantage_hours_title" },
+	{ "id": 3, "icon": "/svgs/advantages/advantage_perfuming.svg", "title": "home:advantage_perfuming_title" },
+	{ "id": 4, "icon": "/svgs/advantages/advantage_subscriptions.svg", "title": "home:advantage_subscriptions_title" },
+	{ "id": 5, "icon": "/svgs/advantages/advantage_discounts.svg", "title": "home:advantage_discounts_title" },
+	{ "id": 6, "icon": "/svgs/advantages/advantage_packaging.svg", "title": "home:advantage_packaging_title" },
+	{ "id": 7, "icon": "/svgs/advantages/advantage_materials.svg", "title": "home:advantage_materials_title" },
+	{ "id": 9, "icon": "/svgs/advantages/advantage_team.svg", "title": "home:advantage_team_title" },
+	{ "id": 0, "icon": "/svgs/advantages/advantage_service.svg", "title": "home:advantage_service_title" }
 ]

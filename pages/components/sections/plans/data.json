@@ -1,22 +1,21 @@
 [
 	{
-		"id": 3,
-		"icon": "/images/plans/plan_super.png",
-		"title": "home:plan_super_title",
-		"price": 1200,
+		"id": 1,
+		"icon": "/svgs/plans/plan_basic.svg",
+		"title": "home:plan_basic_title",
+		"price": 500,
 		"features": [
-			{ "id": 1, "title": "home:plan_super_feature_1_title" },
-			{ "id": 2, "title": "home:plan_super_feature_2_title" },
-			{ "id": 3, "title": "home:plan_super_feature_3_title" },
-			{ "id": 4, "title": "home:plan_super_feature_4_title" },
-			{ "id": 5, "title": "home:plan_super_feature_5_title" },
-			{ "id": 6, "title": "home:plan_super_feature_6_title" },
-			{ "id": 7, "title": "home:plan_super_feature_7_title" }
+			{ "id": 1, "title": "home:plan_basic_feature_1_title" },
+			{ "id": 2, "title": "home:plan_basic_feature_2_title" },
+			{ "id": 3, "title": "home:plan_basic_feature_3_title" },
+			{ "id": 4, "title": "home:plan_basic_feature_4_title" },
+			{ "id": 5, "title": "home:plan_basic_feature_5_title" }
 		]
 	},
+
 	{
 		"id": 2,
-		"icon": "/images/plans/plan_advanced.png",
+		"icon": "/svgs/plans/plan_advanced.svg",
 		"title": "home:plan_advanced_title",
 		"price": 850,
 		"features": [
@@ -30,16 +29,18 @@
 		]
 	},
 	{
-		"id": 1,
-		"icon": "/images/plans/plan_basic.png",
-		"title": "home:plan_basic_title",
-		"price": 500,
+		"id": 3,
+		"icon": "/svgs/plans/plan_super.svg",
+		"title": "home:plan_super_title",
+		"price": 1200,
 		"features": [
-			{ "id": 1, "title": "home:plan_basic_feature_1_title" },
-			{ "id": 2, "title": "home:plan_basic_feature_2_title" },
-			{ "id": 3, "title": "home:plan_basic_feature_3_title" },
-			{ "id": 4, "title": "home:plan_basic_feature_4_title" },
-			{ "id": 5, "title": "home:plan_basic_feature_5_title" }
+			{ "id": 1, "title": "home:plan_super_feature_1_title" },
+			{ "id": 2, "title": "home:plan_super_feature_2_title" },
+			{ "id": 3, "title": "home:plan_super_feature_3_title" },
+			{ "id": 4, "title": "home:plan_super_feature_4_title" },
+			{ "id": 5, "title": "home:plan_super_feature_5_title" },
+			{ "id": 6, "title": "home:plan_super_feature_6_title" },
+			{ "id": 7, "title": "home:plan_super_feature_7_title" }
 		]
 	}
 ]

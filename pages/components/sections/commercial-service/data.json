@@ -1,27 +1,27 @@
 [
 	{
 		"id": 1,
-		"icon": "/images/commercial-service/commercial_service_hotels.png",
+		"icon": "/svgs/commercial-service/commercial_service_hotels.svg",
 		"title": "home:commercial_service_hotels_title"
 	},
 	{
 		"id": 2,
-		"icon": "/images/commercial-service/commercial_service_companies.png",
+		"icon": "/svgs/commercial-service/commercial_service_companies.svg",
 		"title": "home:commercial_service_companies_title"
 	},
 	{
 		"id": 3,
-		"icon": "/images/commercial-service/commercial_service_gym.png",
+		"icon": "/svgs/commercial-service/commercial_service_gym.svg",
 		"title": "home:commercial_service_gym"
 	},
 	{
 		"id": 4,
-		"icon": "/images/commercial-service/commercial_service_restaurants.png",
+		"icon": "/svgs/commercial-service/commercial_service_restaurants.svg",
 		"title": "home:commercial_service_restaurants_title"
 	},
 	{
 		"id": 5,
-		"icon": "/images/commercial-service/commercial_service_spas.png",
+		"icon": "/svgs/commercial-service/commercial_service_spas.svg",
 		"title": "home:commercial_service_spas_title"
 	}
 ]
