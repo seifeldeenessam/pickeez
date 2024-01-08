@@ -43,6 +43,6 @@ Changes to the Policy
 a. We may update this Policy from time to time. We will notify you of any material changes by posting the revised Policy on the Website and indicating the date of the last update. Your continued use of the Website after such modifications will constitute your acknowledgment and acceptance of the updated Policy.
 
 Contact Us
-a. If you have any questions, comments, or concerns about this Policy or our privacy practices, please contact us at https://sourmandly.ae/contact-us .
+a. If you have any questions, comments, or concerns about this Policy or our privacy practices, please contact us at https://pickeez.com/contact-us .
 
 By using the Website, you acknowledge that you have read, understood, and agree to the collection, use, and disclosure of your personal information as described in this Policy.
