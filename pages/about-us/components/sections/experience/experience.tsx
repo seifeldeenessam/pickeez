@@ -20,7 +20,7 @@ const ExperienceSection = (props: Props) => {
 					<Stack spacing={2} useFlexGap>
 						<Stack direction={'row'} alignItems={{ xs: 'flex-start', md: 'center' }} spacing={{ xs: 2, md: 4 }} useFlexGap>
 							<Image src={'/svgs/quote.svg'} alt={'Quote icon'} quality={100} width={mdUp ? 150 : 48} height={mdUp ? 150 : 48} />
-							<Typography color={'text.secondary'} variant={mdUp ? 'h4' : 'body1'}>
+							<Typography color={'text.secondary'} textAlign={'justify'} variant={mdUp ? 'h4' : 'body1'}>
 								{t('about-us:experience_section_description')}
 							</Typography>
 						</Stack>

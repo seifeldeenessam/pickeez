@@ -1,5 +1,6 @@
 import { AspectRatio } from '@/enums/aspectRatio';
 import { Box, Container, Grid } from '@mui/material';
+import useTranslation from 'next-translate/useTranslation';
 import Image from 'next/image';
 import OurGoals from './partials/our-goals';
 import OurMission from './partials/our-mission';
@@ -8,13 +9,14 @@ import OurVision from './partials/our-vision';
 type Props = {};
 
 const LaundrySection = (props: Props) => {
+	const { lang } = useTranslation();
 	return (
 		<Box component={'section'} width={1} py={6} bgcolor={'background.paper'}>
 			<Box position={'relative'} width={0.9} mx={'auto'} sx={{ aspectRatio: AspectRatio.WIDE }}>
 				<Image src={'/svgs/laundry_title.svg'} alt="Laundry Title" fill priority />
 			</Box>
 			<Container>
-				<Grid container mt={6} mb={{ xs: '425px', sm: '350px' }} spacing={6} justifyContent={'center'}>
+				<Grid container mt={6} mb={{ xs: '425px', sm: lang == 'ar' ? '450px' : '350px' }} spacing={6} justifyContent={'center'}>
 					<Grid item xs={12} md={6}>
 						<OurVision />
 					</Grid>
