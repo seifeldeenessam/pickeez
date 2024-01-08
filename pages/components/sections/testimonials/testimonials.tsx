@@ -1,7 +1,6 @@
 import Title from '@/components/title';
 import { AspectRatio } from '@/enums/aspectRatio';
 import { Box, Container, Divider, Rating, Stack, Typography, useTheme } from '@mui/material';
-import { motion } from 'framer-motion';
 import Image from 'next/image';
 import { CSSProperties } from 'react';
 import { A11y, Autoplay } from 'swiper/modules';
@@ -26,19 +25,7 @@ const TestimonialsSection = (props: Props) => {
 							.fill('')
 							.map((testimonial, index) => (
 								<SwiperSlide key={index} style={{ maxWidth: 300 }}>
-									<Stack
-										component={motion.section}
-										initial={{ opacity: 0, scale: 0 }}
-										whileInView={{ opacity: 1, scale: 1 }}
-										transition={{ duration: 0.5 }}
-										viewport={{ once: true }}
-										justifyContent={'center'}
-										alignItems={'center'}
-										bgcolor={'background.paper'}
-										boxShadow={'0px 0px 7px 0px rgba(0, 0, 0, 0.15)'}
-										p={2}
-										spacing={2}
-										useFlexGap>
+									<Stack justifyContent={'center'} alignItems={'center'} bgcolor={'background.paper'} boxShadow={'0px 0px 7px 0px rgba(0, 0, 0, 0.15)'} p={2} spacing={2} useFlexGap>
 										<Box position={'relative'} width={1} sx={{ aspectRatio: AspectRatio.SQUARE }}>
 											<Image src={`/images/testimonials/${index + 1}.png`} alt={'Client Review'} style={{ objectPosition: 'top', objectFit: 'contain' }} fill quality={100} />
 										</Box>

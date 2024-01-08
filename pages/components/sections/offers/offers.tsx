@@ -2,7 +2,6 @@ import Title from '@/components/title';
 import useResponsive from '@/hooks/useResponsive';
 import { arFont, enSecondaryFont } from '@/theme';
 import { Box, Chip, Container, Stack, Typography, useTheme } from '@mui/material';
-import { motion } from 'framer-motion';
 import useTranslation from 'next-translate/useTranslation';
 import Image from 'next/image';
 import { CSSProperties } from 'react';
@@ -20,17 +19,7 @@ const OffersSection = (props: Props) => {
 	const swiperStyles: CSSProperties = { '--swiper-theme-color': theme.palette.primary.main, overflowY: 'visible' } as any;
 
 	return (
-		<Box
-			component={motion.section}
-			initial={{ opacity: 0, scaleY: 0 }}
-			whileInView={{ opacity: 1, scaleY: 1 }}
-			transition={{ duration: 0.5 }}
-			viewport={{ once: true }}
-			width={1}
-			py={6}
-			overflow={'hidden'}
-			bgcolor={'background.paper'}
-			id="offers">
+		<Box component={'section'} width={1} py={6} overflow={'hidden'} bgcolor={'background.paper'} id="offers">
 			<Container>
 				<Stack spacing={4} useFlexGap>
 					<Title title="home:offers_section_title" subtitle="home:offers_section_subtitle" />

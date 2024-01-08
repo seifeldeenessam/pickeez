@@ -1,9 +1,5 @@
-import { AspectRatio } from '@/enums/aspectRatio';
 import useResponsive from '@/hooks/useResponsive';
-import { arFont, enSecondaryFont } from '@/theme';
-import { ArrowForward, Call, WatchLater, WhatsApp } from '@mui/icons-material';
-import { Box, Button, Container, Stack, Typography } from '@mui/material';
-import { motion } from 'framer-motion';
+import { Box } from '@mui/material';
 import useTranslation from 'next-translate/useTranslation';
 import Image from 'next/image';
 
@@ -14,8 +10,9 @@ const HeroSection = (props: Props) => {
 	const mdUp = useResponsive({ key: 'md', query: 'up' });
 
 	return (
-		<Box component={'section'} width={1} position={'relative'}>
-			<Image src={'/images/hero-background.jpg'} alt="Hero Background" sizes="100vw" quality={100} style={{ objectFit: 'cover', zIndex: -1 }} fill priority />
+		<Box component={'section'} width={1} minHeight={'845px'} position={'relative'}>
+			<Image src={`/svgs/hero-banner-${mdUp ? 'desktop' : 'mobile'}.svg`} alt="Hero Background" sizes="100vw" quality={100} style={{ objectPosition: 'top' }} fill priority />
+			{/* <Image src={'/images/hero-background.jpg'} alt="Hero Background" sizes="100vw" quality={100} style={{ objectFit: 'cover', zIndex: -1 }} fill priority />
 			<Box sx={{ position: 'absolute', inset: 0, width: 1, height: 1, background: 'linear-gradient(90deg, rgba(113, 53, 108, 0.80) 47.04%, rgba(241, 132, 232, 0.00) 129.92%)', zIndex: -1 }} />
 
 			<Stack height={1} justifyContent={'center'} color={'background.paper'} px={{ xs: 4, md: 8 }} pb={{ xs: '500px', md: 18 }} useFlexGap>
@@ -114,7 +111,7 @@ const HeroSection = (props: Props) => {
 						</Box>
 					</Stack>
 				</Container>
-			</Stack>
+			</Stack> */}
 		</Box>
 	);
 };

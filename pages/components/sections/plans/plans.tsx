@@ -15,18 +15,20 @@ const PlansSection = (props: Props) => {
 	const smUp = useResponsive({ key: 'sm', query: 'up' });
 
 	return (
-		<Box
-			component={motion.section}
-			initial={{ opacity: 0, scaleX: 0 }}
-			whileInView={{ opacity: 1, scaleX: 1 }}
-			transition={{ duration: 0.5 }}
-			viewport={{ once: true }}
-			position={'relative'}
-			width={1}
-			minHeight={'100dvh'}
-			py={6}
-			overflow={'hidden'}>
-			<Box position={'absolute'} top={0} left={'50%'} width={{ xs: 1280, sm: 1 }} height={{ xs: 850, sm: 600, md: 750, lg: 900 }} zIndex={-1} sx={{ transform: 'translate(-50%, 0)' }}>
+		<Box component={'section'} position={'relative'} width={1} minHeight={'100dvh'} py={6} overflow={'hidden'}>
+			<Box
+				component={motion.div}
+				initial={{ opacity: 0 }}
+				whileInView={{ opacity: 1 }}
+				transition={{ duration: 0.5 }}
+				viewport={{ once: true }}
+				position={'absolute'}
+				top={0}
+				left={'50%'}
+				width={{ xs: 1280, sm: 1 }}
+				height={{ xs: 850, sm: 600, md: 750, lg: 900 }}
+				zIndex={-1}
+				sx={{ transform: 'translate(-50%, 0)' }}>
 				<Image src={'/svgs/curve-texture.svg'} alt="Curve Texture" fill />
 			</Box>
 			<Container>
@@ -34,7 +36,16 @@ const PlansSection = (props: Props) => {
 					<Title title="home:plans_section_title" subtitle="home:plans_section_subtitle" white />
 					<Grid container spacing={2}>
 						{plans.map((plan, index, array) => (
-							<Grid item key={plan.id} xs={12} sm={4}>
+							<Grid
+								component={motion.div}
+								initial={{ opacity: 0, y: '100%' }}
+								whileInView={{ opacity: 1, y: '0%' }}
+								transition={{ duration: 0.5 }}
+								viewport={{ once: true }}
+								item
+								key={plan.id}
+								xs={12}
+								sm={4}>
 								<Stack
 									width={1}
 									height={1}

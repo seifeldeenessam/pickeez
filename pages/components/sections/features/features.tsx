@@ -14,13 +14,22 @@ const FeaturesSection = (props: Props) => {
 	const { t, lang } = useTranslation();
 
 	return (
-		<Box component={motion.section} initial={{ opacity: 0, scaleY: 0 }} whileInView={{ opacity: 1, scaleY: 1 }} transition={{ duration: 0.5 }} viewport={{ once: true }} width={1} py={6} mt={15}>
+		<Box component={'section'} width={1} pb={6}>
 			<Container>
 				<Stack spacing={4} useFlexGap>
 					<Title title="home:features_section_title" subtitle="home:features_section_subtitle" />
 					<Grid container spacing={2}>
 						{features.map((feature) => (
-							<Grid item key={feature.id} xs={12} sm={4}>
+							<Grid
+								component={motion.div}
+								initial={{ opacity: 0, y: '100%' }}
+								whileInView={{ opacity: 1, y: '0%' }}
+								transition={{ duration: 0.5 }}
+								viewport={{ once: true }}
+								item
+								key={feature.id}
+								xs={12}
+								sm={4}>
 								<ShowcaseCard {...feature} />
 							</Grid>
 						))}
