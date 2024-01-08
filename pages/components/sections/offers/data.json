@@ -4,7 +4,7 @@
 		"background_color": "#9A81E0",
 		"title": "home:offer_shoes",
 		"image": "/images/offers/offer_shoes.png",
-		"info": { "price": 105, "quaintly": "3 Shoes", "original_price": 150 },
+		"info": { "price": 105, "key": "shoes", "quaintly": "3", "original_price": 150 },
 		"prices": null
 	},
 	{
@@ -14,9 +14,9 @@
 		"image": "/images/offers/offer_sofas.png",
 		"offers": null,
 		"prices": [
-			{ "id": 1, "price": 85, "quantity": "4 Site" },
-			{ "id": 2, "price": 175, "quantity": "8 Site" },
-			{ "id": 3, "price": 130, "quantity": "6 Site" }
+			{ "id": 1, "price": 85, "key": "seats", "quantity": "4" },
+			{ "id": 2, "price": 175, "key": "seats", "quantity": "8" },
+			{ "id": 3, "price": 130, "key": "seats", "quantity": "6" }
 		]
 	},
 	{
@@ -24,7 +24,7 @@
 		"background_color": "#C4C4C4",
 		"title": "home:offer_bags",
 		"image": "/images/offers/offer_bags.png",
-		"info": { "price": 105, "quaintly": "2 Bags", "original_price": 150 },
+		"info": { "price": 105, "key": "bags", "quaintly": "2", "original_price": 150 },
 		"prices": null
 	},
 	{
@@ -34,9 +34,9 @@
 		"image": "/images/offers/offer_mattress.png",
 		"offers": null,
 		"prices": [
-			{ "id": 1, "price": 150, "quantity": "1 Mattress" },
-			{ "id": 2, "price": 180, "quantity": "2 Mattress" },
-			{ "id": 3, "price": 240, "quantity": "3 Mattress" }
+			{ "id": 1, "price": 150, "key": "mattress", "quantity": "1" },
+			{ "id": 2, "price": 180, "key": "mattress", "quantity": "2" },
+			{ "id": 3, "price": 240, "key": "mattress", "quantity": "3" }
 		]
 	}
 ]

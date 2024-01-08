@@ -22,10 +22,10 @@
 			{ "id": 1, "title": "home:plan_advanced_feature_1_title" },
 			{ "id": 2, "title": "home:plan_advanced_feature_2_title" },
 			{ "id": 3, "title": "home:plan_advanced_feature_3_title" },
+			{ "id": 7, "title": "home:plan_advanced_feature_7_title" },
 			{ "id": 4, "title": "home:plan_advanced_feature_4_title" },
 			{ "id": 5, "title": "home:plan_advanced_feature_5_title" },
-			{ "id": 6, "title": "home:plan_advanced_feature_6_title" },
-			{ "id": 7, "title": "home:plan_advanced_feature_7_title" }
+			{ "id": 6, "title": "home:plan_advanced_feature_6_title" }
 		]
 	},
 	{
@@ -37,10 +37,10 @@
 			{ "id": 1, "title": "home:plan_super_feature_1_title" },
 			{ "id": 2, "title": "home:plan_super_feature_2_title" },
 			{ "id": 3, "title": "home:plan_super_feature_3_title" },
+			{ "id": 7, "title": "home:plan_super_feature_7_title" },
 			{ "id": 4, "title": "home:plan_super_feature_4_title" },
 			{ "id": 5, "title": "home:plan_super_feature_5_title" },
-			{ "id": 6, "title": "home:plan_super_feature_6_title" },
-			{ "id": 7, "title": "home:plan_super_feature_7_title" }
+			{ "id": 6, "title": "home:plan_super_feature_6_title" }
 		]
 	}
 ]

@@ -1,7 +1,7 @@
 import Title from '@/components/title';
 import useResponsive from '@/hooks/useResponsive';
 import { arFont, enSecondaryFont } from '@/theme';
-import { Box, Chip, Container, Stack, Typography, useTheme } from '@mui/material';
+import { Box, Container, Stack, Typography, useTheme } from '@mui/material';
 import useTranslation from 'next-translate/useTranslation';
 import Image from 'next/image';
 import { CSSProperties } from 'react';
@@ -42,7 +42,7 @@ const OffersSection = (props: Props) => {
 													{offer.info.price}
 												</Typography>
 												<Typography variant="h3" fontFamily={lang === 'en' ? enSecondaryFont.style.fontFamily : arFont.style.fontFamily} fontWeight={'bold'} color={'#444444'}>
-													{offer.info.quaintly}
+													{offer.info.quaintly} {t(`common:${offer.info.key}`)}
 												</Typography>
 												<Typography
 													variant="subtitle1"
@@ -58,11 +58,17 @@ const OffersSection = (props: Props) => {
 										return (
 											<>
 												{offer.prices.map((price) => (
-													<Stack width={1} direction={'row'} justifyContent={'space-between'} alignItems={'center'} key={price.id}>
-														<Typography variant="h3" fontFamily={lang === 'en' ? enSecondaryFont.style.fontFamily : arFont.style.fontFamily} fontWeight={'bold'}>
+													<Stack width={1} justifyContent={'center'} alignItems={'center'} key={price.id}>
+														<Typography
+															variant="h3"
+															fontFamily={lang === 'en' ? enSecondaryFont.style.fontFamily : arFont.style.fontFamily}
+															fontWeight={'bold'}
+															sx={{ mb: '-5px' }}>
 															{price.price}
 														</Typography>
-														<Chip label={price.quantity} sx={{ borderRadius: 1, bgcolor: 'background.paper', color: 'text.primary' }} />
+														<Typography fontFamily={lang === 'en' ? enSecondaryFont.style.fontFamily : arFont.style.fontFamily} fontWeight={'bold'} color={'#9A81E0'}>
+															{price.quantity} {t(`common:${price.key}`)}
+														</Typography>
 													</Stack>
 												))}
 											</>
@@ -72,7 +78,7 @@ const OffersSection = (props: Props) => {
 
 								return (
 									<SwiperSlide key={offer.id}>
-										<Stack justifyContent={'space-between'} alignItems={'center'} bgcolor={offer.background_color} borderRadius={4} p={2} spacing={2} useFlexGap>
+										<Stack justifyContent={'space-between'} alignItems={'center'} bgcolor={offer.background_color} borderRadius={4} p={1} spacing={2} useFlexGap>
 											<Typography
 												variant="h3"
 												fontFamily={lang === 'en' ? enSecondaryFont.style.fontFamily : arFont.style.fontFamily}
@@ -80,9 +86,9 @@ const OffersSection = (props: Props) => {
 												color={'background.paper'}>
 												{t(offer.title)}
 											</Typography>
-											<Stack width={1} alignItems={'center'} bgcolor={'background.paper'} borderRadius={4}>
-												<Image src={offer.image} alt={offer.title} width={200} height={200} style={{ objectFit: 'contain' }} />
-												<Stack width={1} alignItems={'center'} boxSizing={'border-box'} bgcolor={'#D9D4E9'} borderRadius={4} p={2}>
+											<Stack width={1} justifyContent={'space-between'} alignItems={'center'} bgcolor={'background.paper'} borderRadius={4}>
+												<Image src={offer.image} alt={offer.title} width={250} height={250} style={{ objectFit: 'contain' }} />
+												<Stack width={1} justifyContent={'center'} alignItems={'center'} boxSizing={'border-box'} bgcolor={'#D9D4E9'} borderRadius={4} p={2} height={250}>
 													{renderOfferDetails()}
 												</Stack>
 											</Stack>
