@@ -2,7 +2,7 @@ import { Directions } from '@/enums/directions';
 import { Languages } from '@/enums/languages';
 import { darkenColor, lightenColor } from '@/utilities/colors';
 import { createTheme } from '@mui/material/styles';
-import { Cairo, Jaldi, Open_Sans } from 'next/font/google';
+import { Almarai, Jaldi, Open_Sans } from 'next/font/google';
 
 export const enFont = Open_Sans({
 	weight: ['300', '400', '500', '600', '700'],
@@ -20,9 +20,9 @@ export const enSecondaryFont = Jaldi({
 	preload: true
 });
 
-export const arFont = Cairo({
-	weight: ['300', '400', '500', '600', '700'],
-	subsets: ['latin'],
+export const arFont = Almarai({
+	weight: ['300', '400', '700', '800'],
+	subsets: ['arabic'],
 	display: 'swap',
 	fallback: ['Helvetica', 'Arial', 'sans-serif'],
 	preload: true
