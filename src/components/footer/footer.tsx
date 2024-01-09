@@ -56,7 +56,7 @@ const Footer = (props: Props) => {
 						bottom={0}
 						right={0}
 						width={
-							asPath === '/about-us' ? { xs: 600, sm: 700, md: 800, lg: 900 } : asPath === '/services' ? { xs: 300, sm: 400, md: 600, lg: 800 } : { xs: 525, sm: 600, md: 800, lg: 900 }
+							asPath === '/about-us' ? { xs: 600, sm: 700, md: 800, lg: 900 } : asPath === '/services' ? { xs: 400, sm: 400, md: 600, lg: 800 } : { xs: 525, sm: 600, md: 800, lg: 900 }
 						}
 						zIndex={-1}
 						overflow={'hidden'}

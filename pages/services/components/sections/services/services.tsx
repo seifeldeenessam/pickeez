@@ -35,7 +35,7 @@ const ServicesSection = (props: Props) => {
 	const mdUp = useResponsive({ key: 'md', query: 'up' });
 
 	return (
-		<Box component={'section'} width={1} pt={6} pb={{ xs: '200px', md: '400px' }} bgcolor={'background.paper'}>
+		<Box component={'section'} width={1} pt={6} pb={{ xs: '250px', md: '400px' }} bgcolor={'background.paper'}>
 			<Container>
 				<Grid container spacing={4}>
 					<Grid item xs={12} md={6}>
