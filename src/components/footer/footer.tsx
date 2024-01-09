@@ -14,7 +14,7 @@ const Footer = (props: Props) => {
 	const { asPath } = useRouter();
 	const { t, lang } = useTranslation();
 	const mdUp = useResponsive({ key: 'md', query: 'up' });
-	const showExtraELement: boolean = asPath === '/' || asPath === '/#offers' || asPath === '/about-us';
+	const showExtraELement: boolean = asPath === '/' || asPath === '/#offers' || asPath === '/about-us' || asPath === '/services';
 
 	return (
 		<Box component={'footer'} width={1} zIndex={1}>
@@ -28,7 +28,7 @@ const Footer = (props: Props) => {
 						priority
 					/>
 
-					<Container sx={{ position: 'absolute', top: '50%', left: '0', right: '0', transform: 'translate(0, -50%)' }}>
+					<Container sx={{ position: 'absolute', top: '50%', left: '0', right: '0', transform: { xs: 'translate(0, -40%)', md: 'translate(0, -50%)' } }}>
 						<Stack
 							direction={{ xs: 'column', md: 'row' }}
 							justifyContent={'space-between'}
@@ -55,12 +55,14 @@ const Footer = (props: Props) => {
 						position={'absolute'}
 						bottom={0}
 						right={0}
-						width={asPath === '/about-us' ? { xs: 600, sm: 700, md: 800, lg: 900 } : { xs: 500, sm: 600, md: 700, lg: 800 }}
+						width={
+							asPath === '/about-us' ? { xs: 600, sm: 700, md: 800, lg: 900 } : asPath === '/services' ? { xs: 300, sm: 400, md: 600, lg: 800 } : { xs: 525, sm: 600, md: 800, lg: 900 }
+						}
 						zIndex={-1}
 						overflow={'hidden'}
-						sx={{ aspectRatio: AspectRatio.SQUARE }}>
+						sx={{ aspectRatio: asPath === '/services' ? '5/4' : AspectRatio.SQUARE }}>
 						<Image
-							src={`/images/${asPath === '/about-us' ? 'footer_announcement_figure_2.png' : 'footer_announcement_figure_1.png'}`}
+							src={`/images/${asPath === '/about-us' ? 'figure_2.png' : asPath === '/services' ? 'basket_3.png' : 'figure_1.png'}`}
 							alt="Call to Action Figure"
 							fill
 							style={{ objectFit: 'contain', transform: lang === 'ar' ? 'translate(-10%, 0)' : 'translate(10%, 0)' }}
