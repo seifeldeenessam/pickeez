@@ -49,7 +49,7 @@ const HeroSection = (props: Props) => {
 					</Stack>
 
 					<Box position={'relative'} width={375} height={505} mb={{ xs: '-100px', md: '-150px' }} sx={{ transform: lang === 'ar' ? 'scaleX(-1)' : 'none' }}>
-						<Image src={'/images/about_us_hero_figure.png'} alt="Hero Basket" quality={100} style={{ objectFit: 'contain' }} fill priority />
+						<Image src={'/images/figure_3.png'} alt="Hero Basket" quality={100} style={{ objectFit: 'contain' }} fill priority />
 					</Box>
 				</Stack>
 			</Container>
