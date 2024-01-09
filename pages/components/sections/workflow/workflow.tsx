@@ -2,11 +2,13 @@ import Title from '@/components/title';
 import useResponsive from '@/hooks/useResponsive';
 import { Box, Container, Stack } from '@mui/material';
 import { motion } from 'framer-motion';
+import useTranslation from 'next-translate/useTranslation';
 import Image from 'next/image';
 
 type Props = {};
 
 const WorkflowSection = (props: Props) => {
+	const { lang } = useTranslation();
 	const smUp = useResponsive({ key: 'sm', query: 'up' });
 
 	return (
@@ -33,7 +35,7 @@ const WorkflowSection = (props: Props) => {
 						spacing={10}
 						mt={4}
 						useFlexGap>
-						<Image src={`/svgs/workflow-${smUp ? 'desktop' : 'mobile'}.svg`} alt="Workflow" fill priority />
+						<Image src={`/svgs/workflow/${smUp ? 'desktop' : 'mobile'}_${lang}.svg`} alt="Workflow" placeholder="blur" blurDataURL="/images/loading_spinner.png" fill priority />
 					</Stack>
 				</Stack>
 			</Container>

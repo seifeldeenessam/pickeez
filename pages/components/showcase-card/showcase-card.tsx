@@ -20,18 +20,18 @@ const ShowcaseCard = ({ icon, title, description }: Props) => {
 			alignItems={'center'}
 			bgcolor={'background.paper'}
 			boxShadow={'0px 0px 7px 0px rgba(0, 0, 0, 0.15)'}
-			sx={{ aspectRatio: AspectRatio.SQUARE }}
+			sx={{ aspectRatio: AspectRatio.SQUARE, transition: 'all 250ms ease-in-out', ':hover': { borderRadius: 2, boxShadow: '0px 0px 7px 0px rgba(0, 0, 0, 0.30)' } }}
 			spacing={2}
 			p={2}
 			useFlexGap>
 			<Box position={'relative'} width={0.5} maxWidth={96} sx={{ aspectRatio: AspectRatio.SQUARE }}>
-				<Image src={icon} alt={title} style={{ objectFit: 'contain' }} fill />
+				<Image src={icon} alt={title} style={{ objectFit: 'contain' }} placeholder="blur" blurDataURL="/images/loading_spinner.png" fill />
 			</Box>
-			<Typography fontWeight={'bold'} textAlign={'center'}>
+			<Typography fontWeight={'bold'} textAlign={'center'} sx={{ userSelect: 'none' }}>
 				{t(title)}
 			</Typography>
 			{description && (
-				<Typography variant="body2" color={'text.secondary'} textAlign={'center'} maxWidth={'35ch'}>
+				<Typography variant="body2" color={'text.secondary'} textAlign={'center'} maxWidth={'35ch'} sx={{ userSelect: 'none' }}>
 					{t(description)}
 				</Typography>
 			)}

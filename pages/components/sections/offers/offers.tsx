@@ -29,7 +29,7 @@ const OffersSection = (props: Props) => {
 							spaceBetween={16}
 							slidesPerView={1.1}
 							centeredSlides={!smUp}
-							breakpoints={{ 426: { slidesPerView: 2 }, 769: { slidesPerView: 4 } }}
+							breakpoints={{ 500: { slidesPerView: 2 }, 769: { slidesPerView: 4 } }}
 							pagination={{ clickable: true }}
 							style={swiperStyles}
 							loop>

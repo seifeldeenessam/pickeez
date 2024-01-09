@@ -1,54 +1,63 @@
 [
 	{
 		"id": 3,
+		"name": "dry_cleaning",
 		"icon": "/svgs/features/feature_dry_cleaning.svg",
 		"title": "home:feature_dry_cleaning_title",
 		"description": "home:feature_dry_cleaning_description"
 	},
 	{
 		"id": 1,
+		"name": "washing",
 		"icon": "/svgs/features/feature_washing.svg",
 		"title": "home:feature_washing_title",
 		"description": "home:feature_washing_description"
 	},
 	{
 		"id": 2,
+		"name": "ironing",
 		"icon": "/svgs/features/feature_ironing.svg",
 		"title": "home:feature_ironing_title",
 		"description": "home:feature_ironing_description"
 	},
 	{
 		"id": 4,
+		"name": "shoes_cleaning",
 		"icon": "/svgs/features/feature_shoes_cleaning.svg",
 		"title": "home:feature_shoes_cleaning_title",
 		"description": "home:feature_shoes_cleaning_description"
 	},
 	{
 		"id": 5,
+		"name": "carpet_cleaning",
 		"icon": "/svgs/features/feature_carpet_cleaning.svg",
 		"title": "home:feature_carpet_cleaning_title",
 		"description": "home:feature_carpet_cleaning_description"
 	},
 	{
 		"id": 6,
+		"name": "furniture_cleaning",
 		"icon": "/svgs/features/feature_furniture_cleaning.svg",
 		"title": "home:feature_furniture_cleaning_title",
 		"description": "home:feature_furniture_cleaning_description"
 	},
 	{
 		"id": 7,
+		"name": "mattress_cleaning",
 		"icon": "/svgs/features/feature_mattress_cleaning.svg",
 		"title": "home:feature_mattress_cleaning_title",
 		"description": "home:feature_mattress_cleaning_description"
 	},
 	{
 		"id": 8,
+		"name": "curtains_cleaning",
 		"icon": "/svgs/features/feature_curtains_cleaning.svg",
 		"title": "home:feature_curtains_cleaning_title",
 		"description": "home:feature_curtains_cleaning_description"
 	},
 	{
 		"id": 9,
+		"name": "laundry_bags",
 		"icon": "/svgs/features/feature_laundry_bags.svg",
 		"title": "home:feature_laundry_bags_title",
 		"description": "home:feature_laundry_bags_description"

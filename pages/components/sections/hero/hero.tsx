@@ -10,8 +10,18 @@ const HeroSection = (props: Props) => {
 	const mdUp = useResponsive({ key: 'md', query: 'up' });
 
 	return (
-		<Box component={'section'} width={1} minHeight={'845px'} position={'relative'}>
-			<Image src={`/svgs/hero-banner-${mdUp ? 'desktop' : 'mobile'}-${lang}.svg`} alt="Hero Background" sizes="100vw" quality={100} style={{ objectPosition: 'top' }} fill priority />
+		<Box component={'section'} position={'relative'} width={1} height={{ xs: 800, md: 850 }}>
+			<Image
+				src={`/svgs/home-hero/${mdUp ? 'desktop' : 'mobile'}_${lang}.svg`}
+				alt="Hero Background"
+				placeholder="blur"
+				blurDataURL="/images/loading_spinner.png"
+				sizes="100vw"
+				quality={100}
+				style={{ objectPosition: 'top', objectFit: 'cover' }}
+				fill
+				priority
+			/>
 		</Box>
 	);
 };

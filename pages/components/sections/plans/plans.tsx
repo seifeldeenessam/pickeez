@@ -36,16 +36,7 @@ const PlansSection = (props: Props) => {
 					<Title title="home:plans_section_title" subtitle="home:plans_section_subtitle" white />
 					<Grid container spacing={2}>
 						{plans.map((plan, index, array) => (
-							<Grid
-								component={motion.div}
-								initial={{ opacity: 0, y: '100%' }}
-								whileInView={{ opacity: 1, y: '0%' }}
-								transition={{ duration: 0.5 }}
-								viewport={{ once: true }}
-								item
-								key={plan.id}
-								xs={12}
-								sm={4}>
+							<Grid component={motion.div} initial="hidden" whileInView="visible" viewport={{ once: true }} item key={plan.id} xs={12} sm={4}>
 								<Stack
 									width={1}
 									height={1}
@@ -63,7 +54,16 @@ const PlansSection = (props: Props) => {
 									}}
 									useFlexGap>
 									<Stack justifyContent={'center'} alignItems={'center'} spacing={2} useFlexGap>
-										<Image src={plan.icon} alt={plan.title} width={64} height={64} quality={100} style={{ objectFit: 'contain' }} />
+										<Image
+											src={plan.icon}
+											alt={plan.title}
+											placeholder="blur"
+											blurDataURL="/images/loading_spinner.png"
+											width={64}
+											height={64}
+											quality={100}
+											style={{ objectFit: 'contain' }}
+										/>
 										<Stack alignItems={'center'} color={'#444444'}>
 											<Typography variant="h6" fontWeight={'bold'} color={'inherit'}>
 												{t(plan.title)}

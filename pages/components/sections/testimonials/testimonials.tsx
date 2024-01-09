@@ -1,10 +1,10 @@
 import Title from '@/components/title';
-import { AspectRatio } from '@/enums/aspectRatio';
-import { Box, Container, Divider, Rating, Stack, Typography, useTheme } from '@mui/material';
-import Image from 'next/image';
+import { arFont } from '@/theme';
+import { Avatar, Box, Card, CardContent, Container, Divider, Rating, Stack, Typography, useTheme } from '@mui/material';
 import { CSSProperties } from 'react';
 import { A11y, Autoplay } from 'swiper/modules';
 import { Swiper, SwiperSlide } from 'swiper/react';
+import testimonials from './data.json';
 
 type Props = {};
 
@@ -21,22 +21,36 @@ const TestimonialsSection = (props: Props) => {
 				</Container>
 				<Box width={1} p={2}>
 					<Swiper modules={[Autoplay, A11y]} spaceBetween={16} slidesPerView={1.1} breakpoints={{ 426: { slidesPerView: 2.1 }, 769: { slidesPerView: 'auto' } }} style={swiperStyles}>
-						{Array(6)
-							.fill('')
-							.map((testimonial, index) => (
-								<SwiperSlide key={index} style={{ maxWidth: 300 }}>
-									<Stack justifyContent={'center'} alignItems={'center'} bgcolor={'background.paper'} boxShadow={'0px 0px 7px 0px rgba(0, 0, 0, 0.15)'} p={2} spacing={2} useFlexGap>
-										<Box position={'relative'} width={1} sx={{ aspectRatio: AspectRatio.SQUARE }}>
-											<Image src={`/images/testimonials/${index + 1}.png`} alt={'Client Review'} style={{ objectPosition: 'top', objectFit: 'contain' }} fill quality={100} />
-										</Box>
-										<Divider sx={{ width: '15%', borderBottomWidth: '2px', borderColor: 'secondary.main' }} />
-										<Stack pt={0}>
-											<Typography textAlign={'center'}>Customer</Typography>
-											<Rating size="small" value={5} readOnly />
+						{testimonials.map((testimonial, index) => (
+							<SwiperSlide key={index} style={{ maxWidth: 300, aspectRatio: '3/4' }}>
+								<Card sx={{ height: 1 }}>
+									<CardContent sx={{ height: 1 }}>
+										<Stack height={1} justifyContent={'space-between'} alignItems={'center'} spacing={4} useFlexGap>
+											<Stack p={2}>
+												{testimonial.messages.map((message, index) => (
+													<Typography key={index} textAlign={'center'} color={'text.secondary'} fontFamily={arFont.style.fontFamily}>
+														{message}
+													</Typography>
+												))}
+											</Stack>
+											<Stack spacing={1} alignItems={'center'} useFlexGap>
+												<Divider sx={{ width: '50%', borderBottomWidth: '1px', borderColor: 'secondary.main', mb: 2 }} />
+												<Avatar src={`/images/avatars/${index + 1}.jpg`} alt={testimonial.name} />
+												<Stack alignItems={'center'}>
+													<Typography textAlign={'center'} fontWeight={'bold'}>
+														{testimonial.name}
+													</Typography>
+													<Typography variant="body2" textAlign={'center'} gutterBottom>
+														Customer
+													</Typography>
+													<Rating size="small" value={5} readOnly />
+												</Stack>
+											</Stack>
 										</Stack>
-									</Stack>
-								</SwiperSlide>
-							))}
+									</CardContent>
+								</Card>
+							</SwiperSlide>
+						))}
 					</Swiper>
 				</Box>
 			</Stack>
