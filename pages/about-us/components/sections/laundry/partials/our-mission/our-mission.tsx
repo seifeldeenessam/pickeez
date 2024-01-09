@@ -30,8 +30,8 @@ const OurMission = (props: Props) => {
 						{t('about-us:our_mission_description')}
 					</Typography>
 				</Stack>
-				<Box position={'relative'} width={187 * 1.75} height={191 * 1.75} mb={-2} mt={'auto'} mx={'auto'}>
-					<Image src={'/images/our_mission_figure.png'} alt="Vision Figure" fill />
+				<Box position={'relative'} width={3318 * 0.125} height={3432 * 0.125} mb={-2} mt={2} mx={'auto'}>
+					<Image src={'/images/figure_4.png'} alt="Vision Figure" style={{ objectFit: 'cover' }} fill />
 				</Box>
 			</Stack>
 		</Box>

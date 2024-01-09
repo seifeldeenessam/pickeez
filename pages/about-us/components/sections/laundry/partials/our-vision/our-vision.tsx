@@ -34,8 +34,8 @@ const OurVision = (props: Props) => {
 						{t('about-us:our_vision_description_2')}
 					</Typography>
 				</Stack>
-				<Box position={'relative'} width={1} mt={'auto'} mb={{ xs: '-50px', md: '-80px' }} mx={'auto'} sx={{ aspectRatio: '4/3' }}>
-					<Image src={'/images/our_vision_figure.png'} alt="Vision Figure" fill />
+				<Box position={'relative'} width={1} mt={2} mb={{ xs: '-50px', md: '-50px' }} mx={'auto'} sx={{ aspectRatio: '4/3' }}>
+					<Image src={'/images/laundry.png'} alt="Vision Figure" fill />
 				</Box>
 			</Stack>
 		</Box>
