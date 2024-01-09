@@ -18,7 +18,7 @@ const HeroSection = (props: Props) => {
 				blurDataURL="/images/loading_spinner.png"
 				sizes="100vw"
 				quality={100}
-				style={{ objectPosition: 'top', objectFit: 'cover' }}
+				style={{ objectPosition: 'top', objectFit: 'contain' }}
 				fill
 				priority
 			/>
