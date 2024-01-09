@@ -1,21 +1,30 @@
 {
-	"hero_header_subtitle": "Our Services",
+	"title": "Our Laundry Services",
+
 	"service_washing_title": "Washing",
-	"service_washing_description": "Premium laundry meets convenience. Try the experience today in Abu Dhabi",
+	"service_washing_description": "Washing involves sorting clothes, loading them into a washing machine, adding detergent, and selecting an appropriate wash cycle. The machine agitates, rinses, and spins the clothes to remove dirt and stains. After washing, clothes are transferred to a dryer. This water-based method is suitable for most fabrics, providing a thorough and cost-effective way to clean everyday clothing.",
+
 	"service_ironing_title": "Iron",
-	"service_ironing_description": "The last time you will have to worry about doing your own laundry",
+	"service_ironing_description": "Ironing service is the process of using a heated iron to remove wrinkles and creases from clothes. It helps to smooth out fabric, giving a neat and polished appearance. The iron is typically set to the appropriate temperature for the fabric type, and the process involves pressing the iron over the garment while it's placed on an ironing board. Ironing is commonly done after washing and drying to enhance the overall appearance of clothing.",
+
 	"service_dry_cleaning_title": "Dry Clean",
-	"service_dry_cleaning_description": "Go above and beyond to guarantee you look your best",
-	"service_shoes_cleaning_title": "Shoes Clean",
-	"service_shoes_cleaning_description": "Have your shoes clean , polished and dyed by professionals",
+	"service_dry_cleaning_description": "Dry cleaning is a cleaning process that uses a solvent, typically perchloroethylene, to clean fabrics without using water. It's effective for delicate or sensitive materials that may be damaged by traditional washing methods. The solvent removes stains and dirt, and the garments are then dried and pressed.",
+
+	"service_shoes_cleaning_title": "Shoes Spa",
+	"service_shoes_cleaning_description": "A shoes spa section includes variety services like cleaning, painting , and dry clean for footwear. This can include professional cleaning to remove dirt and stains, painting ,and polishing to restore the shoes' appearance. Shoe spas may also offer treatments such as waterproofing or conditioning to extend the life of the shoes. These services aim to rejuvenate and refresh footwear, providing a specialized approach to shoe care beyond what a simple cleaning might achieve.",
+
 	"service_carpet_cleaning_title": "Carpet Clean",
-	"service_carpet_cleaning_description": "A deeper, longer-lasting clean to your carpets.",
+	"service_carpet_cleaning_description": "Our carpet cleaning services involves the removal of dirt, stains, and allergens from carpets to improve their appearance and hygiene. Various methods are used, including steam cleaning, dry cleaning, and carpet shampooing using the newest technology . Typically, a cleaning solution is applied to the carpet, followed by agitating the fibers to loosen dirt. The carpet is then rinsed or vacuumed to extract the cleaning solution along with the dirt. Using our professional carpet cleaning helps maintain the carpet's longevity and contributes to a healthier indoor environment by reducing allergens and bacteria.",
+
 	"service_furniture_cleaning_title": "Furniture Clean",
-	"service_furniture_cleaning_description": "Professional technicians with high equipments that cleans virtually every type of Fabric",
+	"service_furniture_cleaning_description": "Furniture cleaning is the process of removing dirt, stains, and dust from upholstered or fabric-covered furniture. This can involve vacuuming, spot cleaning, and using specialized cleaning solutions. The goal is to refresh and maintain the appearance of the furniture while also addressing any stains or odors. Our professional furniture cleaning services utilize steam cleaning or dry cleaning methods, depending on the type of fabric. Regular furniture cleaning helps prolong the life of the upholstery and contributes to a cleaner and more hygienic living space.",
+
 	"service_mattress_cleaning_title": "Mattress Clean",
-	"service_mattress_cleaning_description": "Get a better night's sleep with a mattress professionally cleaned",
+	"service_mattress_cleaning_description": "Mattress cleaning involves removing dust, allergens, and stains from a mattress to maintain a clean and healthy sleeping environment. Vacuuming the mattress surface is a common initial step to eliminate dust mites and debris. Stain removal might require spot cleaning with appropriate solutions. Additionally, some choose to deodorize and sanitize their mattresses. Our Professional mattress cleaning services use steam cleaning or dry cleaning methods for a more thorough and effective cleaning process. Regular mattress maintenance contributes to a cleaner sleeping space and can help extend the lifespan of the mattress.",
+
 	"service_curtains_cleaning_title": "Curtains Clean",
-	"service_curtains_cleaning_description": "Freshen up your curtains with our quick and easy curtain cleaning service",
-	"service_laundry_bags_title": "Laundry Bags",
-	"service_laundry_bags_description": "A weekly bag that can hold over 100 pieces of clothes"
+	"service_curtains_cleaning_description": "Cleaning curtains involves removing dust, allergens, and stains to maintain their appearance and hygiene. The cleaning method depends on the fabric and care instructions. For machine-washable curtains, laundering according to the fabric's guidelines is common. Regular vacuuming with an upholstery attachment helps remove surface dust. Spot cleaning can address stains, but it's essential to test cleaning products in an inconspicuous area first. Our Professional curtain cleaning services use specialized techniques to ensure thorough cleaning without damaging the fabric. Regular curtain maintenance contributes to a fresh and well-maintained living space.",
+
+	"service_laundry_bags_title": "Bags Spa",
+	"service_laundry_bags_description": "A bags spa section includes to a service that offers normal cleaning, and dry cleaning for various types of bags, such as handbags, backpacks, or purses. These services include professional cleaning to remove stains and dirt, and overall conditioning to restore the bag's appearance. Bag spas aim to extend the life of the accessory and enhance its overall condition. We also offer treatments like waterproofing or color restoration. Utilizing a bags spa can be a way to give your bags a fresh and polished look, especially for high-quality or sentimental items."
 }
