@@ -3,7 +3,6 @@ import { ArrowForward } from '@mui/icons-material';
 import { Box, Button, Container, Grid, Stack } from '@mui/material';
 import { motion } from 'framer-motion';
 import useTranslation from 'next-translate/useTranslation';
-import Link from 'next/link';
 import { useRouter } from 'next/router';
 import ShowcaseCard from 'pages/components/showcase-card';
 import features from './data.json';
@@ -31,9 +30,7 @@ const FeaturesSection = (props: Props) => {
 								key={feature.id}
 								xs={12}
 								sm={4}>
-								<Link href={`/services#${feature.name}`} style={{ textDecoration: 'unset', color: 'unset' }}>
-									<ShowcaseCard {...feature} />
-								</Link>
+								<ShowcaseCard {...feature} />
 							</Grid>
 						))}
 					</Grid>
