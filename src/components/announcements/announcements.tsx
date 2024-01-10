@@ -1,5 +1,5 @@
-import { Call, Login } from '@mui/icons-material';
-import { Box, Button, Container, IconButton, Stack } from '@mui/material';
+import { Call } from '@mui/icons-material';
+import { Box, Button, Container, Stack } from '@mui/material';
 import useTranslation from 'next-translate/useTranslation';
 
 type Props = {};
@@ -14,9 +14,6 @@ const Announcements = (props: Props) => {
 					<Button color="inherit" startIcon={<Call sx={{ transform: lang === 'ar' ? 'scaleX(-1)' : 'none' }} />}>
 						050 1044 566 - 02 6760 068
 					</Button>
-					<IconButton color="inherit">
-						<Login sx={{ transform: lang === 'ar' ? 'scaleX(-1)' : 'none' }} />
-					</IconButton>
 				</Stack>
 			</Container>
 		</Box>
