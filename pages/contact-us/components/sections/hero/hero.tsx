@@ -12,7 +12,7 @@ const HeroSection = (props: Props) => {
 	return (
 		<Box component={'section'} position={'relative'} width={1} sx={{ aspectRatio: { xs: '3/6', md: '16/10' } }}>
 			<Image
-				src={`/svgs/contact-us-hero/${mdUp ? 'desktop' : 'mobile'}_${lang}.svg`}
+				src={`/svgs/contact_hero/${mdUp ? 'desktop' : 'mobile'}_${lang}.svg`}
 				alt="Hero Background"
 				sizes="100vw"
 				quality={100}

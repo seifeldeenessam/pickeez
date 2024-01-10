@@ -10,15 +10,15 @@ const HeroSection = (props: Props) => {
 	const mdUp = useResponsive({ key: 'md', query: 'up' });
 
 	return (
-		<Box component={'section'} position={'relative'} width={1} height={{ xs: 800, md: 850 }}>
+		<Box component={'section'} position={'relative'} width={1} sx={{ aspectRatio: { xs: '3/6', md: '16/8' } }}>
 			<Image
-				src={`/svgs/home-hero/${mdUp ? 'desktop' : 'mobile'}_${lang}.svg`}
+				src={`/svgs/home_hero/${mdUp ? 'desktop' : 'mobile'}_${lang}.svg`}
 				alt="Hero Background"
 				placeholder="blur"
 				blurDataURL="/images/loading_spinner.png"
 				sizes="100vw"
 				quality={100}
-				style={{ objectPosition: 'top', objectFit: 'contain' }}
+				style={{ objectPosition: 'top', objectFit: 'cover' }}
 				fill
 				priority
 			/>

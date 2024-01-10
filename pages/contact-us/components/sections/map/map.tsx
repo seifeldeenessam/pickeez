@@ -1,7 +1,7 @@
 import { Box, Container } from '@mui/material';
 
 const mapURL =
-	'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d552.7418205166034!2d54.46427482071701!3d24.352997926118157!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e5e41af3fe86caf%3A0x674f35140f50fd7c!2sM%20Store%205!5e0!3m2!1sen!2seg!4v1704107937604!5m2!1sen!2seg';
+	'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3634.860076822867!2d54.4631333!3d24.3513663!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e5e413fc0353b79%3A0x51c64e1a54bfa78e!2sPickeez%20Laundry!5e0!3m2!1sen!2sus!4v1704874703997!5m2!1sen!2sus';
 
 type Props = {};
 

@@ -20,7 +20,7 @@ const TestimonialsSection = (props: Props) => {
 					<Title title="home:testimonials_section_title" subtitle="home:testimonials_section_subtitle" />
 				</Container>
 				<Box width={1} p={2}>
-					<Swiper modules={[Autoplay, A11y]} spaceBetween={16} slidesPerView={1.1} breakpoints={{ 550: { slidesPerView: 2.1 }, 769: { slidesPerView: 'auto' } }} style={swiperStyles}>
+					<Swiper modules={[Autoplay, A11y]} spaceBetween={16} slidesPerView={1.1} breakpoints={{ 769: { slidesPerView: 'auto' } }} style={swiperStyles}>
 						{testimonials.map((testimonial, index) => (
 							<SwiperSlide key={index} style={{ maxWidth: 300, aspectRatio: '3/4' }}>
 								<Card sx={{ height: 1 }}>
