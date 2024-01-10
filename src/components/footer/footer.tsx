@@ -19,7 +19,7 @@ const Footer = (props: Props) => {
 	return (
 		<Box component={'footer'} width={1} zIndex={1}>
 			{showExtraELement && (
-				<Box position={'relative'} width={1} height={{ xs: 125, md: 250 }}>
+				<Box position={'relative'} width={1} sx={{ aspectRatio: { xs: '21/6', sm: '21/4', md: '21/6', lg: '21/3' } }}>
 					<Image
 						src={'/svgs/footer-announcement.svg'}
 						alt="Footer announcement"
