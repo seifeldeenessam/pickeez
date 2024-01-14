@@ -15,8 +15,8 @@
 		"offers": null,
 		"prices": [
 			{ "id": 1, "price": 85, "key": "seats", "quantity": "4" },
-			{ "id": 2, "price": 175, "key": "seats", "quantity": "8" },
-			{ "id": 3, "price": 130, "key": "seats", "quantity": "6" }
+			{ "id": 3, "price": 130, "key": "seats", "quantity": "6" },
+			{ "id": 2, "price": 175, "key": "seats", "quantity": "8" }
 		]
 	},
 	{
@@ -34,9 +34,9 @@
 		"image": "/images/offers/offer_mattress.png",
 		"offers": null,
 		"prices": [
-			{ "id": 1, "price": 150, "key": "mattress", "quantity": "1" },
-			{ "id": 2, "price": 180, "key": "mattress", "quantity": "2" },
-			{ "id": 3, "price": 240, "key": "mattress", "quantity": "3" }
+			{ "id": 1, "price": 150, "key": "mattress", "quantity": "One" },
+			{ "id": 2, "price": 180, "key": "mattress", "quantity": "Two" },
+			{ "id": 3, "price": 240, "key": "mattress", "quantity": "Three" }
 		]
 	}
 ]

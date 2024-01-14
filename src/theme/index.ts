@@ -2,7 +2,7 @@ import { Directions } from '@/enums/directions';
 import { Languages } from '@/enums/languages';
 import { darkenColor, lightenColor } from '@/utilities/colors';
 import { createTheme } from '@mui/material/styles';
-import { Almarai, Jaldi, Open_Sans } from 'next/font/google';
+import { Almarai, Jaldi, Jomhuria, Open_Sans } from 'next/font/google';
 
 export const enFont = Open_Sans({
 	weight: ['300', '400', '500', '600', '700'],
@@ -14,6 +14,14 @@ export const enFont = Open_Sans({
 
 export const enSecondaryFont = Jaldi({
 	weight: ['400', '700'],
+	subsets: ['latin'],
+	display: 'swap',
+	fallback: ['Helvetica', 'Arial', 'sans-serif'],
+	preload: true
+});
+
+export const offerNumbersFont = Jomhuria({
+	weight: ['400'],
 	subsets: ['latin'],
 	display: 'swap',
 	fallback: ['Helvetica', 'Arial', 'sans-serif'],

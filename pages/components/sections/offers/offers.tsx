@@ -1,7 +1,7 @@
 import Title from '@/components/title';
 import useResponsive from '@/hooks/useResponsive';
-import { arFont, enSecondaryFont } from '@/theme';
-import { Box, Container, Stack, Typography, useTheme } from '@mui/material';
+import { arFont, enSecondaryFont, offerNumbersFont } from '@/theme';
+import { Box, Chip, Container, Divider, Stack, Typography, useTheme } from '@mui/material';
 import useTranslation from 'next-translate/useTranslation';
 import Image from 'next/image';
 import { CSSProperties } from 'react';
@@ -38,12 +38,23 @@ const OffersSection = (props: Props) => {
 									if (offer.info) {
 										return (
 											<>
-												<Typography variant="h1" fontFamily={lang === 'en' ? enSecondaryFont.style.fontFamily : arFont.style.fontFamily} fontWeight={'bold'} lineHeight={0.75}>
+												<Typography variant="h1" fontFamily={offerNumbersFont.style.fontFamily} lineHeight={0.75}>
 													{offer.info.price}
 												</Typography>
-												<Typography variant="h3" fontFamily={lang === 'en' ? enSecondaryFont.style.fontFamily : arFont.style.fontFamily} fontWeight={'bold'} color={'#444444'}>
-													{offer.info.quaintly} {t(`common:${offer.info.key}`)}
-												</Typography>
+												<Chip
+													label={`${offer.info.quaintly} ${t(`common:${offer.info.key}`)}`}
+													sx={{
+														bgcolor: '#9A81E0',
+														color: 'common.white',
+														fontSize: '2rem',
+														fontWeight: '600',
+														height: '40px',
+														px: 2,
+														mb: 2,
+														borderRadius: '100px',
+														fontFamily: lang === 'en' ? enSecondaryFont.style.fontFamily : arFont.style.fontFamily
+													}}
+												/>
 												<Typography
 													variant="subtitle1"
 													fontFamily={lang === 'en' ? enSecondaryFont.style.fontFamily : arFont.style.fontFamily}
@@ -58,15 +69,16 @@ const OffersSection = (props: Props) => {
 										return (
 											<>
 												{offer.prices.map((price) => (
-													<Stack width={1} justifyContent={'center'} alignItems={'center'} key={price.id}>
-														<Typography
-															variant="h3"
-															fontFamily={lang === 'en' ? enSecondaryFont.style.fontFamily : arFont.style.fontFamily}
-															fontWeight={'bold'}
-															sx={{ mb: '-5px' }}>
+													<Stack direction={'row'} width={1} justifyContent={'space-between'} alignItems={'center'} spacing={1} useFlexGap key={price.id}>
+														<Typography variant="h1" fontFamily={offerNumbersFont.style.fontFamily} lineHeight={0.7} width={'3ch'}>
 															{price.price}
 														</Typography>
-														<Typography fontFamily={lang === 'en' ? enSecondaryFont.style.fontFamily : arFont.style.fontFamily} fontWeight={'bold'} color={'#9A81E0'}>
+														<Divider variant="middle" orientation="vertical" sx={{ borderColor: '#9A81E0' }} flexItem />
+														<Typography
+															variant={price.key === 'seats' ? 'h4' : 'subtitle2'}
+															fontFamily={lang === 'en' ? enSecondaryFont.style.fontFamily : arFont.style.fontFamily}
+															fontWeight={'bold'}
+															color={'#9A81E0'}>
 															{price.quantity} {t(`common:${price.key}`)}
 														</Typography>
 													</Stack>
