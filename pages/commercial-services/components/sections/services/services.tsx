@@ -68,7 +68,7 @@ const ServicesSection = (props: Props) => {
 						</Stack>
 					</Grid>
 					<Grid item xs={12}>
-						<Stack spacing={4} mt={{ xs: 6, md: 0 }} useFlexGap>
+						<Stack spacing={4} mt={6} useFlexGap>
 							<Stack direction={{ xs: 'column', md: 'row' }} spacing={2} useFlexGap>
 								<Stack spacing={2} useFlexGap>
 									<Stack>
@@ -87,13 +87,13 @@ const ServicesSection = (props: Props) => {
 										{t('commercial-services:service_gyms_1_description')}
 									</Typography>
 								</Stack>
-								<Box position={'relative'} width={1} minWidth={400} sx={{ aspectRatio: '16/10' }}>
-									<Image src={'/images/commercial_services/towel_1.png'} alt="Wardrobe" fill priority />
+								<Box position={'relative'} width={1} minWidth={400} borderRadius={3} overflow={'hidden'} sx={{ aspectRatio: '16/9' }}>
+									<Image src={'/images/commercial_services/spa.jpg'} alt="Spa" fill priority />
 								</Box>
 							</Stack>
 							<Stack direction={{ xs: 'column', md: 'row' }} spacing={2} useFlexGap>
 								<Box position={'relative'} width={1} minWidth={400} sx={{ aspectRatio: '16/10' }}>
-									<Image src={'/images/commercial_services/towel_2.png'} alt="Wardrobe" fill priority />
+									<Image src={'/images/commercial_services/towel.png'} alt="Towel" fill priority />
 								</Box>
 								<Stack spacing={2} useFlexGap>
 									<Stack>
