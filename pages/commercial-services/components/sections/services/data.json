@@ -1,0 +1,11 @@
+[
+	{ "id": 1, "name": "washing" },
+	{ "id": 2, "name": "ironing" },
+	{ "id": 3, "name": "dry_cleaning" },
+	{ "id": 4, "name": "shoes_cleaning" },
+	{ "id": 5, "name": "carpet_cleaning" },
+	{ "id": 6, "name": "furniture_cleaning" },
+	{ "id": 7, "name": "mattress_cleaning" },
+	{ "id": 8, "name": "curtains_cleaning" },
+	{ "id": 9, "name": "laundry_bags" }
+]

@@ -14,11 +14,32 @@ const Footer = (props: Props) => {
 	const { asPath } = useRouter();
 	const { t, lang } = useTranslation();
 	const mdUp = useResponsive({ key: 'md', query: 'up' });
-	const showExtraELement: boolean = asPath === '/' || asPath === '/#offers' || asPath === '/about-us' || asPath === '/services';
+	const showAnnouncements: boolean = asPath !== 'contact-us';
+
+	const getAnnouncementsImage = () => {
+		if (asPath === '/about-us') return '/images/figure_2.png';
+		if (asPath === '/services') return '/images/basket_3.png';
+		if (asPath === '/commercial-services') return '/images/basket_4.png';
+		return '/images/figure_1.png';
+	};
+
+	const getAnnouncementsImageAspectRatio = () => {
+		if (asPath === '/about-us') return AspectRatio.SQUARE;
+		if (asPath === '/services') return '5/4';
+		if (asPath === '/commercial-services') return '7/5';
+		return AspectRatio.SQUARE;
+	};
+
+	const getAnnouncementsImageWidth = () => {
+		if (asPath === '/about-us') return { xs: 600, sm: 700, md: 800, lg: 900 };
+		if (asPath === '/services') return { xs: 400, sm: 400, md: 600, lg: 800 };
+		if (asPath === '/commercial-services') return { xs: 400, sm: 600, md: 700, lg: 800 };
+		return { xs: 525, sm: 600, md: 800, lg: 900 };
+	};
 
 	return (
 		<Box component={'footer'} width={1} zIndex={1}>
-			{showExtraELement && (
+			{showAnnouncements && (
 				<Box position={'relative'} width={1} sx={{ aspectRatio: { xs: '21/6', sm: '21/4', md: '21/6', lg: '21/3' } }}>
 					<Image
 						src={'/svgs/footer-announcement.svg'}
@@ -51,22 +72,8 @@ const Footer = (props: Props) => {
 						</Stack>
 					</Container>
 
-					<Box
-						position={'absolute'}
-						bottom={0}
-						right={0}
-						width={
-							asPath === '/about-us' ? { xs: 600, sm: 700, md: 800, lg: 900 } : asPath === '/services' ? { xs: 400, sm: 400, md: 600, lg: 800 } : { xs: 525, sm: 600, md: 800, lg: 900 }
-						}
-						zIndex={-1}
-						overflow={'hidden'}
-						sx={{ aspectRatio: asPath === '/services' ? '5/4' : AspectRatio.SQUARE }}>
-						<Image
-							src={`/images/${asPath === '/about-us' ? 'figure_2.png' : asPath === '/services' ? 'basket_3.png' : 'figure_1.png'}`}
-							alt="Call to Action Figure"
-							fill
-							style={{ objectFit: 'contain', transform: lang === 'ar' ? 'translate(-10%, 0)' : 'translate(10%, 0)' }}
-						/>
+					<Box position={'absolute'} bottom={0} right={0} width={getAnnouncementsImageWidth()} zIndex={-1} overflow={'hidden'} sx={{ aspectRatio: getAnnouncementsImageAspectRatio() }}>
+						<Image src={getAnnouncementsImage()} alt="Call to Action Figure" fill style={{ objectFit: 'contain', transform: lang === 'ar' ? 'translate(-10%, 0)' : 'translate(10%, 0)' }} />
 					</Box>
 				</Box>
 			)}
@@ -132,6 +139,13 @@ const Footer = (props: Props) => {
 									<Link href={'/services'} style={{ fontFamily: 'inherit', color: 'inherit', textDecoration: 'inherit' }}>
 										<Typography color={'background.paper'} fontWeight={300} sx={{ ':hover': { textDecoration: 'underline' } }}>
 											{t('common:services')}
+										</Typography>
+									</Link>
+								</Grid>
+								<Grid item xs={6}>
+									<Link href={'/commercial-services'} style={{ fontFamily: 'inherit', color: 'inherit', textDecoration: 'inherit' }}>
+										<Typography color={'background.paper'} fontWeight={300} sx={{ ':hover': { textDecoration: 'underline' } }}>
+											{t('common:commercial_services')}
 										</Typography>
 									</Link>
 								</Grid>

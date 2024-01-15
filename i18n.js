@@ -7,6 +7,7 @@ module.exports = {
 		'/': ['home'],
 		'/about-us': ['about-us'],
 		'/contact-us': ['contact-us'],
-		'/services': ['services']
+		'/services': ['services'],
+		'/commercial-services': ['commercial-services']
 	}
 };

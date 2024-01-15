@@ -92,7 +92,9 @@ const ServicesSection = (props: Props) => {
 											inset: 0,
 											width: 1,
 											height: 1,
-											background: `linear-gradient(${mdUp ? '270deg' : '0deg'}, #F5F5F5 5%, rgba(245, 245, 245, 0.00) 100%)`
+											background: `linear-gradient(${mdUp ? (lang === 'ar' ? '90deg' : '270deg') : '0deg'}, #F5F5F5 ${
+												lang === 'ar' ? '100%' : '5%'
+											}, rgba(245, 245, 245, 0.00) 100%)`
 										}}
 									/>
 								</Box>
@@ -120,7 +122,9 @@ const ServicesSection = (props: Props) => {
 											inset: 0,
 											width: 1,
 											height: 1,
-											background: `linear-gradient(${mdUp ? '270deg' : '0deg'}, #F5F5F5 5%, rgba(245, 245, 245, 0.00) 100%)`
+											background: `linear-gradient(${mdUp ? (lang === 'ar' ? '90deg' : '270deg') : '0deg'}, #F5F5F5 ${
+												lang === 'ar' ? '100%' : '5%'
+											}, rgba(245, 245, 245, 0.00) 100%)`
 										}}
 									/>
 								</Box>
@@ -148,7 +152,9 @@ const ServicesSection = (props: Props) => {
 											inset: 0,
 											width: 1,
 											height: 1,
-											background: `linear-gradient(${mdUp ? '270deg' : '0deg'}, #F5F5F5 5%, rgba(245, 245, 245, 0.00) 100%)`
+											background: `linear-gradient(${mdUp ? (lang === 'ar' ? '90deg' : '270deg') : '0deg'}, #F5F5F5 ${
+												lang === 'ar' ? '100%' : '5%'
+											}, rgba(245, 245, 245, 0.00) 100%)`
 										}}
 									/>
 								</Box>

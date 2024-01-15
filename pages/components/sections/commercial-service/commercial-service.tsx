@@ -1,15 +1,18 @@
 import Title from '@/components/title';
-import { Box, Container, Grid, Stack } from '@mui/material';
+import { ArrowForward } from '@mui/icons-material';
+import { Box, Button, Container, Grid, Stack } from '@mui/material';
 import { motion } from 'framer-motion';
 import useTranslation from 'next-translate/useTranslation';
 import Image from 'next/image';
+import { useRouter } from 'next/router';
 import ShowcaseCard from 'pages/components/showcase-card';
 import services from './data.json';
 
 type Props = {};
 
 const CommercialServiceSection = (props: Props) => {
-	const { lang } = useTranslation();
+	const { push } = useRouter();
+	const { t, lang } = useTranslation();
 
 	return (
 		<Box
@@ -34,6 +37,15 @@ const CommercialServiceSection = (props: Props) => {
 								fill
 								priority
 							/>
+							<Button
+								variant="contained"
+								color="secondary"
+								size="large"
+								onClick={() => push('/commercial-services')}
+								endIcon={<ArrowForward sx={{ transform: lang === 'ar' ? 'scaleX(-1)' : 'none' }} />}
+								sx={{ position: 'absolute', bottom: 0, left: '50%', transform: 'translate(-50%, 50%)', alignSelf: 'center' }}>
+								{t('common:view_all_commercial_services')}
+							</Button>
 						</Box>
 						<Stack width={1} position={{ lg: 'absolute' }} top={'50%'} left={'60%'} spacing={4} sx={{ transform: { lg: 'translate(-90px, -50%)' } }} useFlexGap>
 							<Stack direction={{ xs: 'column', lg: 'row' }} alignItems={'center'} spacing={1} useFlexGap>
