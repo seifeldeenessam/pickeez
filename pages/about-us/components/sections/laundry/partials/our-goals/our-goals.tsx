@@ -1,3 +1,4 @@
+import useResponsive from '@/hooks/useResponsive';
 import { Box, Divider, Grid, Stack, Typography } from '@mui/material';
 import useTranslation from 'next-translate/useTranslation';
 import Image from 'next/image';
@@ -7,6 +8,7 @@ type Props = {};
 
 const OurGoals = (props: Props) => {
 	const { t } = useTranslation();
+	const mdUp = useResponsive({ key: 'md', query: 'up' });
 
 	return (
 		<Box position={'relative'} bgcolor={'background.default'} height={1} p={2} pt={8} borderRadius={2} border={'3px solid white'} boxShadow={'0px 0px 7px 0px rgba(0, 0, 0, 0.15)'}>
@@ -26,8 +28,8 @@ const OurGoals = (props: Props) => {
 				<Typography color={'background.paper'}>{t('about-us:our_goals_title')}</Typography>
 			</Stack>
 			<Grid container spacing={4}>
-				{goals.map((goal) => (
-					<Grid item key={goal.id} xs={12} sm={6}>
+				{goals.map((goal, index) => (
+					<Grid item key={goal.id} xs={12} sm={6} minWidth={index === goals.length - 1 && mdUp ? '100%' : undefined}>
 						<Stack spacing={2} useFlexGap>
 							<Stack direction={'row'} alignItems={'center'} spacing={1} useFlexGap>
 								<Image src={`/svgs/goals/${goal.label}.svg`} alt={goal.label} width={32} height={32} />
