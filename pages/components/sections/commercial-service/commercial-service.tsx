@@ -22,7 +22,8 @@ const CommercialServiceSection = (props: Props) => {
 			transition={{ duration: 0.5 }}
 			viewport={{ once: true }}
 			width={1}
-			py={6}
+			pt={6}
+			pb={10}
 			overflow={'hidden'}>
 			<Container>
 				<Stack spacing={6} useFlexGap>
@@ -32,7 +33,7 @@ const CommercialServiceSection = (props: Props) => {
 							<Image
 								src={'/images/commercial-service-hero.png'}
 								alt={'Laundry Dryer'}
-								style={{ objectFit: 'cover', transform: lang === 'ar' ? 'scaleX(-1)' : 'none' }}
+								style={{ objectFit: 'cover', transform: lang === 'ar' ? 'scaleX(-1)' : 'none', borderRadius: '8px' }}
 								quality={100}
 								fill
 								priority
@@ -47,7 +48,7 @@ const CommercialServiceSection = (props: Props) => {
 								{t('common:view_all_commercial_services')}
 							</Button>
 						</Box>
-						<Stack width={1} position={{ lg: 'absolute' }} top={'50%'} left={'60%'} spacing={4} sx={{ transform: { lg: 'translate(-90px, -50%)' } }} useFlexGap>
+						<Stack width={1} position={{ lg: 'absolute' }} top={'50%'} left={'65%'} spacing={4} sx={{ transform: { lg: 'translate(0, -50%)' } }} useFlexGap>
 							<Stack direction={{ xs: 'column', lg: 'row' }} alignItems={'center'} spacing={1} useFlexGap>
 								<Grid container width={{ xs: 1, lg: '150px' }} spacing={1}>
 									{services.slice(0, 3).map((service) => (
@@ -65,7 +66,7 @@ const CommercialServiceSection = (props: Props) => {
 								</Grid>
 							</Stack>
 						</Stack>
-						<Box position={'absolute'} top={'50%'} right={0} width={550} height={550} zIndex={-1} sx={{ transform: { lg: 'translate(0, -50%)' } }}>
+						<Box position={'absolute'} top={'50%'} right={0} width={550} height={550} zIndex={-1} sx={{ transform: { lg: 'translate(5%, -50%)' } }}>
 							<Image src={'/svgs/arch-texture.svg'} alt="Logo Signature" style={{ opacity: 0.5, transform: lang === 'ar' ? 'scaleX(-1)' : 'none' }} fill priority />
 						</Box>
 					</Stack>
