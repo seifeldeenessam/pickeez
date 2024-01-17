@@ -2,5 +2,6 @@
 	{ "id": 1, "path": "/", "label": "common:home" },
 	{ "id": 2, "path": "/about-us", "label": "common:about" },
 	{ "id": 3, "path": "/services", "label": "common:services" },
-	{ "id": 6, "path": "/contact-us", "label": "common:contact" }
+	{ "id": 4, "path": "/commercial-services", "label": "common:commercial_services" },
+	{ "id": 5, "path": "/contact-us", "label": "common:contact" }
 ]
