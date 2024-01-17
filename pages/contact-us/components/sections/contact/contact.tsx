@@ -36,9 +36,7 @@ const ContactSection = (props: Props) => {
 						<Typography variant="h4" component={'p'} color={'secondary.main'}>
 							{t('contact-us:get_in_touch')}
 						</Typography>
-						<Typography color={'text.secondary'}>
-							Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto error vel ratione molestias nemo. Eius repellendus maxime dolorem laboriosam iusto.
-						</Typography>
+						<Typography color={'text.secondary'}>{t('contact-us:for_more_info')}</Typography>
 						<Stack spacing={2} useFlexGap>
 							{attributes.map((attribute, index) => (
 								<Stack direction={'row'} spacing={1} alignItems={'center'} key={index}>
