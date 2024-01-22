@@ -75,7 +75,7 @@ const OffersSection = (props: Props) => {
 														</Typography>
 														<Divider variant="middle" orientation="vertical" sx={{ borderColor: '#9A81E0' }} flexItem />
 														<Typography
-															variant={price.key === 'seats' ? 'h4' : 'subtitle2'}
+															variant={price.key === 'seats' ? 'h5' : 'subtitle2'}
 															fontFamily={lang === 'en' ? enSecondaryFont.style.fontFamily : arFont.style.fontFamily}
 															fontWeight={'bold'}
 															color={'#9A81E0'}>

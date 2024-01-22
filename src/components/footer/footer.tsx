@@ -31,16 +31,16 @@ const Footer = (props: Props) => {
 	};
 
 	const getAnnouncementsImageWidth = () => {
-		if (asPath === '/about-us') return { xs: 600, sm: 700, md: 800, lg: 900 };
-		if (asPath === '/services') return { xs: 400, sm: 400, md: 600, lg: 800 };
+		if (asPath === '/about-us') return { xs: 500, sm: 600, md: 700, lg: 800 };
+		if (asPath === '/services') return { xs: 400, sm: 400, md: 550, lg: 700 };
 		if (asPath === '/commercial-services') return { xs: 400, sm: 600, md: 700, lg: 800 };
 		return { xs: 525, sm: 600, md: 800, lg: 900 };
 	};
 
 	return (
-		<Box component={'footer'} width={1} zIndex={1}>
+		<Box component={'footer'} display={'flex'} flexDirection={'column'} width={1} zIndex={1}>
 			{showAnnouncements && (
-				<Box position={'relative'} width={1} sx={{ aspectRatio: { xs: '21/6', sm: '21/4', md: '21/6', lg: '21/3' } }}>
+				<Box position={'relative'} width={1} sx={{ mb: '-5px', aspectRatio: { xs: '21/6', sm: '21/4', md: '21/6', lg: '21/3' } }}>
 					<Image
 						src={'/svgs/footer-announcement.svg'}
 						alt="Footer announcement"
@@ -73,7 +73,12 @@ const Footer = (props: Props) => {
 					</Container>
 
 					<Box position={'absolute'} bottom={0} right={0} width={getAnnouncementsImageWidth()} zIndex={-1} overflow={'hidden'} sx={{ aspectRatio: getAnnouncementsImageAspectRatio() }}>
-						<Image src={getAnnouncementsImage()} alt="Call to Action Figure" fill style={{ objectFit: 'contain', transform: lang === 'ar' ? 'translate(-10%, 0)' : 'translate(10%, 0)' }} />
+						<Image
+							src={getAnnouncementsImage()}
+							alt="Call to Action Figure"
+							fill
+							style={{ objectFit: 'contain', transform: lang === 'ar' ? 'translate(-10%, 0) scaleX(-1)' : 'translate(10%, 0) scaleX(0)' }}
+						/>
 					</Box>
 				</Box>
 			)}
