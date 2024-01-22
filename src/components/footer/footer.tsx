@@ -77,7 +77,7 @@ const Footer = (props: Props) => {
 							src={getAnnouncementsImage()}
 							alt="Call to Action Figure"
 							fill
-							style={{ objectFit: 'contain', transform: lang === 'ar' ? 'translate(-10%, 0) scaleX(-1)' : 'translate(10%, 0) scaleX(0)' }}
+							style={{ objectFit: 'contain', transform: lang === 'ar' ? 'translate(-10%, 0) scaleX(-1)' : 'translate(10%, 0) scaleX(1)' }}
 						/>
 					</Box>
 				</Box>
