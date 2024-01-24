@@ -134,7 +134,7 @@ const ServicesSection = (props: Props) => {
 									{t('commercial-services:contact_title')}
 								</Typography>
 								<Stack bgcolor={'#D9D9D9'} px={2} py={1} borderRadius={3}>
-									<Typography variant="h6" fontWeight={'bold'} textAlign={'center'}>
+									<Typography variant="h6" fontWeight={'bold'} textAlign={'center'} sx={{ direction: lang === 'ar' ? 'rtl' : 'ltr' }}>
 										{t('commercial-services:contact_number')}
 									</Typography>
 								</Stack>

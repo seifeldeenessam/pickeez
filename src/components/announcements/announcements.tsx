@@ -1,5 +1,5 @@
 import { Call } from '@mui/icons-material';
-import { Box, Button, Container, Stack } from '@mui/material';
+import { Box, Button, Container, Stack, Typography } from '@mui/material';
 import useTranslation from 'next-translate/useTranslation';
 
 type Props = {};
@@ -12,7 +12,9 @@ const Announcements = (props: Props) => {
 			<Container>
 				<Stack direction={'row'} justifyContent={'space-between'} alignItems={'center'}>
 					<Button color="inherit" startIcon={<Call sx={{ transform: lang === 'ar' ? 'scaleX(-1)' : 'none' }} />}>
-						050 1044 566 - 02 6760 068
+						<Typography variant="button" sx={{ direction: lang === 'ar' ? 'rtl' : 'ltr' }}>
+							050 1044 566 - 02 6760 068
+						</Typography>
 					</Button>
 				</Stack>
 			</Container>

@@ -110,7 +110,9 @@ const Footer = (props: Props) => {
 							<Stack spacing={2} mt={4} useFlexGap>
 								<Stack direction={'row'} alignItems={'flex-start'} spacing={2} useFlexGap>
 									<Call color="secondary" sx={{ transform: lang === 'ar' ? 'scaleX(-1)' : 'none' }} />
-									<Typography maxWidth={'13ch'}>050 1044 566 02 6760 068</Typography>
+									<Typography maxWidth={'13ch'} sx={{ direction: lang === 'ar' ? 'rtl' : 'ltr' }}>
+										050 1044 566 <br /> 02 6760 068
+									</Typography>
 								</Stack>
 								<Stack direction={'row'} alignItems={'flex-start'} spacing={2} useFlexGap>
 									<Mail color="secondary" sx={{ transform: lang === 'ar' ? 'scaleX(-1)' : 'none' }} />

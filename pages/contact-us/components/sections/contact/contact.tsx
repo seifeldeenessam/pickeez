@@ -26,7 +26,7 @@ const attributes = [
 type Props = {};
 
 const ContactSection = (props: Props) => {
-	const { t } = useTranslation();
+	const { t, lang } = useTranslation();
 
 	return (
 		<Container sx={{ mb: 4 }}>
@@ -44,7 +44,9 @@ const ContactSection = (props: Props) => {
 										{attribute.icon}
 									</Stack>
 									<Typography sx={{ minWidth: '7ch', display: { xs: 'none', md: 'block' } }}>{t(attribute.title)}:</Typography>
-									<Typography fontSize={{ xs: 12, md: 16 }}>{attribute.value}</Typography>
+									<Typography fontSize={{ xs: 12, md: 16 }} sx={{ direction: attribute.title.includes('phone') && lang === 'ar' ? 'rtl' : 'ltr' }}>
+										{attribute.value}
+									</Typography>
 								</Stack>
 							))}
 						</Stack>
