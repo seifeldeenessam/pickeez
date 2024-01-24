@@ -100,7 +100,7 @@ const OffersSection = (props: Props) => {
 																whiteSpace={'pre-wrap'}
 																textAlign={'center'}
 																gutterBottom>
-																{price.quantity} {t(`common:${price.key}`)}
+																{t(`common:${price.quantity}`)} {t(`common:${price.key}`)}
 															</Typography>
 														</Stack>
 													</Box>
