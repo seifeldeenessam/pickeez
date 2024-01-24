@@ -24,7 +24,7 @@ const ShowcaseCard = ({ icon, title, description }: Props) => {
 			spacing={2}
 			p={2}
 			useFlexGap>
-			<Box position={'relative'} width={0.5} maxWidth={96} sx={{ aspectRatio: AspectRatio.SQUARE }}>
+			<Box position={'relative'} width={0.5} maxWidth={'96px'} sx={{ aspectRatio: AspectRatio.SQUARE }}>
 				<Image src={icon} alt={title} style={{ objectFit: 'contain' }} placeholder="blur" blurDataURL="/images/loading_spinner.png" fill />
 			</Box>
 			<Typography fontWeight={'bold'} textAlign={'center'} sx={{ userSelect: 'none' }}>
