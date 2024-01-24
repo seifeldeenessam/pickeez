@@ -2,6 +2,7 @@
 	{
 		"id": 1,
 		"background_color": "#9A81E0",
+		"card_color": "#9A81E0",
 		"title": "home:offer_shoes",
 		"image": "/images/offers/offer_shoes.png",
 		"info": { "price": 105, "key": "shoes", "quaintly": "3", "original_price": 150 },
@@ -10,6 +11,7 @@
 	{
 		"id": 2,
 		"background_color": "#FBB040",
+		"card_color": "#FBB040",
 		"title": "home:offer_sofas",
 		"image": "/images/offers/offer_sofas.png",
 		"offers": null,
@@ -22,6 +24,7 @@
 	{
 		"id": 3,
 		"background_color": "#C4C4C4",
+		"card_color": "#9A81E0",
 		"title": "home:offer_bags",
 		"image": "/images/offers/offer_bags.png",
 		"info": { "price": 105, "key": "bags", "quaintly": "2", "original_price": 150 },
@@ -30,6 +33,7 @@
 	{
 		"id": 4,
 		"background_color": "#9A81E0",
+		"card_color": "#9A81E0",
 		"title": "home:offer_mattress",
 		"image": "/images/offers/offer_mattress.png",
 		"offers": null,
