@@ -14,7 +14,7 @@ const Footer = (props: Props) => {
 	const { asPath } = useRouter();
 	const { t, lang } = useTranslation();
 	const mdUp = useResponsive({ key: 'md', query: 'up' });
-	const showAnnouncements: boolean = asPath !== '/contact-us';
+	const showAnnouncements: boolean = asPath !== '/contact-us' && asPath !== '/privacy-policy' && asPath !== '/return-policy';
 
 	const getAnnouncementsImage = () => {
 		if (asPath === '/about-us') return '/images/figure_2.png';
