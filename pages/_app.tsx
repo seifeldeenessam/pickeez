@@ -1,3 +1,4 @@
+import WhatsappButton from '@/components/whatsapp-button';
 import { theme } from '@/theme';
 import { createEmotionCache } from '@/utilities/theme';
 import { CacheProvider, EmotionCache } from '@emotion/react';
@@ -35,6 +36,7 @@ const App = ({ Component, emotionCache, pageProps, router }: Props) => {
 				</Head>
 				<CssBaseline />
 				<Component {...pageProps} />
+				<WhatsappButton />
 			</ThemeProvider>
 		</CacheProvider>
 	);
