@@ -75,6 +75,9 @@ const PlansSection = (props: Props) => {
 										<Typography variant="h4" fontWeight={'bold'} textAlign={'center'}>
 											{`${plan.price} AED`}
 										</Typography>
+										<Typography variant="body2" textAlign={'center'}>
+											{t('common:tax_added')}
+										</Typography>
 										<Divider sx={{ width: '25%', borderBottomWidth: '2px', borderColor: 'secondary.main' }} />
 									</Stack>
 									<Stack width={1} divider={<Divider flexItem />} spacing={1} flex={1} useFlexGap>
