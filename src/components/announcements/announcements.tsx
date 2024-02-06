@@ -11,7 +11,7 @@ const Announcements = (props: Props) => {
 		<Box bgcolor={'primary.main'} color={'background.paper'}>
 			<Container>
 				<Stack direction={'row'} justifyContent={'flex-end'} alignItems={'center'}>
-					<Button color="inherit" startIcon={<Call sx={{ transform: lang === 'ar' ? 'scaleX(-1)' : 'none' }} />}>
+					<Button color="inherit" href="tel:050 1044 566" startIcon={<Call sx={{ transform: lang === 'ar' ? 'scaleX(-1)' : 'none' }} />}>
 						<Typography variant="button" sx={{ direction: lang === 'ar' ? 'rtl' : 'ltr' }}>
 							050 1044 566 - 02 6760 068
 						</Typography>
