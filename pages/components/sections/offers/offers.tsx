@@ -51,7 +51,7 @@ const OffersSection = (props: Props) => {
 													</Typography>
 												</Box>
 												<Chip
-													label={`${offer.info.quaintly} ${t(`common:${offer.info.key}`)}`}
+													label={offer.info.quantity ? `${offer.info.quantity} ${t(`common:${offer.info.key}`)}` : `${t(`common:${offer.info.key}`)}`}
 													sx={{
 														bgcolor: '#9A81E0',
 														color: 'common.white',
@@ -77,7 +77,7 @@ const OffersSection = (props: Props) => {
 									} else {
 										return (
 											<Stack mt={'-20%'}>
-												{offer.prices.map((price, index, array) => (
+												{offer.prices.map((price) => (
 													<Box position={'relative'} mb={'-10px'} key={price.id}>
 														<OffersCard color={offer.card_color} width={225} />
 														<Stack
@@ -121,7 +121,7 @@ const OffersSection = (props: Props) => {
 												{t(offer.title)}
 											</Typography>
 											<Stack width={1} justifyContent={'space-between'} alignItems={'center'} bgcolor={'background.paper'} borderRadius={4}>
-												<Image src={offer.image} alt={offer.title} width={250} height={300} style={{ objectFit: 'contain' }} />
+												<Image src={offer.image} alt={offer.title} width={250} height={300} quality={100} style={{ objectFit: 'contain' }} />
 												<Stack width={1} justifyContent={'center'} alignItems={'center'} boxSizing={'border-box'} bgcolor={'#D9D4E9'} borderRadius={4} p={2} height={250}>
 													{renderOfferDetails()}
 												</Stack>
