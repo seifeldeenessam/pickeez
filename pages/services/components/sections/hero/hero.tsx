@@ -14,7 +14,8 @@ const HeroSection = (props: Props) => {
 			<Image
 				src={`/svgs/services_hero/${mdUp ? 'desktop' : 'mobile'}_${lang}.svg`}
 				alt="Hero Background"
-				sizes="100vw"
+				placeholder="blur"
+				blurDataURL="/images/placeholder-loading.webp"
 				quality={100}
 				style={{ objectPosition: 'top', objectFit: 'cover' }}
 				fill
