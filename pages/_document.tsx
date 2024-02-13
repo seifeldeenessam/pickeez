@@ -4,6 +4,7 @@ import { createEmotionCache } from '@/utilities/theme';
 import createEmotionServer from '@emotion/server/create-instance';
 import { AppType } from 'next/app';
 import NextDocument, { DocumentContext, DocumentProps, Head, Html, Main, NextScript } from 'next/document';
+import Script from 'next/script';
 import * as React from 'react';
 import { Props as AppProps } from './_app';
 
@@ -13,6 +14,14 @@ export default function Document({ emotionStyleTags, ...props }: Props) {
 	return (
 		<Html lang={props.locale} dir={props.locale === Languages.ARABIC ? Directions.RTL : Directions.LTR}>
 			<Head>
+				<Script id="google-tag-manager-id" async strategy="beforeInteractive" src="https://www.googletagmanager.com/gtag/js?id=G-K93WXYMJ3M" />
+				<Script id="google-tag-manager" strategy="beforeInteractive">{`
+				window.dataLayer = window.dataLayer || [];
+				function gtag(){dataLayer.push(arguments);}
+				gtag('js', new Date());
+
+				gtag('config', 'G-K93WXYMJ3M');
+				`}</Script>
 				<link rel="manifest" href="/manifest.json" />
 				<meta name="emotion-insertion-point" content="" />
 				{emotionStyleTags}
