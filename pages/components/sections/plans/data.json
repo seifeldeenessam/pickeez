@@ -3,7 +3,7 @@
 		"id": 1,
 		"icon": "/svgs/plans/plan_basic.svg",
 		"title": "home:plan_basic_title",
-		"price": 500,
+		"price": 525,
 		"features": [
 			{ "id": 1, "title": "home:plan_basic_feature_1_title" },
 			{ "id": 2, "title": "home:plan_basic_feature_2_title" },
