@@ -1,7 +1,25 @@
 <xml version="1.0" encoding="UTF-8">
   <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-    <!-- <url>
-      <loc>https://medicalcosmeticskw.com/</loc>
-    </url> -->
+    <url>
+      <loc>https://pickeez.com/</loc>
+    </url>
+    <url>
+      <loc>https://pickeez.com/services</loc>
+    </url>
+    <url>
+      <loc>https://pickeez.com/about-us</loc>
+    </url>
+    <url>
+      <loc>https://pickeez.com/contact-us</loc>
+    </url>
+    <url>
+      <loc>https://pickeez.com/commercial-services</loc>
+    </url>
+    <url>
+      <loc>https://pickeez.com/privacy-policy</loc>
+    </url>
+    <url>
+      <loc>https://pickeez.com/return-policy</loc>
+    </url>
   </urlset>
 </xml>
